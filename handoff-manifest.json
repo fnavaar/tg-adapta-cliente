@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "adapta-cliente-handoff/v1",
+  "phase": 1,
+  "versions": {
+    "package": "0.1.0",
+    "adapta": "0.7.0",
+    "adaptaCliente": "0.2.0"
+  },
+  "generatedAt": "2026-08-19T12:31:36.278Z",
+  "files": [
+    {
+      "path": "04_fase-atual/README.md",
+      "sha256": "57843f15414253dfbcc46b12fc0860f4aa0481fefdd8440eca68b80a3663f4cc",
+      "classification": "template-publico"
+    },
+    {
+      "path": "04_fase-atual/fase.md",
+      "sha256": "120a5c78d73c29179273efa1a3c594957cd4fa7c1ad003d72e83e2c8d2a27dcb",
+      "classification": "fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-f1-001-dicionario-baseline.md",
+      "sha256": "0206c21a961ed409985c4c7ddd037a779fcb95a665e9565a9ce6c925a1287ed9",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-f1-002-pipeline-dashboard-minimo.md",
+      "sha256": "49c4983b4c7eb5293b2933eae02d607cd94fec87223fddf2324ca5f170e5268a",
+      "classification": "spec-fase-atual"
+    }
+  ]
+}
