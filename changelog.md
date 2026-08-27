@@ -7,4 +7,6 @@
 
 ## Registro
 
+- 2026-08-27 · Champion (João Paulo) · F1-T03 CONCLUÍDA e aprovada: baseline comercial 90 dias (0), 37 vagas preservadas como dado histórico separado, metas mensais (R&S 7/5, TMO 5/2), gate com separação APROVADO/DEFINIDO/BLOQUEADO/HIPÓTESE, Dicionário Comercial Talent Group v1, definição de Lead Qualificado (3 condições) e Oportunidade aprovadas. Proposta aceita não = Lead Qualificado (correção 27/08). Pendências técnicas registradas para F1-T04. Não avançou para F1-T04.
+- 2026-08-25 · Champion (João Paulo) · Decisões comerciais consolidadas: unidade=empresa/grupo econômico; baseline 0; metas de aquisição/reativação; critério de conquista (1ª vaga/1ª demanda); ICP 2026 como fonte oficial.
 - 2026-08-19 · Adapta · Pasta operacional preparada; Fase 1 liberada para execução controlada, sem repo ou publicação externa.
