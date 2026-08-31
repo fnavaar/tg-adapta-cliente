@@ -63,24 +63,21 @@ Ao aceitar esta SPEC, a equipe demonstra uma visão mínima de CRM/pipeline e pa
 6. Encerrar em estado terminal somente com motivo e evidência; registrar follow-up quando o estado for `sem timing`.
 7. Recalcular o painel a partir do pipeline, aplicar filtros mínimos e comparar com a tabela de origem.
 8. Demonstrar um caso inbound e um outbound, incluindo erro ou bloqueio, antes de aceitar a SPEC.
-(Trecho do fluxo corrigido por erro de digitação — ver Emendas. O conteúdo permanece o mesmo: "Recalcular o painel a partir do pipeline, aplicar filtros mínimos e comparar com a tabela de origem" e "Demonstrar um caso inbound e um outbound, incluindo erro ou bloqueio, antes de aceitar a SPEC.")
 
 | Cenário | Dado/condição | Resultado esperado | Caminho de erro/recuperação |
 |---|---|---|---|
 | Principal | `FIX-IN-001` e `FIX-OUT-001` têm origem, responsável e próximo passo | Painel mostra os dois tipos separados; registros têm estado e ação; contagens batem com a fonte | Divergência abre log e bloqueia o aceite até reconciliação |
 | Limite | Registro sem origem, sem responsável ou sem prazo | Registro aparece como `desconhecido`/pendente e não é contado como oportunidade válida | Dono recebe pendência; se não houver ação, estado terminal com motivo aprovado |
 | Falha | Comercial não aceita o handoff ou o canal autorizado está indisponível | Registro é preservado, tentativa é registrada e o estado anterior permanece com pendência visível | Escalar para o dono definido; não repetir contato automaticamente |
-| Transição inválida | Solicitação para marcar `ganho` sem evidência de fechamento ou `lead qualificado` com gate bloqueado | Mudança recusada; estado anterior permanece; motivo aparece no log | Consultor/direção revisam o critério, sem corregir silenciosamente |
-| Rollback | Visão ou campo de teste causa contagem divergente | Pausar o piloto, conserver evidências e retornar à última visão aceita | Reconciliar a fonte antes de reabrir a demonstração |
-
-(Trecho do cenário corrigido por erro de digitação — ver Emendas. O conteúdo permanece o mesmo: "Solicitação para marcar `ganho` sem evidência de fechamento ... Mudança recusada ... Consultor/direção revisam o critério" e "Visão ou campo de teste causa contagem divergente ... Pausar o piloto, conservar evidências e retornar à última visão aceita ... Reconciliar a fonte antes de reabrir a demonstração.")
+| Transição inválida | Solicitação para marcar `ganho` sem evidência de fechamento ou `lead qualificado` com gate bloqueado | Mudança recusada; estado anterior permanece; motivo aparece no log | Consultor/direção revisam o critério, sem corrigir silenciosamente |
+| Rollback | Visão ou campo de teste causa contagem divergente | Pausar o piloto, conservar evidências e retornar à última visão aceita | Reconciliar a fonte antes de reabrir a demonstração |
 
 ## Instruções de execução para o Ethos
 
 1. **Ler antes de alterar:** esta SPEC; SPEC-F1-001; `03-Projeto/02-Escopo-Definitivo.md` seção Fase 1; `03-Projeto/requisitos.md` RQ-003, RQ-004, RQ-008 e RQ-010; `02-Reuniao/Kickoff Call/02-Ata_reuniao.md` linhas 48–50 e 54–62.
 2. **Alterar somente:** campos/visões não destrutivos do CRM validado ou o fallback manual e os dois artefatos de evidência desta SPEC.
 3. **Não alterar:** taxonomia fora dos estados listados; permissões globais; registros de produção fora da amostra; campanhas; integrações; dados do DHO; qualquer ação externa sem aprovação.
-4. **Excutar nesta ordem:** validar gate da SPEC-F1-001 → confirmar taxonomia/prazos → carregar fixtures → testar transições → gerar painel → testar filtros e reconciiação → demonstrar erro/rollback → pedir aceite.
+4. **Executar nesta ordem:** validar gate da SPEC-F1-001 → confirmar taxonomia/prazos → carregar fixtures → testar transições → gerar painel → testar filtros e reconciliação → demonstrar erro/rollback → pedir aceite.
 5. **Parar e pedir validação quando:** não houver acesso/schema; a definição de lead qualificado estiver ausente; alguém pedir um novo estado, SLA ou integração; o registro tiver dado sensível; houver tentativa de publicação, abordagem, disparo ou alteração irreversível.
 6. **Estado válido ao parar:** fonte e log preservados; cada registro mantém estado anterior em caso de erro; painel identifica bloqueios; nenhuma ação externa foi executada por inferência.
 
