@@ -7,6 +7,7 @@
 
 ## Registro
 
+- 2026-09-01 · Champion (João Paulo) · F1-T05 CONCLUÍDA E VALIDADA HUMANAMENTE — aprovação expressa às 18:32 após revisão da implementação, migration 0005, handoff/ICP, testes H1-H10, ICP-1 a ICP-6, jornadas inbound/outbound, regressão F1-T04, artefato, emenda append-only e limitações. Fase 1: 5/6 (83%). F1-T06 não iniciada e permanece aguardando autorização expressa.
 - 2026-09-01 · Adapta (Pepe) · CONCLUSÃO DOCUMENTAL DA F1-T05 — emenda append-only da SPEC registrada com handoff_status, icp_validado e validação humana do ICP; retry exclusivamente manual; testes H1-H10, ICP-1 a ICP-6, jornadas inbound/outbound e regressão F1-T04 documentados; ausência de histórico estruturado de retries e canal indisponível não demonstrável tecnicamente registrados. F1-T05 permanece AGUARDANDO VALIDAÇÃO HUMANA DO CHAMPION; F1-T06 não iniciada.
 
 - 2026-09-01 · Adapta (Pepe) · F1-T05 IMPLEMENTADA — migration 0005 adicionou somente handoff_status e icp_validado; hook atualizado com handoff, proteção do aceite, retry manual e gate humano de ICP. Testes H1-H10, ICP-1 a ICP-6, jornadas inbound/outbound, CA-1-10 e regressão F1-T04 executados via API real; registros fictícios removidos. Skip v0.0.28 (QA ok). F1-T05 AGUARDANDO VALIDAÇÃO HUMANA DO CHAMPION; F1-T06 não iniciada. Evidência: 04-fase-atual/pipeline-f1-f1-t05.md.
