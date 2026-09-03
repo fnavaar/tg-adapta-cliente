@@ -4,10 +4,10 @@
 - champion: João Paulo
 - spec: nenhuma
 - etapa: concluida
-- autorizacao_implementacao: confirmada — F1-T05 autorizada expressamente em 2026-09-01
-- teste_humano: aprovado — validação humana expressa do Champion em 2026-09-01 às 18:32
-- verificacao_automatica: passou — Skip v0.0.28; QA completo; migration 0005 aplicada; testes H1-H10, ICP-1-6, jornadas e regressão executados
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-09-01-1835-handoff-icp-opcionais.md
-- ultima_acao: F1-T05 concluída e validada humanamente; registros atualizados no commit de conclusão
-- proxima_acao: nenhuma — não iniciar F1-T06 sem nova autorização expressa
-- atualizado_em: 2026-09-01T18:32:00-03:00
+- autorizacao_implementacao: confirmada — F1-T06 autorizada expressamente em 2026-09-02
+- teste_humano: aprovado — validação humana expressa do Champion em 2026-09-03 às 09:26
+- verificacao_automatica: passou — Skip v0.0.31; QA completo; painel/fonte reconciliados; U1-U7; filtros; regressão; rollback e limpeza controlada
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-09-03-0928-reconciliacao-fonte-painel.md
+- ultima_acao: F1-T06 concluída e Fase 1 encerrada após validação humana; registros oficiais atualizados
+- proxima_acao: nenhuma — não iniciar próxima fase/task sem nova autorização expressa
+- atualizado_em: 2026-09-03T09:26:00-03:00
