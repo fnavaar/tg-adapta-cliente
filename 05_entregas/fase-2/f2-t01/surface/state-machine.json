@@ -1,0 +1,7 @@
+{
+  "allowed_states":["Rascunho","Em revisão","Aprovado para preparação","Bloqueado","Rejeitado","Arquivado"],
+  "transitions":["Rascunho -> Em revisão","Em revisão -> Aprovado para preparação","Em revisão -> Bloqueado","Em revisão -> Rejeitado","Bloqueado -> Em revisão","Rascunho -> Rejeitado","qualquer estado -> Arquivado com decisão humana e motivo"],
+  "forbidden_states":["Em execução","Pausado","Concluído"],
+  "external_actions_blocked":true,
+  "synthetic_only":true
+}

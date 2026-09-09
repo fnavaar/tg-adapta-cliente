@@ -1,0 +1,5 @@
+[
+  {"id":"BLK-001","scenario":"campo obrigatório ausente","status":"testado/bloqueado","resolution":"não aplicável no cenário negativo","synthetic_only":true},
+  {"id":"BLK-002","scenario":"origem inferida sem evidência","status":"testado/bloqueado","resolution":"registrar origem como não identificado","synthetic_only":true},
+  {"id":"BLK-003","scenario":"ação externa não autorizada","status":"testado/bloqueado","resolution":"nenhuma ação externa executada","synthetic_only":true}
+]

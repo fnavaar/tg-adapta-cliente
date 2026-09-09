@@ -1,0 +1,7 @@
+{
+  "synthetic_only": true,
+  "results": [
+    {"id":"SUMMARY","testado":"TDD completo F2-T01","entrada":"EXP-F2-IN-001 + EXP-F2-OUT-001","esperado":"20 testes aprovados","obtido":"20/20","status":"aprovado","evidencia":"test-results.json"}
+  ],
+  "summary":{"total":20,"passed":20,"failed":0}
+}
