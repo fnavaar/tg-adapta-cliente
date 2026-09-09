@@ -8,6 +8,6 @@
 - autorizacao_implementacao: ausente — Champion autorizou somente debate e fechamento; implementação ainda proibida
 - teste_humano: pendente — será exigido ao fim da implementação
 - verificacao_automatica: não aplicável — debate documental, sem implementação
-- ultima_acao: Champion aprovou seis estados formais: Rascunho, Em revisão, Aprovado para preparação, Bloqueado, Rejeitado e Arquivado; não haverá estados de execução nesta task e aprovação para preparação não autoriza publicação, gasto ou contato externo
-- proxima_acao: deliberar com o Champion as regras de mudança entre estados
-- atualizado_em: 2026-09-09T10:51:00-03:00
+- ultima_acao: Champion aprovou transições controladas; arquivamento exige decisão humana e motivo, inclusive para Bloqueado; Aprovado para preparação exige Champion ou delegado formal, sem definir autoridades futuras de campanha, orçamento ou execução
+- proxima_acao: deliberar com o Champion a definição operacional da hipótese
+- atualizado_em: 2026-09-09T10:55:00-03:00
