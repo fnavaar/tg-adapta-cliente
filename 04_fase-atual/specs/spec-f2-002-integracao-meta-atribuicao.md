@@ -1,7 +1,7 @@
 # SPEC-F2-002 — Integração Meta Ads e atribuição de origem
 
 **Fase:** 2 — Sistema de campanhas e experimentação de Growth Marketing  
-**Status:** planejada  
+**Status:** liberada para execução  
 **Dono:** gestor de tráfego, responsável de TI/Dados do cliente e consultor Adapta  
 **Origem no escopo:** DC-003, C-01, C-04, G-009 e RQ-002  
 **Degrau da solução:** reuso/conector nativo — integrar a API/Webhook do Meta Ads quando token, permissões e schema forem demonstrados; utilizar importação manual com marcação de origem como fallback obrigatório se o acesso direto não for autorizado.

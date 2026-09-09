@@ -1,7 +1,7 @@
-# Fase 2 — Tasks gerais (RASCUNHO)
+# Fase 2 — Tasks gerais
 
 **Plano:** TG Mais Serviços / `6b09d189`
-**Estado:** liberadas no repositório do cliente após aprovação do consultor em 03/09/2026; nenhuma implementação iniciada.
+**Estado:** Liberadas para execução no repositório do cliente; F2-T01 concluída/validada e F2-T02 autorizada para execução imediata pelo champion.
 
 ## Tasks
 

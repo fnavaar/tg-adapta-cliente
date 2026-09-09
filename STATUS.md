@@ -4,13 +4,10 @@
 
 ## Onde estamos
 
-- **Fase atual:** 2 — Sistema de campanhas e experimentação de Growth Marketing.
-- **Task ativa:** F2-T01 — Materializar briefing versionado de experimento com massa sintética.
-- **Debate:** concluído pelo Champion nas Decisões 1–20.
-- **Arquitetura:** aprovada para superfície local/file-backed isolada em `05_entregas/fase-2/f2-t01/`.
-- **Implementação:** executada no escopo autorizado.
-- **TDD/evidências:** automatizados aprovados, aguardando validação humana.
-- **Progresso:** 0 de 9 tasks formalmente concluídas; F2-T01 não pode ser concluída automaticamente.
+- **Fase atual:** 2 — Sistema de campanhas e experimentação de Growth Marketing (LIBERADA PARA EXECUÇÃO).
+- **Task ativa:** F2-T02 — Provar validações de briefing incompleto, duplicação e aprovação de publicação/gasto.
+- **Task anterior:** F2-T01 concluída e validada (20/20 testes TDD aprovados, superfície e evidências publicadas em `05_entregas/fase-2/f2-t01/`).
+- **Progresso:** 1 de 9 tasks concluídas (F2-T02 liberada para execução).
 
 ## Resultado técnico da F2-T01
 
@@ -20,18 +17,15 @@
 - TDD: 20/20 aprovados, 0 falhas.
 - Evidências individuais registradas em `05_entregas/fase-2/f2-t01/evidence/test-results.json`.
 - Relatório: `05_entregas/fase-2/f2-t01/report/atendimento-criterios-f2-t01.md`.
-
-## Proteções verificadas
-
-A implementação criou somente arquivos em `05_entregas/fase-2/f2-t01/`. Não foram alterados collections, schemas, migrations, hooks, PocketBase, collection `demandas`, código, regras ou dados da Fase 1, ICP oficial ou sistemas externos. Não houve publicação, gasto, contato externo ou uso de dados reais.
+- Validação humana: aprovada expressamente.
 
 ## Gate atual
 
-**AGUARDANDO TESTE HUMANO.** O Champion deve revisar a superfície, os dois briefings, estados/transições, bloqueios, versionamento, aprovações documentais, rollback, evidências e relatório. Aprovação técnica/automática não encerra a task.
+**LIBERADA PARA EXECUÇÃO.** Todos os impeditivos foram removidos. F2-T02 está autorizada e pronta para execução imediata pelo champion.
 
 ## Próxima ação
 
-Champion executar validação humana e informar se o resultado foi aprovado ou se encontrou falha. Não concluir a F2-T01 nem iniciar outra task antes dessa confirmação.
+Executar **F2-T02 — Provar validações de briefing incompleto, duplicação e aprovação de publicação/gasto.**
 
 ## Fase 1 arquivada
 

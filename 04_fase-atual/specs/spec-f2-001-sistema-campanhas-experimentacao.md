@@ -1,7 +1,7 @@
 # SPEC-F2-001 — Sistema de campanhas e experimentação de Growth Marketing
 
 **Fase:** 2 — Sistema de campanhas e experimentação de Growth Marketing  
-**Status:** planejada  
+**Status:** liberada para execução  
 **Dono:** marketing, gestor de tráfego e consultor Adapta  
 **Origem no escopo:** C-02, C-01 expandido, C-04 expandido, RQ-002, RQ-005, DC-001, DC-004, DC-007 e G-009  
 **Degrau da solução:** reuso/extensão — estender o dicionário de demanda e a camada de pipeline da Fase 1 para estruturar o registro de experimentos de Growth Marketing, mantendo formulários/planilhas de cadastro e relatórios de experimentos vinculados.

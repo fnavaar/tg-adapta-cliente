@@ -1,31 +1,41 @@
 {
   "schemaVersion": "adapta-cliente-handoff/v1",
-  "phase": 1,
+  "phase": 2,
   "versions": {
     "package": "0.1.0",
     "adapta": "0.7.0",
     "adaptaCliente": "0.2.0"
   },
-  "generatedAt": "2026-08-19T12:31:36.278Z",
+  "generatedAt": "2026-09-09T18:35:00.000Z",
   "files": [
     {
       "path": "04_fase-atual/README.md",
-      "sha256": "57843f15414253dfbcc46b12fc0860f4aa0481fefdd8440eca68b80a3663f4cc",
+      "sha256": "8bba69205eac3c2a0568a2089652542863674c156af9c4a46466f835139f9305",
       "classification": "template-publico"
     },
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "120a5c78d73c29179273efa1a3c594957cd4fa7c1ad003d72e83e2c8d2a27dcb",
+      "sha256": "047a1d8b7540e5a96fd51aea629103405e4b8dc755b4f71b8d9132196e00933f",
       "classification": "fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-f1-001-dicionario-baseline.md",
-      "sha256": "0206c21a961ed409985c4c7ddd037a779fcb95a665e9565a9ce6c925a1287ed9",
+      "path": "04_fase-atual/00-Tasks_Gerais.md",
+      "sha256": "0eb7440ae8dddb0bf3c792b8e52ec01b6139ae4b1f23329587a1ddd62876ad42",
+      "classification": "tasks-gerais"
+    },
+    {
+      "path": "04_fase-atual/matriz-de-rastreabilidade.md",
+      "sha256": "9d0ec3802679e20cf697cc622736731243250c2dd4dacec613dc1f43b6f95714",
+      "classification": "matriz-rastreabilidade"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-f2-001-sistema-campanhas-experimentacao.md",
+      "sha256": "faf4a64c6c9dd78c0ddceac27a86f735795726ec21fe3f6a787a3fd820487806",
       "classification": "spec-fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-f1-002-pipeline-dashboard-minimo.md",
-      "sha256": "49c4983b4c7eb5293b2933eae02d607cd94fec87223fddf2324ca5f170e5268a",
+      "path": "04_fase-atual/specs/spec-f2-002-integracao-meta-atribuicao.md",
+      "sha256": "185ec05bafb38f7e66778e72b63368ac80f88c55e81d3e45069b60610f5fd000",
       "classification": "spec-fase-atual"
     }
   ]
