@@ -8,6 +8,6 @@
 - autorizacao_implementacao: ausente — Champion autorizou somente debate e fechamento; implementação ainda proibida
 - teste_humano: pendente — será exigido ao fim da implementação
 - verificacao_automatica: não aplicável — debate documental, sem implementação
-- ultima_acao: Champion aprovou transições controladas; arquivamento exige decisão humana e motivo, inclusive para Bloqueado; Aprovado para preparação exige Champion ou delegado formal, sem definir autoridades futuras de campanha, orçamento ou execução
-- proxima_acao: deliberar com o Champion a definição operacional da hipótese
-- atualizado_em: 2026-09-09T10:55:00-03:00
+- ultima_acao: Champion aprovou hipótese estruturada em Se/Para/Então/Porque/Mediremos por, com métricas intermediárias válidas mas não suficientes isoladamente; baseline não é obrigatório sem fundamento aprovado; inbound e outbound permanecem separados
+- proxima_acao: deliberar com o Champion a definição de público/ICP
+- atualizado_em: 2026-09-09T11:07:00-03:00
