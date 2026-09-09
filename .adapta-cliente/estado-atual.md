@@ -8,6 +8,6 @@
 - autorizacao_implementacao: ausente — Champion autorizou somente debate e fechamento; implementação ainda proibida
 - teste_humano: pendente — será exigido ao fim da implementação
 - verificacao_automatica: não aplicável — debate documental, sem implementação
-- ultima_acao: Champion aprovou janela estruturada com tipo, datas, fuso, período de análise previsto, justificativa e observações; na F2-T01 tudo será sintético/teste, sem datas ou métricas reais; mudança material exige nova versão e revisão humana
-- proxima_acao: deliberar com o Champion o orçamento previsto do experimento
-- atualizado_em: 2026-09-09T12:15:00-03:00
+- ultima_acao: Champion aprovou orçamento previsto estruturado; na F2-T01 valores são sintéticos, aprovação financeira não solicitada e nenhum valor autoriza gasto, publicação, campanha, contratação ou reserva; orçamento de marketing fica separado da margem comercial de R&S/TMO e não haverá CAC/ROI/margem com dados sintéticos
+- proxima_acao: deliberar com o Champion o critério de parada e continuidade
+- atualizado_em: 2026-09-09T12:25:00-03:00
