@@ -8,6 +8,6 @@
 - autorizacao_implementacao: ausente — Champion autorizou somente debate e fechamento; implementação ainda proibida
 - teste_humano: pendente — será exigido ao fim da implementação
 - verificacao_automatica: não aplicável — debate documental, sem implementação
-- ultima_acao: Champion aprovou público estruturado separado do ICP oficial; unidade comercial é empresa, sem grupo econômico; pessoa é contato associado; não haverá validação automática; público fora do ICP exige identificação, justificativa e aprovação humana; TMO sem critérios inventados; testes sem dados reais
-- proxima_acao: deliberar com o Champion a definição de serviço/oferta
-- atualizado_em: 2026-09-09T11:18:00-03:00
+- ultima_acao: Champion aprovou serviço limitado a R&S/TMO/R&S + TMO e oferta descrita por mensagem, problema e resultado esperado; em R&S + TMO a relação deve ser explicada e resultados mantidos identificáveis por serviço quando possível; intenção não identificada não será inferida; oferta não altera preço, margem, desconto ou autorização de gasto
+- proxima_acao: deliberar com o Champion a definição de canal
+- atualizado_em: 2026-09-09T11:25:00-03:00
