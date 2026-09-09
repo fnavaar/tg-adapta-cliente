@@ -8,6 +8,6 @@
 - autorizacao_implementacao: ausente — Champion autorizou somente debate e fechamento; implementação ainda proibida
 - teste_humano: pendente — será exigido ao fim da implementação
 - verificacao_automatica: não aplicável — debate documental, sem implementação
-- ultima_acao: Champion aprovou matriz de evidências flexível e auditável; inclui briefings sintéticos, testes, bloqueios/resoluções, versões, aprovações, limites e relatório final; falhas e evidências anteriores preservadas; conclusão usa atendimento dos critérios da F2-T01; evidência ausente deixa teste pendente/inconclusivo
-- proxima_acao: deliberar com o Champion o rollback documental
-- atualizado_em: 2026-09-09T15:26:00-03:00
+- ultima_acao: Champion aprovou rollback exclusivamente documental: localizar/consultar referência anterior, criar nova versão ao reutilizar, preservar v1/v2/v3, não transferir aprovação e manter rastreabilidade completa; nenhum rollback externo ou real
+- proxima_acao: deliberar com o Champion a massa sintética inbound/outbound
+- atualizado_em: 2026-09-09T15:31:00-03:00
