@@ -8,34 +8,30 @@
 - **Task ativa:** F2-T01 — Materializar briefing versionado de experimento com massa sintética.
 - **Debate:** concluído pelo Champion nas Decisões 1–20.
 - **Arquitetura:** aprovada para superfície local/file-backed isolada em `05_entregas/fase-2/f2-t01/`.
-- **Implementação:** ainda não autorizada e não iniciada.
-- **Progresso:** 0 de 9 tasks concluídas.
+- **Implementação:** executada no escopo autorizado.
+- **TDD/evidências:** automatizados aprovados, aguardando validação humana.
+- **Progresso:** 0 de 9 tasks formalmente concluídas; F2-T01 não pode ser concluída automaticamente.
 
-## Arquitetura aprovada para a F2-T01
+## Resultado técnico da F2-T01
 
-A superfície será local e file-backed, exclusiva da F2-T01, com componentes próprios para interface, validação, máquina de estados, versionamento, aprovações, bloqueios, TDD e evidências. O armazenamento será sintético e append-only, com preservação integral do histórico.
+- Commit de implementação: `c6b77ef9796ef760ccaf7d04db412d6597831dcf`.
+- Commit de evidência individual: `27d4e5c963a0fe346918ce3da07cdb1201770e25`.
+- Massa sintética: `EXP-F2-IN-001` e `EXP-F2-OUT-001`.
+- TDD: 20/20 aprovados, 0 falhas.
+- Evidências individuais registradas em `05_entregas/fase-2/f2-t01/evidence/test-results.json`.
+- Relatório: `05_entregas/fase-2/f2-t01/report/atendimento-criterios-f2-t01.md`.
 
-## Proteções obrigatórias
+## Proteções verificadas
 
-Nesta task não criar nem alterar collections, schemas, migrations, hooks, PocketBase, collection `demandas`, código, regras ou dados da Fase 1, nem integrações externas. A arquitetura local não é a arquitetura definitiva da Fase 2 nem do futuro sistema de Growth Marketing.
+A implementação criou somente arquivos em `05_entregas/fase-2/f2-t01/`. Não foram alterados collections, schemas, migrations, hooks, PocketBase, collection `demandas`, código, regras ou dados da Fase 1, ICP oficial ou sistemas externos. Não houve publicação, gasto, contato externo ou uso de dados reais.
 
-## Gate de implementação
+## Gate atual
 
-A aprovação arquitetural não autoriza implementação. Antes de iniciar, será necessário novo pedido expresso do Champion. Durante a implementação, se a superfície não atender algum critério obrigatório, a execução deverá parar, registrar a limitação, apresentar alternativas e aguardar nova decisão.
-
-## Condição de encerramento
-
-A F2-T01 somente poderá ser formalmente encerrada após testes obrigatórios e evidências essenciais aprovados, correção/reteste de falhas, relatório de atendimento dos critérios e validação humana expressa do Champion. Aprovação técnica ou automática não encerra a task.
+**AGUARDANDO TESTE HUMANO.** O Champion deve revisar a superfície, os dois briefings, estados/transições, bloqueios, versionamento, aprovações documentais, rollback, evidências e relatório. Aprovação técnica/automática não encerra a task.
 
 ## Próxima ação
 
-Aguardar autorização expressa e específica para implementar F2-T01.
-
-## Travas e limites
-
-- F2-T09 permanece **condicional/não elegível** até acesso Meta, permissões, payload/campos, chave multi-fonte e autorização específica.
-- Nenhuma task autoriza publicar campanha, alterar orçamento, escrever no Meta ou abordar contatos.
-- Sem acesso Meta comprovado, o fluxo autorizado é fallback manual com lacuna explícita.
+Champion executar validação humana e informar se o resultado foi aprovado ou se encontrou falha. Não concluir a F2-T01 nem iniciar outra task antes dessa confirmação.
 
 ## Fase 1 arquivada
 
