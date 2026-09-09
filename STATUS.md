@@ -7,20 +7,21 @@
 - **Fase atual:** 2 — Sistema de campanhas e experimentação de Growth Marketing.
 - **Task ativa:** F2-T01 — Materializar briefing versionado de experimento com massa sintética.
 - **Debate:** concluído pelo Champion nas Decisões 1–20.
+- **Arquitetura:** aprovada para superfície local/file-backed isolada em `05_entregas/fase-2/f2-t01/`.
 - **Implementação:** ainda não autorizada e não iniciada.
 - **Progresso:** 0 de 9 tasks concluídas.
 
-## Escopo aprovado da F2-T01
+## Arquitetura aprovada para a F2-T01
 
-Implementar exclusivamente a superfície mínima funcional do briefing, `EXP-F2-IN-001` e `EXP-F2-OUT-001`, estados/transições, validações objetivas, bloqueios/resoluções, separação origem/canal e R&S/TMO, hipótese estruturada, público/ICP sem inferência automática, serviço/oferta, versionamento separado de briefing/criativo, histórico integral, responsáveis humanos sintéticos, estrutura futura de agentes sem execução nesta task, janela e período de análise previstos, orçamento sintético, conclusões CONTINUAR/AJUSTAR/INTERROMPER/INCONCLUSIVO, aprovação humana estruturada, TDD positivo/negativo, rollback documental, evidências e relatório final de atendimento dos critérios.
+A superfície será local e file-backed, exclusiva da F2-T01, com componentes próprios para interface, validação, máquina de estados, versionamento, aprovações, bloqueios, TDD e evidências. O armazenamento será sintético e append-only, com preservação integral do histórico.
 
-## Fora do escopo
+## Proteções obrigatórias
 
-RD Station, 1CRM, Meta, publicação, campanha real, orçamento real, gasto, contato externo, dados reais, alteração do ICP oficial, alteração de código/schema/migration/hook/collection/regras/dados da Fase 1, automação autônoma por agentes, CAC/ROI/margem/retorno real e qualquer execução externa não autorizada.
+Nesta task não criar nem alterar collections, schemas, migrations, hooks, PocketBase, collection `demandas`, código, regras ou dados da Fase 1, nem integrações externas. A arquitetura local não é a arquitetura definitiva da Fase 2 nem do futuro sistema de Growth Marketing.
 
-## Pendência antes da implementação
+## Gate de implementação
 
-O escopo exige uma superfície mínima funcional, mas a autorização também protege integralmente código, schema, migrations, hooks, collections, regras e dados da Fase 1. Antes de implementar, o plano deverá demonstrar uma superfície separada que não altere esses elementos protegidos. Se isso não for possível, será necessária nova decisão do Champion; não resolver por inferência.
+A aprovação arquitetural não autoriza implementação. Antes de iniciar, será necessário novo pedido expresso do Champion. Durante a implementação, se a superfície não atender algum critério obrigatório, a execução deverá parar, registrar a limitação, apresentar alternativas e aguardar nova decisão.
 
 ## Condição de encerramento
 
@@ -28,7 +29,7 @@ A F2-T01 somente poderá ser formalmente encerrada após testes obrigatórios e 
 
 ## Próxima ação
 
-Aguardar autorização expressa e específica para implementar F2-T01, condicionada à resolução documental da arquitetura sem alteração da Fase 1.
+Aguardar autorização expressa e específica para implementar F2-T01.
 
 ## Travas e limites
 
