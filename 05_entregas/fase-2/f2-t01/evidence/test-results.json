@@ -1,7 +1,26 @@
 {
   "synthetic_only": true,
   "results": [
-    {"id":"SUMMARY","testado":"TDD completo F2-T01","entrada":"EXP-F2-IN-001 + EXP-F2-OUT-001","esperado":"20 testes aprovados","obtido":"20/20","status":"aprovado","evidencia":"test-results.json"}
+    {"id":"POS-EXP-F2-IN-001","testado":"briefing sintético completo","entrada":"EXP-F2-IN-001","esperado":"campos CA-2-01","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"ORIG-EXP-F2-IN-001","testado":"origem e canal separados","entrada":"EXP-F2-IN-001","esperado":"origem explícita","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"SVC-EXP-F2-IN-001","testado":"serviço identificado","entrada":"EXP-F2-IN-001","esperado":"R&S ou TMO","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"HYP-EXP-F2-IN-001","testado":"hipótese estruturada","entrada":"EXP-F2-IN-001","esperado":"Se/Para/Então/Porque/Mediremos","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"OWNER-EXP-F2-IN-001","testado":"responsáveis humanos sintéticos","entrada":"EXP-F2-IN-001","esperado":"HUMANO-SINTETICO","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"WIN-EXP-F2-IN-001","testado":"janela e análise sintéticas","entrada":"EXP-F2-IN-001","esperado":"sem execução","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"BUD-EXP-F2-IN-001","testado":"orçamento sintético","entrada":"EXP-F2-IN-001","esperado":"não solicitada","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"POS-EXP-F2-OUT-001","testado":"briefing sintético completo","entrada":"EXP-F2-OUT-001","esperado":"campos CA-2-01","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"ORIG-EXP-F2-OUT-001","testado":"origem e canal separados","entrada":"EXP-F2-OUT-001","esperado":"origem explícita","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"SVC-EXP-F2-OUT-001","testado":"serviço identificado","entrada":"EXP-F2-OUT-001","esperado":"R&S ou TMO","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"HYP-EXP-F2-OUT-001","testado":"hipótese estruturada","entrada":"EXP-F2-OUT-001","esperado":"Se/Para/Então/Porque/Mediremos","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"OWNER-EXP-F2-OUT-001","testado":"responsáveis humanos sintéticos","entrada":"EXP-F2-OUT-001","esperado":"HUMANO-SINTETICO","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"WIN-EXP-F2-OUT-001","testado":"janela e análise sintéticas","entrada":"EXP-F2-OUT-001","esperado":"sem execução","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"BUD-EXP-F2-OUT-001","testado":"orçamento sintético","entrada":"EXP-F2-OUT-001","esperado":"não solicitada","obtido":"PASS","status":"aprovado","evidencia":"data/briefings.json"},
+    {"id":"NEG-MISSING","testado":"campo obrigatório ausente","entrada":"fixture incompleta sintética","esperado":"bloqueado","obtido":"PASS","status":"aprovado","evidencia":"data/blockers.json"},
+    {"id":"NEG-REAL","testado":"dado real na massa sintética","entrada":"fixture proibida","esperado":"bloqueado","obtido":"PASS","status":"aprovado","evidencia":"evidence/limits.md"},
+    {"id":"NEG-AGENT","testado":"aprovação por agente","entrada":"tentativa sintética","esperado":"bloqueado","obtido":"PASS","status":"aprovado","evidencia":"data/approvals.json"},
+    {"id":"NEG-EXTERNAL","testado":"ação externa não autorizada","entrada":"tentativa sintética","esperado":"bloqueado","obtido":"PASS","status":"aprovado","evidencia":"surface/state-machine.json"},
+    {"id":"VER-001","testado":"versionamento material","entrada":"v1 -> v2 -> v3 sintético","esperado":"histórico preservado","obtido":"PASS","status":"aprovado","evidencia":"report/atendimento-criterios-f2-t01.md"},
+    {"id":"RB-001","testado":"rollback documental","entrada":"retomada sintética de v1","esperado":"recuperar v1 sem apagar versões","obtido":"PASS","status":"aprovado","evidencia":"report/atendimento-criterios-f2-t01.md"}
   ],
   "summary":{"total":20,"passed":20,"failed":0}
 }
