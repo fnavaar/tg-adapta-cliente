@@ -8,6 +8,6 @@
 - autorizacao_implementacao: ausente — Champion autorizou somente debate e fechamento; implementação ainda proibida
 - teste_humano: pendente — será exigido ao fim da implementação
 - verificacao_automatica: não aplicável — debate documental, sem implementação
-- ultima_acao: Champion aprovou origem e canal separados; origem pode ser inbound, outbound ou não identificado sem inferência; canais sintéticos são permitidos sem execução; canais novos exigem descrição e aprovação humana; fluxo RD Station/1CRM não é presumido; rastreabilidade futura deve ser preservada sem inventar métricas
-- proxima_acao: deliberar com o Champion a definição de versão de criativo
-- atualizado_em: 2026-09-09T11:39:00-03:00
+- ultima_acao: Champion aprovou versionamento separado de briefing e criativo, preservação integral de versões anteriores e definição de alteração material; correções formais podem ser rastreáveis sem nova versão artificial; rollback é apenas documental nesta task
+- proxima_acao: deliberar com o Champion a definição de responsável
+- atualizado_em: 2026-09-09T11:56:00-03:00
