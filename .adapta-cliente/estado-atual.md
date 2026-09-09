@@ -8,6 +8,6 @@
 - autorizacao_implementacao: ausente — Champion autorizou somente debate e fechamento; implementação ainda proibida
 - teste_humano: pendente — será exigido ao fim da implementação
 - verificacao_automatica: não aplicável — debate documental, sem implementação
-- ultima_acao: Champion aprovou serviço limitado a R&S/TMO/R&S + TMO e oferta descrita por mensagem, problema e resultado esperado; em R&S + TMO a relação deve ser explicada e resultados mantidos identificáveis por serviço quando possível; intenção não identificada não será inferida; oferta não altera preço, margem, desconto ou autorização de gasto
-- proxima_acao: deliberar com o Champion a definição de canal
-- atualizado_em: 2026-09-09T11:25:00-03:00
+- ultima_acao: Champion aprovou origem e canal separados; origem pode ser inbound, outbound ou não identificado sem inferência; canais sintéticos são permitidos sem execução; canais novos exigem descrição e aprovação humana; fluxo RD Station/1CRM não é presumido; rastreabilidade futura deve ser preservada sem inventar métricas
+- proxima_acao: deliberar com o Champion a definição de versão de criativo
+- atualizado_em: 2026-09-09T11:39:00-03:00
