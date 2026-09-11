@@ -29,9 +29,14 @@
 
 ## Gate atual
 
-**F2-T02 CONCLUÍDA.** F2-T03 depende de análise e autorização expressa separadas.
+**F2-T02 CONCLUÍDA.** F2-T03 depende de análise e autorização expressa separadas; não deve ser iniciada automaticamente.
 
-## Fase 1 arquivada
+## Fase 1 arquivada e homologada visualmente
 
 - Fase 1 foi encerrada em 2026-09-03 e está preservada em `05_entregas/fase-1/`.
-- O histórico declara 6/6 tasks concluídas e aceite humano registrado; a fonte técnica viva não é versionada neste repositório.
+- Em 11/09/2026, foi realizada homologação visual retroativa pelo Champion, com **6 homologações executadas e 6/6 aprovadas**.
+- F1-T01 a F1-T06 permanecem concluídas.
+- A Fase 1 passa a ter evidência técnica e validação visual retroativa pelo Champion.
+- Nenhuma alteração funcional foi necessária durante a homologação.
+- Nenhum código, banco, migration, hook, dado ou regra da Fase 1 foi alterado.
+- A pendência documental já identificada da F2-T03 permanece sem correção e a pendência existente de `.skip.config.json` permanece registrada, sem tentativa de resolução.
