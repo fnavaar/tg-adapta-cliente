@@ -1,13 +1,13 @@
 # STATUS — Projeto TG Mais Serviços de Tecnologia e RH LTDA
 
-> **Atualizado em:** 2026-09-09 · **Por:** Adapta / Consultor
+> **Atualizado em:** 2026-09-11 · **Por:** Adapta / Consultor
 
 ## Onde estamos
 
 - **Fase atual:** 2 — Sistema de campanhas e experimentação de Growth Marketing (LIBERADA PARA EXECUÇÃO).
-- **Task ativa:** F2-T02 — Provar validações de briefing incompleto, duplicação e aprovação de publicação/gasto.
-- **Task anterior:** F2-T01 concluída e validada (20/20 testes TDD aprovados, superfície e evidências publicadas em `05_entregas/fase-2/f2-t01/`).
-- **Progresso:** 1 de 9 tasks concluídas (F2-T02 liberada para execução).
+- **Task ativa:** nenhuma; F2-T02 concluída e F2-T03 não iniciada.
+- **Task anterior:** F2-T02 concluída e validada humanamente em 2026-09-11.
+- **Progresso:** 2 de 9 tasks concluídas (F2-T01 e F2-T02).
 
 ## Resultado técnico da F2-T01
 
@@ -19,13 +19,17 @@
 - Relatório: `05_entregas/fase-2/f2-t01/report/atendimento-criterios-f2-t01.md`.
 - Validação humana: aprovada expressamente.
 
+## Resultado da F2-T02
+
+- Relatório de fechamento: `05_entregas/fase-2/f2-t02/relatorio-fechamento.md`.
+- Validação humana: testes RED, duplicidade, versionamento/histórico, separação de preparação/publicação/gasto e permissões aprovados ou comprovados conforme relatório.
+- Correções retestadas: v0.0.60 (validação do RED) e v0.0.61 (mensagem de duplicidade); QA completo passou nas duas versões.
+- Limite: publicação e gasto foram validados exclusivamente como controles sintéticos; não houve execução real.
+- Ressalva: CA-2-02 e CA-2-03, em sentido amplo de captura de leads e relatório de métricas, não são declarados como entregues pela F2-T02.
+
 ## Gate atual
 
-**LIBERADA PARA EXECUÇÃO.** Todos os impeditivos foram removidos. F2-T02 está autorizada e pronta para execução imediata pelo champion.
-
-## Próxima ação
-
-Executar **F2-T02 — Provar validações de briefing incompleto, duplicação e aprovação de publicação/gasto.**
+**F2-T02 CONCLUÍDA.** F2-T03 depende de análise e autorização expressa separadas.
 
 ## Fase 1 arquivada
 
