@@ -1,14 +1,14 @@
 # Estado atual — Adapta Cliente
 
 - fase: 2
-- task_id: nenhuma
+- task_id: F2-T04
 - champion: João Paulo
-- spec: nenhuma
-- etapa: concluida
-- autorizacao_implementacao: confirmada — Champion autorizou a implementação da F2-T03 conforme plano aprovado; depois autorizou o fechamento formal
-- teste_humano: aprovado — 4/4 testes da F2-T03 aprovados expressamente pelo Champion em 2026-09-14
-- verificacao_automatica: passou — Skip v0.0.64 / 00bb006; migration 0019 aplicada; QA setup, análise estática, build, integrações e testes passaram; regressão Fase 1/F2-T01/F2-T02 passou; exatamente três fixtures ATR confirmadas
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-09-14-0935-atr-fonte-unica.md
-- ultima_acao: F2-T03 concluída formalmente; evidências, divergência documental, pendência multi-fonte e metadado preexistente do `.skip.config.json` preservados; Fase 1, F2-T01 e F2-T02 mantidas
-- proxima_acao: aguardar nova análise e autorização expressa para F2-T04; não iniciar automaticamente
-- atualizado_em: 2026-09-14T09:35:00-03:00
+- spec: 04-fase-atual/specs/spec-f2-002-integracao-meta-atribuicao.md
+- etapa: aguardando_autorizacao
+- autorizacao_implementacao: ausente — Champion autorizou somente a análise da F2-T04; implementação não autorizada
+- teste_humano: pendente
+- verificacao_automatica: pendente
+- aprendizado: pendente
+- ultima_acao: análise oficial da F2-T04 concluída; F2-T03 preservada; DÚVIDA documental CA-2-04..06 versus CA-2-05..07 registrada; necessidade de lote-fonte independente identificada para evitar reconciliação tautológica
+- proxima_acao: aguardar autorização expressa para implementar somente a F2-T04, após decisão sobre os pontos bloqueantes destacados na análise
+- atualizado_em: 2026-09-14T09:42:00-03:00
