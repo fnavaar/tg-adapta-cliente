@@ -1,13 +1,13 @@
 # STATUS — Projeto TG Mais Serviços de Tecnologia e RH LTDA
 
-> **Atualizado em:** 2026-09-11 · **Por:** Adapta / Consultor
+> **Atualizado em:** 2026-09-14 · **Por:** Adapta / Consultor
 
 ## Onde estamos
 
 - **Fase atual:** 2 — Sistema de campanhas e experimentação de Growth Marketing (LIBERADA PARA EXECUÇÃO).
-- **Task ativa:** nenhuma; F2-T02 concluída e F2-T03 não iniciada.
-- **Task anterior:** F2-T02 concluída e validada humanamente em 2026-09-11.
-- **Progresso:** 2 de 9 tasks concluídas (F2-T01 e F2-T02).
+- **Task ativa:** nenhuma; F2-T03 concluída e F2-T04 não iniciada.
+- **Task anterior:** F2-T03 concluída e validada humanamente em 2026-09-14.
+- **Progresso:** 3 de 9 tasks concluídas (F2-T01, F2-T02 e F2-T03).
 
 ## Resultado técnico da F2-T01
 
@@ -27,9 +27,26 @@
 - Limite: publicação e gasto foram validados exclusivamente como controles sintéticos; não houve execução real.
 - Ressalva: CA-2-02 e CA-2-03, em sentido amplo de captura de leads e relatório de métricas, não são declarados como entregues pela F2-T02.
 
+## Resultado da F2-T03
+
+- Relatório de fechamento: `05_entregas/fase-2/f2-t03/relatorio-fechamento.md`.
+- Entrega: contrato de atribuição de fonte única, três fixtures sintéticas e registro da pendência multi-fonte.
+- Fixtures: `ATR-F2-IN-001`, `ATR-F2-OUT-001` e `ATR-F2-UNK-001`.
+- Migration: `0019_f2_t03_atr_fonte_unica` aplicada no Skip.
+- Skip: v0.0.64, hash `00bb006`.
+- QA oficial: setup, análise estática, build, integrações e testes passaram.
+- Validação humana: 4/4 testes aprovados em 2026-09-14.
+- Limites: sem Meta, RD Station, 1CRM, segunda fonte, schema novo, campo novo, hook novo ou decisão de identidade global/composta.
+
 ## Gate atual
 
-**F2-T02 CONCLUÍDA.** F2-T03 depende de análise e autorização expressa separadas; não deve ser iniciada automaticamente.
+**F2-T03 CONCLUÍDA E VALIDADA.** F2-T04 depende de análise e autorização expressa separadas; não deve ser iniciada automaticamente.
+
+## Pendências preservadas
+
+- A divergência documental de numeração entre `fase.md`/matriz e a SPEC F2-002 permanece aberta, sem correção unilateral.
+- A pendência arquitetural de identidade técnica/multi-fonte permanece para tasks posteriores.
+- O `.skip.config.json` mantém a alteração preexistente `deployment.lastDevBuildRef = c67ddca`, correspondente ao Skip v0.0.63; a alteração não modificou proteções, rotas, entrypoint ou regras, e não foi causada pela migration 0019.
 
 ## Fase 1 arquivada e homologada visualmente
 
@@ -39,4 +56,9 @@
 - A Fase 1 passa a ter evidência técnica e validação visual retroativa pelo Champion.
 - Nenhuma alteração funcional foi necessária durante a homologação.
 - Nenhum código, banco, migration, hook, dado ou regra da Fase 1 foi alterado.
-- A pendência documental já identificada da F2-T03 permanece sem correção e a pendência existente de `.skip.config.json` permanece registrada, sem tentativa de resolução.
+
+## F2-T01 e F2-T02 preservadas
+
+- F2-T01 permanece concluída e validada.
+- F2-T02 permanece concluída e validada.
+- Nenhuma alteração funcional adicional foi feita no fechamento da F2-T03.
