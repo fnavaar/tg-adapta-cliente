@@ -7,4 +7,4 @@ Esta pasta contém somente as SPECs e tasks da Fase 2. A Fase 1 encerrada foi ar
 - `matriz-de-rastreabilidade.md`: origem → SPEC → critério → task.
 - `specs/`: contratos executáveis das entregas.
 
-Fase 2 liberada para execução: a task F2-T01 foi concluída/validada e a task F2-T02 está autorizada e liberada para execução imediata pelo champion. Execute apenas uma task por vez e obtenha teste humano antes da seguinte.
+Fase 2 liberada para execução controlada: F2-T01, F2-T02, F2-T03 e F2-T04 foram concluídas e validadas. F2-T05 é a próxima task, não foi iniciada e requer autorização expressa do Champion. Execute apenas uma task por vez e obtenha teste humano antes da seguinte.

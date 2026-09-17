@@ -1,8 +1,8 @@
 # Fase 2 — Tasks gerais
 
 **Plano:** TG Mais Serviços / `6b09d189`
-**Estado:** Liberadas para execução no repositório do cliente; F2-T01 concluída/validada e F2-T02 autorizada para execução imediata pelo champion.
+**Estado:** Fase 2 liberada para execução controlada no repositório do cliente; F2-T01, F2-T02, F2-T03 e F2-T04 concluídas e validadas. F2-T05 é a próxima task da ordem, mas permanece não iniciada e depende de autorização expressa do Champion.
 
 ## Tasks
 
-Ver `fase.md` para a tabela operacional completa, critérios, provas, evidências, pré-condições e pontos de parada de F2-T01 a F2-T09.
+Ver `fase.md` para a tabela operacional completa, critérios, provas, evidências, pré-condições e pontos de parada de F2-T01 a F2-T09. Execute apenas uma task por vez e obtenha teste humano antes da seguinte.
