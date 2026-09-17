@@ -6,37 +6,57 @@
     "adapta": "0.7.0",
     "adaptaCliente": "0.2.0"
   },
-  "generatedAt": "2026-09-09T18:35:00.000Z",
+  "generatedAt": "2026-09-17T17:45:00.000Z",
   "files": [
     {
       "path": "04_fase-atual/README.md",
-      "sha256": "8bba69205eac3c2a0568a2089652542863674c156af9c4a46466f835139f9305",
+      "sha256": "cf33fed8c1a187a8e36c8d4458325c669426f70a90af18945c38dbab5b6758b7",
       "classification": "template-publico"
     },
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "047a1d8b7540e5a96fd51aea629103405e4b8dc755b4f71b8d9132196e00933f",
+      "sha256": "81e2a92ac987341380c9b4a60f479e39c82d6dd0b373158788acaedd61b94671",
       "classification": "fase-atual"
     },
     {
       "path": "04_fase-atual/00-Tasks_Gerais.md",
-      "sha256": "0eb7440ae8dddb0bf3c792b8e52ec01b6139ae4b1f23329587a1ddd62876ad42",
+      "sha256": "321c81026f924d918cc508c5e08c43b931e4609f1654a2fd2983b14a6b99a848",
       "classification": "tasks-gerais"
     },
     {
       "path": "04_fase-atual/matriz-de-rastreabilidade.md",
-      "sha256": "9d0ec3802679e20cf697cc622736731243250c2dd4dacec613dc1f43b6f95714",
+      "sha256": "2a73b40cd7949303d52e54454c1557ef4f66ed49c7724c5fad542292a710533e",
       "classification": "matriz-rastreabilidade"
     },
     {
-      "path": "04_fase-atual/specs/spec-f2-001-sistema-campanhas-experimentacao.md",
-      "sha256": "faf4a64c6c9dd78c0ddceac27a86f735795726ec21fe3f6a787a3fd820487806",
+      "path": "04_fase-atual/specs/spec-f2-001-briefing-experimento-controlado.md",
+      "sha256": "9404db73f445689eb24e06f6010931de1e07fe128f619470ebda175376e03a95",
       "classification": "spec-fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-f2-002-integracao-meta-atribuicao.md",
-      "sha256": "185ec05bafb38f7e66778e72b63368ac80f88c55e81d3e45069b60610f5fd000",
+      "path": "04_fase-atual/specs/spec-f2-002-atribuicao-qualidade.md",
+      "sha256": "f5d052035c8c7adf28b74bd79db803166926e5f690c034f59061ee88fadd3fa2",
       "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-f2-003-decisao-do-experimento.md",
+      "sha256": "3ff935f08fa9325e0f82cb74d3dc417e57a904173a11b44bdd593f613046f0af",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-f2-004-prova-meta-ou-fallback.md",
+      "sha256": "0e879906fa7ac40d1f3c7a919550c4f9365a2ed7da0a31793cac364efdeddd20",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "a967b3ddfa19732530d0994b206e66cc923e385d747b0e082a2b34af43718384",
+      "classification": "estado"
+    },
+    {
+      "path": "changelog.md",
+      "sha256": "38cd96b0babf4d0502ca536638c2563a36478bfc4b18b0a579228d877e06c671",
+      "classification": "estado"
     }
   ]
 }
