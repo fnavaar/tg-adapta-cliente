@@ -51,17 +51,23 @@
 - Regressão: painel 10 × fonte 10, diferença 0; nenhum `T04-*` gravado; Fase 1 e F2-T01/T02/T03 preservadas.
 - Limites: sem Meta, RD Station, 1CRM, dados reais, identidade global/multi-fonte, relação `demandas` ↔ `experimentos_f2`, nova collection/campo, alteração de RLS/hook/schema ou início da F2-T05.
 
+## Regularização documental (2026-09-17)
+
+- Publicadas as SPECs **F2-003** (decisão do experimento) e **F2-004** (prova Meta ou fallback manual), que constavam da decomposição aprovada em 03/09 mas não haviam sido enviadas na liberação original da fase — causa do bloqueio documental da F2-T05 identificado pelo Champion.
+- As SPECs F2-001 e F2-002 foram substituídas pelas versões validadas da mesma decomposição (arquivos antigos arquivados com nota de substituição), encerrando a divergência de numeração CA/RN registrada como aberta desde a F2-T03.
+- As tasks F2-T01..T04 foram executadas contra os contratos destas versões (fixtures `EXP-F2-*`, `ATR-F2-*`, reconciliação por `record_id`); nenhum resultado, evidência ou aceite foi alterado retroativamente.
+- O `handoff-manifest.json` foi atualizado para refletir os contratos ativos da fase.
+
 ## Gate atual
 
-**F2-T04 CONCLUÍDA E VALIDADA.** F2-T05 é a próxima task da ordem, permanece não iniciada e exige autorização expressa separada do Champion.
+**F2-T05 ELEGÍVEL COM O CONTRATO PUBLICADO.** Para autorizar a execução, o Champion precisa fornecer dois insumos que a SPEC exige e não podem ser inferidos: (1) **decisor identificado** (quem decide continuar/ajustar/interromper) e (2) **critério de decisão** definido no briefing (RN-F2-008). Após registrar esses insumos, a execução exige autorização expressa separada. F2-T07 também é elegível na ordem (independente de F2-T05), uma task por vez.
 
 ## Pendências preservadas
 
-- A divergência documental de numeração entre `fase.md`/matriz e a SPEC F2-002 permanece aberta, sem correção unilateral.
 - A pendência arquitetural de identidade técnica/multi-fonte permanece para tasks posteriores.
 - Na F2-T04, `record_id` foi usado somente no escopo da fonte declarada; não houve identidade global ou composta.
 - O `.skip.config.json` mantém a alteração preexistente `deployment.lastDevBuildRef = c67ddca`, correspondente ao Skip v0.0.63; a alteração não modificou proteções, rotas, entrypoint ou regras, e não foi causada pela T04.
-- Nenhuma integração Meta, RD Station ou 1CRM foi executada nesta task.
+- Nenhuma integração Meta, RD Station ou 1CRM foi executada.
 - Nenhuma relação estrutural entre `demandas` e `experimentos_f2` foi criada.
 
 ## Fase 1 arquivada e homologada visualmente
@@ -73,10 +79,7 @@
 - Nenhuma alteração funcional foi necessária durante a homologação.
 - Nenhum código, banco, migration, hook, dado ou regra da Fase 1 foi alterado.
 
-## F2-T01 e F2-T02 preservadas
+## F2-T01 a F2-T04 preservadas
 
-- F2-T01 permanece concluída e validada.
-- F2-T02 permanece concluída e validada.
-- F2-T03 permanece concluída e validada.
-- F2-T04 permanece concluída e validada.
+- F2-T01, F2-T02, F2-T03 e F2-T04 permanecem concluídas e validadas.
 - F2-T05 não foi iniciada.
