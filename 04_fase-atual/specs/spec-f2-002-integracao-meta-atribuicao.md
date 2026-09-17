@@ -1,7 +1,11 @@
-# SPEC-F2-002 — Integração Meta Ads e atribuição de origem
+# SPEC-F2-002 — Atribuição de origem e qualidade do experimento (ARQUIVADA)
+
+> **Nota de arquivamento (2026-09-17):** este arquivo foi substituído por `spec-f2-002-atribuicao-qualidade.md`, a versão validada da decomposição aprovada em 03/09, cuja numeração (CA-2-04..06, RN-F2-004..007) é a referida por `fase.md`, pela matriz e pelas evidências das tasks F2-T03/F2-T04. O conteúdo histórico abaixo é preservado apenas para rastreabilidade; não é o contrato ativo. O contrato ativo da F2-002 está em `spec-f2-002-atribuicao-qualidade.md`.
+
+# SPEC-F2-002 — Integração Meta Ads e atribuição de origem (HISTÓRICO)
 
 **Fase:** 2 — Sistema de campanhas e experimentação de Growth Marketing  
-**Status:** liberada para execução  
+**Status:** substituída em 2026-09-17  
 **Dono:** gestor de tráfego, responsável de TI/Dados do cliente e consultor Adapta  
 **Origem no escopo:** DC-003, C-01, C-04, G-009 e RQ-002  
 **Degrau da solução:** reuso/conector nativo — integrar a API/Webhook do Meta Ads quando token, permissões e schema forem demonstrados; utilizar importação manual com marcação de origem como fallback obrigatório se o acesso direto não for autorizado.
