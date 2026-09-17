@@ -6,7 +6,7 @@
     "adapta": "0.7.0",
     "adaptaCliente": "0.2.0"
   },
-  "generatedAt": "2026-09-17T17:45:00.000Z",
+  "generatedAt": "2026-09-17T17:25:00.000Z",
   "files": [
     {
       "path": "04_fase-atual/README.md",
@@ -15,17 +15,17 @@
     },
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "81e2a92ac987341380c9b4a60f479e39c82d6dd0b373158788acaedd61b94671",
+      "sha256": "4994258b81ff8130cf2d1ad709483cf0cc2a04602802e6f1fb64c7106231377b",
       "classification": "fase-atual"
     },
     {
       "path": "04_fase-atual/00-Tasks_Gerais.md",
-      "sha256": "321c81026f924d918cc508c5e08c43b931e4609f1654a2fd2983b14a6b99a848",
+      "sha256": "8c478b7006f30f1e9bb17a48abaa05865188baccacea43331961a3057e09455c",
       "classification": "tasks-gerais"
     },
     {
       "path": "04_fase-atual/matriz-de-rastreabilidade.md",
-      "sha256": "2a73b40cd7949303d52e54454c1557ef4f66ed49c7724c5fad542292a710533e",
+      "sha256": "cbfe8b58bb91f45fdb708096945b8be20aa86b0feaf02d03638a50f1b6b3c0b2",
       "classification": "matriz-rastreabilidade"
     },
     {
@@ -40,7 +40,7 @@
     },
     {
       "path": "04_fase-atual/specs/spec-f2-003-decisao-do-experimento.md",
-      "sha256": "3ff935f08fa9325e0f82cb74d3dc417e57a904173a11b44bdd593f613046f0af",
+      "sha256": "b494106f87a84862a4b6a789e8d54d0d3b46cf71c877539daf75d27ad73f8ad8",
       "classification": "spec-fase-atual"
     },
     {
@@ -50,12 +50,12 @@
     },
     {
       "path": "STATUS.md",
-      "sha256": "a967b3ddfa19732530d0994b206e66cc923e385d747b0e082a2b34af43718384",
+      "sha256": "473f5f411c343f5f7b7bb6ef9acfb19790d9abdd2046655935c312abc3b4be15",
       "classification": "estado"
     },
     {
       "path": "changelog.md",
-      "sha256": "38cd96b0babf4d0502ca536638c2563a36478bfc4b18b0a579228d877e06c671",
+      "sha256": "8a341a052cb17b1f798bdec851c78e520670eac229c3dc14e6df1ea335a1b1cb",
       "classification": "estado"
     }
   ]
