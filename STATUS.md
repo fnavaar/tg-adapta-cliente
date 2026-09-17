@@ -6,9 +6,9 @@
 ## Onde estamos
 
 - **Fase atual:** 2 — Sistema de campanhas e experimentação de Growth Marketing (LIBERADA PARA EXECUÇÃO).
-- **Task ativa:** nenhuma; F2-T04 concluída e validada humanamente em 2026-09-17.
-- **Task anterior:** F2-T04 concluída e validada; F2-T05 não iniciada.
-- **Progresso:** 4 de 9 tasks concluídas (44%).
+- **Task ativa:** F2-T05 — AUTORIZADA em 2026-09-17 (decisor: João Paulo, Champion/direção; critério conforme briefing, RN-F2-008).
+- **Task anterior:** F2-T04 concluída e validada em 2026-09-17.
+- **Progresso:** 4 de 9 tasks concluídas (44%); F2-T05 em execução.
 
 ## Resultado técnico da F2-T01
 
@@ -51,16 +51,16 @@
 - Regressão: painel 10 × fonte 10, diferença 0; nenhum `T04-*` gravado; Fase 1 e F2-T01/T02/T03 preservadas.
 - Limites: sem Meta, RD Station, 1CRM, dados reais, identidade global/multi-fonte, relação `demandas` ↔ `experimentos_f2`, nova collection/campo, alteração de RLS/hook/schema ou início da F2-T05.
 
-## Regularização documental (2026-09-17)
+## Regularização documental e liberação da F2-T05 (2026-09-17)
 
 - Publicadas as SPECs **F2-003** (decisão do experimento) e **F2-004** (prova Meta ou fallback manual), que constavam da decomposição aprovada em 03/09 mas não haviam sido enviadas na liberação original da fase — causa do bloqueio documental da F2-T05 identificado pelo Champion.
 - As SPECs F2-001 e F2-002 foram substituídas pelas versões validadas da mesma decomposição (arquivos antigos arquivados com nota de substituição), encerrando a divergência de numeração CA/RN registrada como aberta desde a F2-T03.
 - As tasks F2-T01..T04 foram executadas contra os contratos destas versões (fixtures `EXP-F2-*`, `ATR-F2-*`, reconciliação por `record_id`); nenhum resultado, evidência ou aceite foi alterado retroativamente.
-- O `handoff-manifest.json` foi atualizado para refletir os contratos ativos da fase.
+- **F2-T05 AUTORIZADA**: o Champion confirmou positivamente a liberação; decisor registrado na SPEC/jornada/matriz — João Paulo (Champion/direção); critério de decisão conforme briefing de cada experimento (RN-F2-008) — na prova sintética, o briefing sintético; decisão real exige critério real.
 
 ## Gate atual
 
-**F2-T05 ELEGÍVEL COM O CONTRATO PUBLICADO.** Para autorizar a execução, o Champion precisa fornecer dois insumos que a SPEC exige e não podem ser inferidos: (1) **decisor identificado** (quem decide continuar/ajustar/interromper) e (2) **critério de decisão** definido no briefing (RN-F2-008). Após registrar esses insumos, a execução exige autorização expressa separada. F2-T07 também é elegível na ordem (independente de F2-T05), uma task por vez.
+**F2-T05 EM EXECUÇÃO (AUTORIZADA).** Implementar conforme SPEC F2-003: fixture → bloqueio RED (`DEC-F2-RED-001`) → decisão GREEN (`DEC-F2-001`) → rollback/revogação. Ao fim: provas automatizadas + **teste humano obrigatório do Champion antes de qualquer avanço**. F2-T06 bloqueada até aceite da T05; F2-T07 elegível mas não inicia enquanto a T05 estiver em execução (uma task por vez).
 
 ## Pendências preservadas
 
@@ -82,4 +82,4 @@
 ## F2-T01 a F2-T04 preservadas
 
 - F2-T01, F2-T02, F2-T03 e F2-T04 permanecem concluídas e validadas.
-- F2-T05 não foi iniciada.
+- F2-T05 autorizada; F2-T06 e F2-T08 bloqueadas; F2-T07 elegível na ordem; F2-T09 condicional.
