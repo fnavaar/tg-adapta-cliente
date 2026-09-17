@@ -1,7 +1,11 @@
-# SPEC-F2-001 — Sistema de campanhas e experimentação de Growth Marketing
+# SPEC-F2-001 — Sistema de campanhas e experimentação de Growth Marketing (ARQUIVADA)
+
+> **Nota de arquivamento (2026-09-17):** este arquivo foi substituído por `spec-f2-001-briefing-experimento-controlado.md`, a versão validada da decomposição aprovada em 03/09, cuja numeração (CA-2-01..03, RN-F2-001..003) é a referida por `fase.md`, pela matriz e pelas evidências das tasks F2-T01/F2-T02. O conteúdo histórico abaixo é preservado apenas para rastreabilidade; não é o contrato ativo. O contrato ativo da F2-001 está em `spec-f2-001-briefing-experimento-controlado.md`.
+
+# SPEC-F2-001 — Sistema de campanhas e experimentação de Growth Marketing (HISTÓRICO)
 
 **Fase:** 2 — Sistema de campanhas e experimentação de Growth Marketing  
-**Status:** liberada para execução  
+**Status:** substituída em 2026-09-17  
 **Dono:** marketing, gestor de tráfego e consultor Adapta  
 **Origem no escopo:** C-02, C-01 expandido, C-04 expandido, RQ-002, RQ-005, DC-001, DC-004, DC-007 e G-009  
 **Degrau da solução:** reuso/extensão — estender o dicionário de demanda e a camada de pipeline da Fase 1 para estruturar o registro de experimentos de Growth Marketing, mantendo formulários/planilhas de cadastro e relatórios de experimentos vinculados.
