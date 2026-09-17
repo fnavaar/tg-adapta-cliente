@@ -2,12 +2,12 @@
 
 - task_id: F2-T05
 - champion: João Paulo
-- spec: 04_fase-atual/specs/spec-f2-003-decisao-do-experimento.md
-- etapa: aguardando_autorizacao
-- autorizacao_implementacao: liberação documental e autorização anterior registradas em 2026-09-17 após regularização; esta rodada executou somente nova análise, sem nova autorização de implementação nesta mensagem
-- teste_humano: pendente — obrigatório ao fim da T05, antes de qualquer avanço para F2-T06
-- verificacao_automatica: pendente — análise somente leitura concluída; Skip funcional v0.0.66/c27bc10 preservado, com versões posteriores v0.0.67–v0.0.69 apenas de governança; nenhuma alteração funcional feita
+- spec: 04-fase-atual/specs/spec-f2-003-decisao-do-experimento.md
+- etapa: aguardando_teste_humano
+- autorizacao_implementacao: confirmada — Champion autorizou a implementação da F2-T05 conforme a SPEC F2-003 regularizada e o plano apresentado
+- teste_humano: pendente — iniciar pelo cenário RED; obrigatório antes de qualquer avanço para F2-T06
+- verificacao_automatica: passou — Skip v0.0.74/5f2be90; QA setup, análise estática, build, integrações e testes passaram; migration 0020 aplicada; collection decisoes_f2, hook exclusivo, fixtures RED/GREEN/rollback e rota /decisoes-f2 verificadas; TDD determinístico 6/6; regressão /, /experimentos e /atribuicao-t04 preservada; demandas 10×10 e T04 intactas. Falha inicial v0.0.70 (import incorreto) corrigida antes do apply final.
 - aprendizado: pendente
-- ultima_acao: nova análise oficial da F2-T05 concluída após a regularização: F2-003 existe; RN-F2-008/RN-F2-009/RN-F2-010 e CA-2-07..09 foram relidos; decisor João Paulo confirmado; produto real auditado e ainda sem collection, rota ou fila de decisões
-- proxima_acao: aguardar autorização expressa do Champion para implementar o plano atualizado da F2-T05; não iniciar F2-T06 nem F2-T07
-- atualizado_em: 2026-09-17T19:45:59-03:00
+- ultima_acao: implementação F2-T05 concluída tecnicamente; estado movido para aguardando_teste_humano sem iniciar F2-T06/F2-T07
+- proxima_acao: conduzir teste humano RED da F2-T05, um teste por vez; não concluir sem validação expressa do Champion
+- atualizado_em: 2026-09-17T20:20:00-03:00
