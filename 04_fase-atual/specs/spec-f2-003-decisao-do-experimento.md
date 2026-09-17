@@ -1,7 +1,7 @@
 # SPEC-F2-003 — Decisão humana de continuar, ajustar ou interromper
 
 **Fase:** 2  
-**Status:** liberada para execução — F2-T05 é a próxima task; exige decisor identificado e critério de decisão como insumo do Champion antes da autorização expressa  
+**Status:** liberada para execução — F2-T05 autorizada em 2026-09-17; decisor: João Paulo (Champion/direção); F2-T06 bloqueada até aceite por teste humano da T05  
 **Dono:** direção/marketing decide; consultor valida o primeiro ciclo  
 **Origem no escopo:** Fase 2, C-02, C-04, DC-007, G-001, G-006  
 **Degrau da solução:** reuso dos dados atribuídos pela F2-002 e registro mínimo de decisão — não automatiza otimização nem muda orçamento.
@@ -11,6 +11,8 @@
 - **Estado atual:** o escopo exige decisão baseada em qualidade, não clique/abandono isolado; meta/capacidade não podem ser inferidas.
 - **Estado desejado:** cada experimento encerrado recebe uma decisão humana, sua evidência e próxima ação, preservando a hipótese/versão avaliada.
 - **Decisões já fechadas:** opções são continuar, ajustar ou interromper; o agente não decide, publica ou muda orçamento.
+- **Decisor (registrado em 2026-09-17):** João Paulo, Champion/direção — confirmado pelo Champion após a regularização documental.
+- **Critério de decisão:** conforme RN-F2-008, é definido no briefing de cada experimento — na prova sintética da T05, o briefing sintético; decisão real de experimento real continua exigindo critério real definido no briefing.
 - **Bloqueios:** ausência de critério de decisão definido antes da execução impede encerrar o experimento como sucesso/fracasso.
 
 ## Resultado observável
@@ -98,11 +100,11 @@ Um `DEC-F2-###` vincula experimento, período, evidência de volume e qualidade,
 
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
 |---|---|---|---|---|---|---|---|---|
-| F2-T05 | Materializar o registro de decisão e a fila de próxima ação para um experimento já reconciliado. | Direção/marketing | F2-003 | RN-F2-008, RN-F2-010 | Dados e integrações; Fluxo e regras; Checklist | Captura/export do registro e permissões de decisão. | F2-T04 aceita; decisor identificado. | Elegível — aguarda decisor e critério de decisão (insumo do Champion) e autorização expressa |
+| F2-T05 | Materializar o registro de decisão e a fila de próxima ação para um experimento já reconciliado. | Direção/marketing | F2-003 | RN-F2-008, RN-F2-010 | Dados e integrações; Fluxo e regras; Checklist | Captura/export do registro e permissões de decisão. | F2-T04 aceita; decisor identificado. | AUTORIZADA — decisor João Paulo; única task ativa |
 | F2-T06 | Provar decisão baseada em qualidade e o histórico de ajuste/revogação. | Direção/marketing | F2-003 | CA-2-07, CA-2-08, CA-2-09 | Critérios de aceite; TDD da SPEC | Decisão humana, relatório referenciado e histórico de revogação/versão. | F2-T05 aceita por teste humano. | Bloqueada — depende de F2-T05 |
 
 ## Emendas
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
-| | | | |
+| 2026-09-17 | Champion (João Paulo) — confirmação positiva pós-regularização | F2-T05 | Registrar decisor e liberar a execução da task |
