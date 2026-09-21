@@ -67,6 +67,9 @@ A interface marca todos os cinco casos como **SIMULADO**. Nenhum é resposta rea
 - Nenhuma chamada externa.
 - F2-T09: não iniciada.
 
-## Limitação atual
+## Validação humana em andamento
 
-A validação humana ainda não foi executada. Estas evidências sustentam o gate de teste, não o fechamento formal da task.
+- **Teste 1 — APROVADO (2026-09-21 ~16:53)**: Champion executou o lote T04 e enviou PDF com as 7 verificações verdes, mensagem “PASSOU — todas as verificações determinísticas da T04”, pipeline preservado em 10 registros, 0 criações no replay e a seção T08 ainda não executada. Evidência: `uploads/d1df2dc5-teste_t08.pdf` (7 páginas).
+- **Teste 2 (lote manual e classificações)**: aguardando execução pelo Champion.
+- **Testes 3–5**: pendentes após aprovação do Teste 2.
+- A F2-T08 permanece aberta; nenhum aceite final foi declarado.
