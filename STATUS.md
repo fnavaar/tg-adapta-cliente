@@ -6,9 +6,9 @@
 ## Onde estamos
 
 - **Fase atual:** 2 — Sistema de campanhas e experimentação de Growth Marketing (LIBERADA PARA EXECUÇÃO).
-- **Task ativa:** nenhuma — F2-T07 concluída e validada em 2026-09-21.
+- **Task ativa:** F2-T08 — implementação concluída, aguardando teste humano do Champion.
 - **Task anterior:** F2-T07 concluída e validada em 2026-09-21.
-- **Progresso:** 7 de 9 tasks concluídas (78%); próximas elegíveis: nenhuma — F2-T08 bloqueada por dependência e F2-T09 condicional.
+- **Progresso:** 7 de 9 tasks concluídas (78%); F2-T08 aguarda teste humano; F2-T09 permanece condicional.
 
 ## Resultado técnico da F2-T01
 
@@ -26,7 +26,7 @@
 - Validação humana: testes RED, duplicação, versionamento/histórico, separação de preparação/publicação/gasto e permissões aprovados ou comprovados conforme relatório.
 - Correções retestadas: v0.0.60 (validação do RED) e v0.0.61 (mensagem de duplicidade); QA completo passou nas duas versões.
 - Limite: publicação e gasto foram validados exclusivamente como controles sintéticos; não houve execução real.
-- Ressalva: CA-2-02 e CA-2-03, em sentido amplo de captura de leads e relatório de métricas, não são declarados como entregues pela T02.
+- Ressalva: CA-2-02 e CA-2-03, em sentido amplo de captura de leads e relatório de métricas de alcance/conversão, não são declarados como entregues pela T02.
 
 ## Resultado da F2-T03
 
@@ -84,38 +84,34 @@
 - Limites confirmados: sem leads, formulários, contatos, dados pessoais, token, OAuth, chamada Meta, importação, nova estrutura ou alteração funcional.
 - Revalidação: Skip v0.0.81 (`e64f8bc`) preservado; migrations até `0020`; collections/rotas existentes, `demandas`, T04 e decisões preservadas; nenhuma task posterior iniciada.
 
-## Regularização documental e liberação da F2-T05 (2026-09-17)
+## Resultado da F2-T08 — aguardando teste humano
 
-- Publicadas as SPECs **F2-003** (decisão do experimento) e **F2-004** (prova Meta ou fallback manual), que constavam da decomposição aprovada em 03/09 mas não haviam sido enviadas na liberação original da fase — causa do bloqueio documental da F2-T05 identificado pelo Champion.
-- As SPECs F2-001 e F2-002 foram substituídas pelas versões validadas da mesma decomposição (arquivos antigos arquivados com nota de substituição), encerrando a divergência de numeração CA/RN registrada como aberta desde a F2-T03.
-- As tasks F2-T01..T04 foram executadas contra os contratos destas versões (fixtures `EXP-F2-*`, `ATR-F2-*`, reconciliação por `record_id`); nenhum resultado, evidência ou aceite foi alterado retroativamente.
-- **F2-T05 AUTORIZADA**: o Champion confirmou positivamente a liberação; decisor registrado na SPEC/jornada/matriz — João Paulo (Champion/direção); critério de decisão conforme briefing de cada experimento (RN-F2-008) — na prova sintética, o briefing sintético; decisão real exige critério real.
+- Relatório: `05_entregas/fase-2/f2-t08/relatorio-implementacao.md`.
+- Superfície: seção `F2-T08 · prova sintética do fallback manual` reutilizando a rota existente `/atribuicao-t04`; nenhuma página isolada nova.
+- Núcleo compartilhado: `src/lib/f2/reconciliation/core.ts`; T04 preservada como adapter em `src/lib/f2/t04/engine.ts`.
+- Adapter/contrato: `src/lib/f2/t08/manualBatch.ts`, com `META-F2-MANUAL-001`, ledger em memória, `batch_id`, replay e conflito de payload.
+- Lote: 5 linhas sintéticas, sem dados pessoais; classificações vinculado, não vinculado, desconhecido, divergente e inválido.
+- TDD T08: 8/8 aprovados no preview; regressão T04: 7/7 aprovados; `demandas`: 10 registros preservados.
+- QA oficial Skip v0.0.85 (`25c717a`): setup, análise estática, build, integrações e testes passaram.
+- Falhas 401/403/429/timeout/payload inválido: eventos injetados, marcados como `SIMULADO`, sem chamada Meta, sem retry automático e com retorno `fallback_manual`/`bloqueada`.
+- Não houve nova collection, migration, campo, hook, RLS, escrita em `demandas`, token/OAuth, dado real/pessoal, publicação ou alteração de orçamento.
+- Validação humana: pendente. A F2-T08 não está formalmente concluída.
 
 ## Gate atual
 
-**Nenhuma task em execução.** F2-T07 concluída e validada em 2026-09-21. F2-T08 permanece bloqueada por dependência da T07. F2-T09 é condicional.
+**F2-T08 está no gate de teste humano.** O Champion deve executar o roteiro registrado em `05_entregas/fase-2/f2-t08/roteiro-validacao-humana.md`. F2-T09 não foi iniciada e permanece condicional.
 
 ## Pendências preservadas
 
 - A pendência arquitetural de identidade técnica/multi-fonte permanece para tasks posteriores.
-- Na F2-T04, `record_id` foi usado somente no escopo da fonte declarada; não houve identidade global ou composta.
-- O `.skip.config.json` mantém a alteração preexistente `deployment.lastDevBuildRef = c67ddca`, correspondente ao Skip v0.0.63; a alteração não modificou proteções, rotas, entrypoint ou regras, e não foi causada pela T04.
+- Na F2-T04 e T08, `record_id` foi usado somente no escopo da fonte declarada; não houve identidade global ou composta.
+- O `.skip.config.json` mantém a alteração preexistente de metadado de build; não é alteração funcional da T08.
 - Nenhuma integração Meta, RD Station ou 1CRM foi executada.
 - Nenhuma relação estrutural entre `demandas` e `experimentos_f2` foi criada.
-- Na F2-T05, `DEC-F2-003` permanece na massa sintética como registro criado pelo botão genérico durante o teste (sem vínculo de rollback); preservada sem alteração.
-- Na F2-T06, a verificação foi somente leitura; não há correção funcional pendente para os CA-2-07/08/09.
-- Na F2-T07, `fallback_manual` é a modalidade documental aprovada; a prova do lote está reservada à T08 e a leitura real é condicional na T09.
+- Na F2-T05, `DEC-F2-003` permanece na massa sintética sem vínculo de rollback; preservada sem alteração.
+- F2-T09 aguarda aceite humano da T08, acesso real de leitura, payload autorizado, política de dados, contrato de chave e autorização própria.
 
-## Fase 1 arquivada e homologada visualmente
-
-- Fase 1 foi encerrada em 2026-09-03 e está preservada em `05_entregas/fase-1/`.
-- Em 11/09/2026, foi realizada homologação visual retroativa pelo Champion, com **6 homologações executadas e 6/6 aprovadas**.
-- F1-T01 a F1-T06 permanecem concluídas.
-- A Fase 1 passa a ter evidência técnica e validação visual retroativa pelo Champion.
-- Nenhuma alteração funcional foi necessária durante a homologação.
-- Nenhum código, banco, migration, hook, dado ou regra da Fase 1 foi alterado.
-
-## F2-T01 a F2-T07 preservadas
+## F2-T01 a F2-T08 preservadas
 
 - F2-T01, F2-T02, F2-T03, F2-T04, F2-T05, F2-T06 e F2-T07 permanecem concluídas e validadas.
-- F2-T08 permanece bloqueada por dependência da T07; F2-T09 é condicional. Nenhuma task posterior foi iniciada.
+- F2-T08 permanece implementada e aguardando teste humano; F2-T09 é condicional.
