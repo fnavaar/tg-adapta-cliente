@@ -7,8 +7,8 @@
 
 - **Fase atual:** 2 — Sistema de campanhas e experimentação de Growth Marketing (LIBERADA PARA EXECUÇÃO).
 - **Task ativa:** nenhuma — F2-T05 concluída e validada em 2026-09-21.
-- **Task anterior:** F2-T05 — 3/3 testes humanos aprovados em 2026-09-18 (RED 10:38, GREEN 10:47, rollback 11:35) + reteste GREEN aprovado em 2026-09-21 após correção do detector (Skip v0.0.78).
-- **Progresso:** 5 de 9 tasks concluídas (56%); F2-T06 e F2-T07 elegíveis, aguardando autorização expressa (uma task por vez).
+- **Task anterior:** F2-T04 concluída e validada em 2026-09-17.
+- **Progresso:** 5 de 9 tasks concluídas (56%); próximas elegíveis: F2-T06 e F2-T07.
 
 ## Resultado técnico da F2-T01
 
@@ -54,13 +54,14 @@
 ## Resultado da F2-T05
 
 - Relatório de fechamento: `05_entregas/fase-2/f2-t05/relatorio-fechamento.md`.
-- Entrega: collection `decisoes_f2` (migration `0020`), hook exclusivo de invariantes, seção Decisão de Marketing no detalhe do experimento, fila `/decisoes-f2` e fixtures RED/GREEN/rollback sintéticas.
-- Skip funcional: v0.0.78, hash `2a06902`; QA completo aprovado; TDD determinístico 6/6.
-- Validação humana: 3/3 testes aprovados em 2026-09-18 — RED bloqueado por ausência de qualidade; GREEN AJUSTAR registrado; rollback com `DEC-F2-004 → previous_decision_id = DEC-F2-002` e `DEC-F2-002` preservada revogada.
-- Reteste GREEN aprovado em 2026-09-21 após correção do detector (qualidade positiva ≠ marcador de ausência).
-- Transparência: `DEC-F2-003` foi criada pelo botão genérico durante o teste, sem vínculo com a cadeia de rollback; permanece na massa sintética, sem exclusão.
-- Correções de validação documentadas em `06_notas/debug/` (v0.0.76 rolagem, v0.0.77 botão de próxima decisão, v0.0.78 detector).
-- Limites: sem Meta, RD Station, 1CRM, Omie, dados reais, publicação, alteração de orçamento, execução automática de próxima ação, decisão "inconclusivo", clique como qualidade, relação estrutural `demandas` ↔ `experimentos_f2` ou alteração na T04/telas homologadas.
+- Entrega: collection `decisoes_f2` (migration `0020_f2_t05_decisoes`), hook exclusivo de invariantes, seção Decisão de Marketing no detalhe do experimento e fila `/decisoes-f2`, com fixtures sintéticas RED/GREEN/rollback.
+- Skip funcional da entrega: v0.0.78, hash `2a06902` (versão corrente v0.0.79, `d42864c`).
+- QA oficial: setup, análise estática, build, integrações e testes passaram.
+- TDD determinístico: 6/6 aprovados.
+- Validação humana: 3/3 testes aprovados em 2026-09-18 (RED, GREEN, rollback) + reteste do GREEN aprovado em 2026-09-21 após correção do detector.
+- Rollback provado: `DEC-F2-004` com `previous_decision_id = DEC-F2-002`; `DEC-F2-002` preservada como revogada; histórico sem exclusão.
+- Debugs registrados: `06_notas/debug/debug-2026-09-18-f2-t05-decisao-subsequente.md` e `06_notas/debug/debug-2026-09-18-f2-t05-detector-red-green.md`.
+- Limites: sem Meta, RD Station, 1CRM, Omie, dados reais, publicação, orçamento, decisão automática, relação `demandas` ↔ `experimentos_f2`, identidade global ou início de F2-T06/F2-T07.
 
 ## Regularização documental e liberação da F2-T05 (2026-09-17)
 
@@ -71,16 +72,16 @@
 
 ## Gate atual
 
-**NENHUMA TASK EM EXECUÇÃO.** F2-T06 (CA-2-07..09, mesma SPEC F2-003) e F2-T07 (checklist Meta/fallback, SPEC F2-004) estão elegíveis na ordem; F2-T08 bloqueada por dependência; F2-T09 condicional. Aguardando autorização expressa do Champion para a próxima task — uma por vez, com teste humano ao fim.
+**Nenhuma task em execução.** F2-T05 concluída e validada (2026-09-21). F2-T06 (Leva 6) e F2-T07 (Leva 5) estão elegíveis e aguardam autorização expressa do Champion — uma por vez. F2-T08 bloqueada por dependência da T07; F2-T09 condicional.
 
 ## Pendências preservadas
 
 - A pendência arquitetural de identidade técnica/multi-fonte permanece para tasks posteriores.
 - Na F2-T04, `record_id` foi usado somente no escopo da fonte declarada; não houve identidade global ou composta.
-- O `.skip.config.json` mantém a alteração preexistente `deployment.lastDevBuildRef = c67ddca`, correspondente ao Skip v0.0.63; a alteração não modificou proteções, rotas, entrypoint ou regras, e não foi causada pelas tasks.
-- Nenhuma integração Meta, RD Station, 1CRM ou Omie foi executada.
+- O `.skip.config.json` mantém a alteração preexistente `deployment.lastDevBuildRef = c67ddca`, correspondente ao Skip v0.0.63; a alteração não modificou proteções, rotas, entrypoint ou regras, e não foi causada pela T04.
+- Nenhuma integração Meta, RD Station ou 1CRM foi executada.
 - Nenhuma relação estrutural entre `demandas` e `experimentos_f2` foi criada.
-- `DEC-F2-003` permanece na massa sintética como registro do botão genérico, sem vínculo — preservada por transparência.
+- Na F2-T05, `DEC-F2-003` permanece na massa sintética como registro criado pelo botão genérico durante o teste (sem vínculo de rollback); preservada sem alteração.
 
 ## Fase 1 arquivada e homologada visualmente
 
@@ -94,4 +95,4 @@
 ## F2-T01 a F2-T05 preservadas
 
 - F2-T01, F2-T02, F2-T03, F2-T04 e F2-T05 permanecem concluídas e validadas.
-- F2-T06 e F2-T07 elegíveis na ordem; F2-T08 bloqueada; F2-T09 condicional.
+- F2-T06 e F2-T07 elegíveis, aguardando autorização expressa; F2-T08 bloqueada; F2-T09 condicional.
