@@ -116,7 +116,7 @@ A leitura do estado real e das evidências oficiais confirmou:
 ## Verificação de escopo
 
 - Produto funcional alterado nesta task: **não**.
-- Escrita no Skip durante a revalidação: **não**.
+- Escrita funcional ou de dados no Skip durante a revalidação: **não**; após a leitura, foi atualizado somente o arquivo de estado de governança e consolidado o checkpoint documental autorizado (Skip v0.0.81).
 - Nova migration/collection/campo/hook/RLS: **não**.
 - Nova fixture ou decisão: **não**.
 - Meta/RD Station/1CRM/Omie: **não**.
