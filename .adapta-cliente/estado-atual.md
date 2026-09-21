@@ -1,13 +1,13 @@
 # Estado atual — Adapta Cliente
 
-- task_id: F2-T07
+- task_id: F2-T08
 - champion: João Paulo
 - spec: 04_fase-atual/specs/spec-f2-004-prova-meta-ou-fallback.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada — Champion autorizou a F2-T07 no modo fallback_manual, exclusivamente como contrato, checklist, owner e governança da fonte
-- teste_humano: aprovado — Champion aprovou o META-F2-001, a modalidade fallback_manual e o contrato, incluindo batch_id/idempotência, record_id restrito à fonte, sem identidade global/multi-fonte, sem leads/contatos/dados pessoais e sem Meta/credenciais
-- verificacao_automatica: passou — revalidação documental/estrutural; RED equivalente bloqueado sem acesso/credencial/payload; GREEN documental completo; Skip funcional v0.0.81/e64f8bc preservado; migrations até 0020; collections/rotas existentes, demandas, T04 e decisões F2 preservadas; nenhuma chamada externa ou dado real
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-09-21-0936-f2-t07-fallback-idempotencia.md
-- ultima_acao: fechamento documental da F2-T07 executado; relatório, fase, matriz, Tasks Gerais, STATUS, changelog, aprendizado e estado atualizados
-- proxima_acao: aguardar autorização expressa do Champion para a próxima task; F2-T08 permanece bloqueada por dependência e F2-T09 condicional; não iniciar automaticamente
-- atualizado_em: 2026-09-21T09:36:00-03:00
+- etapa: aguardando_autorizacao
+- autorizacao_implementacao: ausente — Champion autorizou somente a análise da F2-T08; nenhuma implementação, importação, chamada Meta ou alteração funcional foi autorizada
+- teste_humano: pendente — roteiro será definido somente após autorização de implementação; não iniciar F2-T09
+- verificacao_automatica: baseline somente leitura passou — Skip v0.0.82/785febb; produto funcional v0.0.81/e64f8bc preservado; migrations até 0020; collections e rotas existentes; T04 engine/replay disponível para reutilização; nenhuma chamada externa ou mutação
+- aprendizado: pendente
+- ultima_acao: análise oficial da F2-T08 concluída; fronteira T04×T07×T08×T09 definida; recomendação: adaptar/reutilizar núcleo T04, sem segunda engine e sem nova persistência
+- proxima_acao: aguardar autorização expressa para executar o plano mínimo da F2-T08; não iniciar F2-T09
+- atualizado_em: 2026-09-21T09:49:00-03:00
