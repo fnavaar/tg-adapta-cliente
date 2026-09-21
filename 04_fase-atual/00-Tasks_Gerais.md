@@ -1,8 +1,73 @@
-# Fase 2 — Tasks gerais
-
-**Plano:** TG Mais Serviços / `6b09d189`
-**Estado:** Fase 2 liberada para execução controlada no repositório do cliente; F2-T01, F2-T02, F2-T03, F2-T04 e F2-T05 concluídas e validadas (F2-T05 em 2026-09-21, com 3/3 testes humanos e reteste do GREEN aprovado). Nenhuma task ativa; F2-T06 e F2-T07 elegíveis e aguardam autorização expressa do Champion — uma por vez; F2-T08 bloqueada por dependência; F2-T09 condicional.
+# Jornada — Fase 2
 
 ## Tasks
 
-Ver `fase.md` para a tabela operacional completa, critérios, provas, evidências, pré-condições e pontos de parada de F2-T01 a F2-T09. Execute apenas uma task por vez e obtenha teste humano antes da seguinte.
+| ID | Leva | Task | Dono | SPEC | Critério | Subseção exata da SPEC | Recorte da prova | Evidência esperada | Pré-condições | Ponto de parada | Status |
+|---|---:|---|---|---|---|---|---|---|---|---|---|
+| F2-T01 | 1 | Materializar a superfície mínima de briefing versionado e seus estados, usando apenas massa sintética. | Marketing/gestor de tráfego | F2-001 | CA-2-01 | Dados e integrações; Fluxo e regras; Checklist | Criar `EXP-F2-IN-001` e `EXP-F2-OUT-001`, localizar por ID/versão/dono. | Captura/export da superfície com os dois briefings. | Acesso à superfície F1 ou fallback manual confirmado; owner do modelo; autorização confirmada. | Parar se exigir campo estrutural, dado pessoal, gasto ou publicação. | Concluída e validada |
+| F2-T02 | 2 | Provar validações de briefing incompleto, duplicação e aprovação de publicação/gasto. | Marketing/gestor de tráfego | F2-001 | CA-2-01, CA-2-02, CA-2-03 | Critérios de aceite; TDD da SPEC | RED `EXP-F2-RED-001`; alterar mensagem/criativo e preservar versão anterior. | Log/captura de bloqueio, comparação v1/v2 e aprovação/bloqueio rastreável. | F2-T01 aceita por teste humano; autorização confirmada. | Parar se o sistema permitir publicação/gasto sem aprovação humana. | Concluída e validada em 2026-09-11 |
+| F2-T03 | 3 | Configurar/registrar contrato de atribuição de fonte única e fixtures de qualidade, sem agregação multi-fonte. | Marketing + comercial | F2-002 | RN-F2-004, RN-F2-005, RN-F2-006 | Dados e integrações; Fluxo e regras; Checklist | Criar `ATR-F2-IN-001`, `ATR-F2-OUT-001`, `ATR-F2-UNK-001`; registrar chave usada e pendência multi-fonte. | Mapa de campos/chave, fixtures e registro de pendência. | F2-T02 aceita; fonte única declarada; dono da qualidade definido. | Parar se precisar escolher `record_id` global/composto ou agregar fonte técnica adicional. | Concluída e validada em 2026-09-14 |
+| F2-T04 | 4 | Provar atribuição, desconhecido, duplicidade e reconciliação por IDs contra a fonte declarada. | Marketing + comercial | F2-002 | CA-2-04, CA-2-05, CA-2-06 | Critérios de aceite; TDD da SPEC | RED sem origem/chave repetida; GREEN inbound/outbound; regressão reexecuta lote. | Relatório, lista de IDs, comparação fonte×relatório e lista de lacunas com dono. | F2-T03 aceita por teste humano; fonte acessível ou lacuna formal aceita. | Parar diante de divergência sem explicação, duplicação ou tentativa de somar multi-fonte. | Concluída e validada em 2026-09-17 |
+| F2-T05 | 5 | Materializar o registro de decisão e a fila de próxima ação para um experimento já reconciliado. | Direção/marketing | F2-003 | RN-F2-008, RN-F2-010 | Dados e integrações; Fluxo e regras; Checklist | Criar estrutura `DEC-F2-###` ligada a briefing, período, evidência, decisão, owner e próxima ação. | Captura/export do registro e permissões de decisão. | F2-T04 aceita; decisor identificado; critério de decisão definido no briefing. | Parar se exigir decisão automática, meta inferida, mudança de orçamento ou publicação. | Concluída e validada em 2026-09-21 — 3/3 testes humanos e reteste do GREEN aprovado |
+| F2-T06 | 6 | Provar decisão baseada em qualidade e o histórico de ajuste/revogação. | Direção/marketing | F2-003 | CA-2-07, CA-2-08, CA-2-09 | Critérios de aceite; TDD da SPEC | RED `DEC-F2-RED-001` só com clique; GREEN decisão `ajustar`; regressão revoga e preserva histórico. | Decisão humana, relatório referenciado e histórico de revogação/versão. | F2-T05 aceita por teste humano. | Parar se resultado incompleto aparecer como êxito ou se o sistema agir externamente. | Concluída e validada em 2026-09-21 — revalidação somente leitura; CA-2-07/08/09 passaram; sem alteração funcional |
+| F2-T07 | 5 | Preencher o checklist Meta e documentar contrato de campos/owner ou selecionar formalmente fallback manual. | Gestor de tráfego/direção | F2-004 | RN-F2-011, RN-F2-012 | Contexto e decisões fechadas; Dados e integrações; Checklist | Tentar iniciar modo integrado sem checklist; selecionar `fallback_manual`/`bloqueada` quando faltar acesso. | Checklist de acesso, mapa de campos ou justificativa de fallback com owner. | F2-T04 aceita; decisão de identidade para multi-fonte não é necessária se permanecer manual. | Parar sem acesso, permissão, payload ou se houver pedido de segredo/OAuth/escrita Meta. | Elegível — aguarda autorização expressa |
+| F2-T08 | 6 | Provar o fallback manual e a recuperação simulada de falhas sem escrita externa ou duplicidade. | Marketing/gestor de tráfego | F2-004 | CA-2-10, CA-2-12 (simulado) | Critérios de aceite; TDD da SPEC | RED sem credencial; lote `META-F2-MANUAL-001`; simular 401/403/429/timeout/payload inválido e lote repetido. | Log/captura do fallback/bloqueio, estado final e reconciliação do lote. | F2-T07 aceita por teste humano; fallback manual autorizado. | Parar se a prova exigir chamada real ao Meta ou qualquer escrita/publicação. | Bloqueada — depende de F2-T07 |
+| F2-T09 | Condicional | Provar leitura Meta limitada, mapeamento autorizado e tratamento real de erro, sem escrita. | Gestor de tráfego/direção | F2-004 | CA-2-11, CA-2-12 (real) | Dados e integrações; Critérios de aceite; TDD da SPEC | Consulta limitada com payload autorizado; reconciliar IDs/contagens; exercer erro real permitido. | Checklist aprovado, mapa de campos, log de leitura, comparação e rollback. | F2-T07 e F2-T08 aceitas; acesso de leitura, permissão, payload, chave multi-fonte e autorização explícita para esta task. | Parar em 401/403/429/timeout/campo não autorizado; desabilitar consulta e retornar a fallback. | Condicional — não elegível |
+
+## Ordem e independência
+
+- **Leva 1:** F2-T01.
+- **Leva 2:** F2-T02, após F2-T01.
+- **Leva 3:** F2-T03, após F2-T02.
+- **Leva 4:** F2-T04, após F2-T03.
+- **Leva 5:** F2-T05, após F2-T04; F2-T07, após F2-T04 — são independentes entre si.
+- **Leva 6:** F2-T06, após F2-T05; F2-T08, após F2-T07 — são independentes entre si.
+- **F2-T09:** não participa de leva fixa; fica inelegível até os gates explícitos da própria linha.
+- **Execução:** uma task por vez, mediante autorização expressa do Champion e teste humano ao fim de cada uma.
+
+## Registro de fechamento da F2-T03
+
+- F2-T03 foi concluída e validada humanamente pelo Champion em 2026-09-14, com 4/4 testes aprovados.
+- A entrega permaneceu restrita a uma fonte declarada (`demandas`), três fixtures sintéticas, mapa de campos/chave e registro da pendência multi-fonte.
+- A chave `record_id` foi registrada somente no escopo da fonte declarada; não houve decisão de identidade global ou composta.
+- A pendência arquitetural de identidade/multi-fonte permanece para tasks posteriores.
+- F2-T04 foi executada e concluída após autorização separada e validação humana integral.
+
+## Registro de fechamento da F2-T04
+
+- F2-T04 foi concluída e validada humanamente pelo Champion em 2026-09-17, com 3/3 testes aprovados.
+- A entrega ficou restrita a uma superfície isolada de lote-fonte sintético, processamento dry-run, reconciliação fonte×pipeline por `record_id`, duplicidade, conflito e replay idempotente.
+- Foram confirmadas 7/7 verificações determinísticas, replay com 0 novas criações, pipeline preservado em 10 registros e reconciliação final 10 × 10, diferença 0.
+- Nenhum registro `T04-*` foi gravado em `demandas`; Fase 1, F2-T01, F2-T02 e F2-T03 permaneceram preservadas.
+- A pendência de identidade multi-fonte permanece; `record_id` continua restrito à fonte declarada.
+- F2-T05 não foi iniciada e continua dependendo de autorização expressa separada.
+
+## Registro de regularização documental (2026-09-17)
+
+- Publicadas as SPECs F2-003 e F2-004, que constavam da decomposição aprovada em 03/09 mas não haviam sido enviadas na liberação original da fase.
+- As SPECs F2-001 e F2-002 foram substituídas pelas versões validadas da mesma decomposição, eliminando a divergência de numeração CA/RN entre esta jornada/matriz e as SPECs — divergência que estava registrada como aberta desde a F2-T03.
+- As tasks F2-T01..T04 foram executadas contra os contratos destas versões (fixtures `EXP-F2-*`, `ATR-F2-*`, reconciliação por `record_id`); nenhum resultado, evidência ou aceite foi alterado retroativamente.
+
+## Registro de autorização da F2-T05 (2026-09-17)
+
+- O Champion confirmou positivamente a liberação após a regularização documental; o decisor da T05 é o próprio Champion João Paulo (direção).
+- Critério de decisão: conforme RN-F2-008, integra o briefing de cada experimento — na prova sintética, o briefing sintético; decisão real de experimento real continua exigindo critério real definido no briefing.
+- F2-T05 é a única task ativa; F2-T06 permanece bloqueada até aceite por teste humano da T05; F2-T07 permanece elegível, mas não deve ser iniciada enquanto a T05 estiver em execução (uma task por vez).
+
+## Registro de fechamento da F2-T05 (2026-09-21)
+
+- F2-T05 foi concluída e validada humanamente pelo Champion em 2026-09-21, com 3/3 testes aprovados (RED, GREEN e rollback em 18/09) e reteste do GREEN aprovado em 21/09 após correção do detector de qualidade.
+- A entrega ficou restrita à collection `decisoes_f2` (migration `0020_f2_t05_decisoes`), hook exclusivo de invariantes, seção Decisão de Marketing no detalhe do experimento e fila `/decisoes-f2`, com fixtures sintéticas RED/GREEN/rollback.
+- Rollback provado no backend: `DEC-F2-004` com `previous_decision_id = DEC-F2-002`; `DEC-F2-002` preservada como revogada; histórico sem exclusão.
+- `DEC-F2-003` permanece na massa sintética como registro criado pelo botão genérico durante o teste, sem vínculo de rollback; não foi apagada nem alterada.
+- Duas rodadas de debug registradas em `06_notas/debug/` (botão de decisão subsequente ausente; detector RED/GREEN).
+- F2-T06 e F2-T07 permanecem elegíveis e aguardam autorização expressa; nenhuma foi iniciada.
+
+## Registro de fechamento da F2-T06 (2026-09-21)
+
+- O Champion autorizou a execução exclusivamente como prova, revalidação somente leitura e fechamento documental, sem nova implementação funcional.
+- A consulta direta confirmou `DEC-F2-RED-001` pendente por evidência insuficiente/clique isolado; `DEC-F2-004` registrada como `ajustar` com volume, qualidade, owner e próxima ação; `DEC-F2-002` revogada e preservada; e `DEC-F2-004.previous_decision_id = DEC-F2-002`.
+- `DEC-F2-003` permaneceu como massa sintética criada pelo botão genérico, sem vínculo anterior e fora da cadeia de rollback.
+- A matriz critério → regra → evidência → resultado foi registrada em `05_entregas/fase-2/f2-t06/relatorio-fechamento.md`; CA-2-07, CA-2-08 e CA-2-09 passaram.
+- Não houve alteração em tela, collection, campo, migration, hook, RLS, fixture, regra funcional, integração, `demandas`, T04 ou decisão existente.
+- Fase 1 e F2-T01 a F2-T05 permanecem preservadas. F2-T07 não foi iniciada.

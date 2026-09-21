@@ -3,11 +3,11 @@
 - task_id: F2-T06
 - champion: João Paulo
 - spec: 04_fase-atual/specs/spec-f2-003-decisao-do-experimento.md
-- etapa: aguardando_autorizacao
-- autorizacao_implementacao: ausente — Champion autorizou somente a análise da F2-T06; nenhuma implementação foi autorizada
-- teste_humano: pendente — a F2-T05 já tem RED/GREEN/rollback e reteste GREEN aprovados; F2-T06 ainda aguarda seu próprio gate de aceite/fechamento
-- verificacao_automatica: baseline somente leitura passou — Skip v0.0.80/1f788f6; migration 0020 e collection decisoes_f2 íntegras; 6 decisões vivas; TDD da T05 6/6; regressões Fase 1/T01-T05 preservadas
-- aprendizado: pendente
-- ultima_acao: análise oficial da F2-T06 concluída; diagnóstico: não há lacuna funcional demonstrada além da prova/fechamento dos CA-2-07/08/09, já cobertos pelas evidências da T05
-- proxima_acao: aguardar autorização para executar o plano mínimo de prova/fechamento da F2-T06 sem alteração funcional; não iniciar F2-T07
-- atualizado_em: 2026-09-21T08:40:00-03:00
+- etapa: concluida
+- autorizacao_implementacao: confirmada — Champion autorizou a F2-T06 exclusivamente como prova, revalidação somente leitura e fechamento documental; sem implementação funcional
+- teste_humano: nao_aplicavel — provas humanas RED/GREEN/rollback da F2-T05 e reteste GREEN já foram realizados e aprovados; F2-T06 não fez mutação
+- verificacao_automatica: passou — revalidação somente leitura do backend e documentos oficiais; migration 0020 aplicada; collection decisoes_f2 íntegra; 6 registros decisórios preservados; CA-2-07/08/09 passaram; Fase 1 e F2-T01/T02/T03/T04/T05 preservadas; nenhuma alteração funcional
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-09-21-0901-f2-t06-revalidacao-sem-mutacao.md
+- ultima_acao: fechamento documental da F2-T06 executado; relatório, fase, matriz, SPEC, Tasks Gerais, STATUS, changelog, aprendizado e estado atualizados
+- proxima_acao: aguardar autorização expressa do Champion para a próxima task elegível (F2-T07); não iniciar automaticamente
+- atualizado_em: 2026-09-21T09:01:00-03:00

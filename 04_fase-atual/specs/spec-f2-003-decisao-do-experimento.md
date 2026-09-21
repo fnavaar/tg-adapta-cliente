@@ -1,7 +1,7 @@
 # SPEC-F2-003 — Decisão humana de continuar, ajustar ou interromper
 
 **Fase:** 2  
-**Status:** liberada para execução — F2-T05 autorizada em 2026-09-17; decisor: João Paulo (Champion/direção); F2-T06 bloqueada até aceite por teste humano da T05  
+**Status:** liberada para execução — F2-T05 e F2-T06 concluídas e validadas em 2026-09-21; decisor: João Paulo (Champion/direção)  
 **Dono:** direção/marketing decide; consultor valida o primeiro ciclo  
 **Origem no escopo:** Fase 2, C-02, C-04, DC-007, G-001, G-006  
 **Degrau da solução:** reuso dos dados atribuídos pela F2-002 e registro mínimo de decisão — não automatiza otimização nem muda orçamento.
@@ -100,11 +100,12 @@ Um `DEC-F2-###` vincula experimento, período, evidência de volume e qualidade,
 
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
 |---|---|---|---|---|---|---|---|---|
-| F2-T05 | Materializar o registro de decisão e a fila de próxima ação para um experimento já reconciliado. | Direção/marketing | F2-003 | RN-F2-008, RN-F2-010 | Dados e integrações; Fluxo e regras; Checklist | Captura/export do registro e permissões de decisão. | F2-T04 aceita; decisor identificado. | AUTORIZADA — decisor João Paulo; única task ativa |
-| F2-T06 | Provar decisão baseada em qualidade e o histórico de ajuste/revogação. | Direção/marketing | F2-003 | CA-2-07, CA-2-08, CA-2-09 | Critérios de aceite; TDD da SPEC | Decisão humana, relatório referenciado e histórico de revogação/versão. | F2-T05 aceita por teste humano. | Bloqueada — depende de F2-T05 |
+| F2-T05 | Materializar o registro de decisão e a fila de próxima ação para um experimento já reconciliado. | Direção/marketing | F2-003 | RN-F2-008, RN-F2-010 | Dados e integrações; Fluxo e regras; Checklist | Captura/export do registro e permissões de decisão. | F2-T04 aceita; decisor identificado. | Concluída e validada em 2026-09-21 |
+| F2-T06 | Provar decisão baseada em qualidade e o histórico de ajuste/revogação. | Direção/marketing | F2-003 | CA-2-07, CA-2-08, CA-2-09 | Critérios de aceite; TDD da SPEC | Decisão humana, relatório referenciado e histórico de revogação/versão. | F2-T05 aceita por teste humano. | Concluída e validada em 2026-09-21 — revalidação somente leitura; critérios aprovados sem alteração funcional |
 
 ## Emendas
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
 | 2026-09-17 | Champion (João Paulo) — confirmação positiva pós-regularização | F2-T05 | Registrar decisor e liberar a execução da task |
+| 2026-09-21 | Champion (João Paulo) — autorização expressa para prova, revalidação somente leitura e fechamento documental | F2-T06 | Fechar CA-2-07/08/09 com as evidências homologadas da F2-T05, sem nova implementação |
