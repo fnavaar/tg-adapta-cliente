@@ -6,9 +6,9 @@
 ## Onde estamos
 
 - **Fase atual:** 2 — Sistema de campanhas e experimentação de Growth Marketing (LIBERADA PARA EXECUÇÃO).
-- **Task ativa:** nenhuma — F2-T06 concluída e validada em 2026-09-21.
-- **Task anterior:** F2-T06 concluída e validada em 2026-09-21.
-- **Progresso:** 6 de 9 tasks concluídas (67%); próxima elegível: F2-T07.
+- **Task ativa:** nenhuma — F2-T07 concluída e validada em 2026-09-21.
+- **Task anterior:** F2-T07 concluída e validada em 2026-09-21.
+- **Progresso:** 7 de 9 tasks concluídas (78%); próximas elegíveis: nenhuma — F2-T08 bloqueada por dependência e F2-T09 condicional.
 
 ## Resultado técnico da F2-T01
 
@@ -75,6 +75,15 @@
 - Preservação confirmada: Fase 1 e F2-T01/T02/T03/T04/T05 sem mutação.
 - Nenhuma tela, collection, campo, migration, hook, RLS, fixture, regra funcional, integração, `demandas`, T04 ou decisão existente foi alterado.
 
+## Resultado da F2-T07
+
+- Relatório de fechamento: `05_entregas/fase-2/f2-t07/relatorio-fechamento.md`.
+- Registro: `META-F2-001`; modalidade `fallback_manual` aprovada humanamente pelo Champion.
+- Owner de governança: João Paulo (Champion/direção); operação e qualidade/reconciliação definidos por função; owner operacional nominal será informado quando houver operação real.
+- Contrato aprovado: `batch_id` como chave de idempotência; identificadores de campanha/anúncio como atributos; `record_id` limitado à fonte declarada; sem identidade global/multi-fonte; não vinculados, desconhecidos e divergências explícitos; métricas de campanha aceitas, com `spend` somente como leitura.
+- Limites confirmados: sem leads, formulários, contatos, dados pessoais, token, OAuth, chamada Meta, importação, nova estrutura ou alteração funcional.
+- Revalidação: Skip v0.0.81 (`e64f8bc`) preservado; migrations até `0020`; collections/rotas existentes, `demandas`, T04 e decisões preservadas; nenhuma task posterior iniciada.
+
 ## Regularização documental e liberação da F2-T05 (2026-09-17)
 
 - Publicadas as SPECs **F2-003** (decisão do experimento) e **F2-004** (prova Meta ou fallback manual), que constavam da decomposição aprovada em 03/09 mas não haviam sido enviadas na liberação original da fase — causa do bloqueio documental da F2-T05 identificado pelo Champion.
@@ -84,7 +93,7 @@
 
 ## Gate atual
 
-**Nenhuma task em execução.** F2-T06 concluída e validada em 2026-09-21. F2-T07 é a próxima elegível e aguarda autorização expressa do Champion — uma por vez. F2-T08 bloqueada por dependência da T07; F2-T09 condicional.
+**Nenhuma task em execução.** F2-T07 concluída e validada em 2026-09-21. F2-T08 permanece bloqueada por dependência da T07. F2-T09 é condicional.
 
 ## Pendências preservadas
 
@@ -95,6 +104,7 @@
 - Nenhuma relação estrutural entre `demandas` e `experimentos_f2` foi criada.
 - Na F2-T05, `DEC-F2-003` permanece na massa sintética como registro criado pelo botão genérico durante o teste (sem vínculo de rollback); preservada sem alteração.
 - Na F2-T06, a verificação foi somente leitura; não há correção funcional pendente para os CA-2-07/08/09.
+- Na F2-T07, `fallback_manual` é a modalidade documental aprovada; a prova do lote está reservada à T08 e a leitura real é condicional na T09.
 
 ## Fase 1 arquivada e homologada visualmente
 
@@ -105,7 +115,7 @@
 - Nenhuma alteração funcional foi necessária durante a homologação.
 - Nenhum código, banco, migration, hook, dado ou regra da Fase 1 foi alterado.
 
-## F2-T01 a F2-T06 preservadas
+## F2-T01 a F2-T07 preservadas
 
-- F2-T01, F2-T02, F2-T03, F2-T04, F2-T05 e F2-T06 permanecem concluídas e validadas.
-- F2-T07 é a próxima elegível e aguarda autorização expressa; F2-T08 permanece bloqueada; F2-T09 é condicional.
+- F2-T01, F2-T02, F2-T03, F2-T04, F2-T05, F2-T06 e F2-T07 permanecem concluídas e validadas.
+- F2-T08 permanece bloqueada por dependência da T07; F2-T09 é condicional. Nenhuma task posterior foi iniciada.
