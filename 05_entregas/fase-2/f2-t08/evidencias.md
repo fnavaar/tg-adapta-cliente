@@ -70,6 +70,7 @@ A interface marca todos os cinco casos como **SIMULADO**. Nenhum é resposta rea
 ## Validação humana em andamento
 
 - **Teste 1 — APROVADO (2026-09-21 ~16:53)**: Champion executou o lote T04 e enviou PDF com as 7 verificações verdes, mensagem “PASSOU — todas as verificações determinísticas da T04”, pipeline preservado em 10 registros, 0 criações no replay e a seção T08 ainda não executada. Evidência: `uploads/d1df2dc5-teste_t08.pdf` (7 páginas).
-- **Teste 2 (lote manual e classificações)**: aguardando execução pelo Champion.
-- **Testes 3–5**: pendentes após aprovação do Teste 2.
+- **Teste 2 — APROVADO (2026-09-21 ~17:08)**: Champion executou a prova T08 e enviou PDF (10 páginas) com: 8 verificações verdes e “PASSOU — TDD sintético da F2-T08”; lote `META-F2-MANUAL-001` com `manual_export`; tabela com as 5 classificações (Vinculado, Não vinculado, Desconhecido, Divergente, Inválido) e tratamentos corretos; replay idêntico `replay_skip` com zero nova criação; mesmo `batch_id` com payload diferente em `payload_conflict`/`bloqueada` com decisão humana necessária; falhas 401/403/429/timeout/payload inválido exibidas como **SIMULADO · sem chamada externa · sem retry automático**, com estados `fallback_manual`/`bloqueada`. Evidência: `uploads/3f201c65-teste_t08_1.pdf`.
+- **Teste 3 (replay e conflito de batch_id)**: pendente de confirmação formal, embora os blocos correspondentes já tenham aparecido aprovados no Teste 2.
+- **Testes 4–5**: pendentes.
 - A F2-T08 permanece aberta; nenhum aceite final foi declarado.
