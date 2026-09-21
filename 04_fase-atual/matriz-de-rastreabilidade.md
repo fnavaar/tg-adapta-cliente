@@ -3,17 +3,15 @@
 | Origem do escopo | SPEC | Critério de aceite | Task(s) | Prova/Evidência | Estado |
 |---|---|---|---|---|---|
 | Fase 2; C-02; DC-001/DC-004; G-006 | F2-001 | CA-2-01..03 | F2-T01, F2-T02 | Briefings, bloqueios, versões e referência de aprovação | F2-T01 e F2-T02 concluídas e validadas |
-| Fase 2; C-01/C-04; DC-004; G-001/G-009 | F2-002 | CA-2-04..06 | F2-T03, F2-T04 | Relatório, IDs, reconciliação e lacunas | F2-T03 e F2-T04 concluídas e validadas; F2-T04 com 3/3 testes humanos, 7/7 verificações determinísticas e replay idempotente |
-| Fase 2; C-02/C-04; DC-007 | F2-003 | CA-2-07..09 | F2-T05, F2-T06 | Decisão humana e histórico de versões | F2-T05 e F2-T06 concluídas e validadas em 2026-09-21; T06 revalidou em leitura CA-2-07/08/09 sem alteração funcional |
-| Fase 2; DC-003; G-009 | F2-004 | CA-2-10..12 | F2-T07, F2-T08 | Checklist, fallback, falhas simuladas | F2-T07 concluída e validada em 2026-09-21; F2-T08 implementada, TDD/QA passados, aguardando teste humano |
+| Fase 2; C-01/C-04; DC-004; G-001/G-009 | F2-002 | CA-2-04..06 | F2-T03, F2-T04 | Relatório, IDs, reconciliação e lacunas | F2-T03 e F2-T04 concluídas e validadas; 3/3 testes humanos T04, 7/7 determinísticos e replay idempotente |
+| Fase 2; C-02/C-04; DC-007 | F2-003 | CA-2-07..09 | F2-T05, F2-T06 | Decisão humana e histórico de versões | F2-T05 e F2-T06 concluídas e validadas em 2026-09-21 |
+| Fase 2; DC-003; G-009 | F2-004 | CA-2-10..12 | F2-T07, F2-T08 | Checklist, fallback, falhas simuladas | F2-T07 e F2-T08 concluídas e validadas em 2026-09-21; T08 bateria humana 5/5 |
 | Fase 2; DC-003; G-009 | F2-004 | CA-2-11..12 | F2-T09 | Consulta Meta de leitura, reconciliação e erro real | Condicional — não elegível |
 
 ## Ressalvas de rastreabilidade
 
-- A divergência de numeração entre `fase.md`/esta matriz e as SPECs foi **encerrada em 2026-09-17**: as SPECs F2-001/F2-002 foram substituídas pelas versões validadas da decomposição de 03/09 e as SPECs F2-003/F2-004 foram publicadas. A numeração CA-2-01..12 e RN-F2-001..014 agora é única e coerente em toda a fase.
-- A pendência de identidade técnica/multi-fonte permanece para tasks posteriores; a F2-T04 usou `record_id` somente no escopo da fonte declarada.
-- F2-T05 concluída com decisor registrado (João Paulo, Champion/direção, 2026-09-17); o critério de decisão seguiu a RN-F2-008 — na prova sintética, o briefing sintético; decisão real continua exigindo critério real.
-- Na F2-T05, `DEC-F2-003` permanece na massa sintética como registro criado pelo botão genérico durante o teste, sem vínculo de rollback; preservada sem alteração.
-- Na F2-T06, a evidência viva confirmou `DEC-F2-RED-001` pendente, `DEC-F2-004` registrada como `ajustar`, `DEC-F2-002` revogada e `DEC-F2-004.previous_decision_id = DEC-F2-002`; `DEC-F2-003` foi excluída da prova da cadeia por não possuir vínculo anterior.
-- Na F2-T07, o `META-F2-001` foi aprovado humanamente com `fallback_manual`; não há integração Meta validada, e `batch_id` é a chave de idempotência do lote manual.
-- Na F2-T08, o lote `META-F2-MANUAL-001` permanece 100% sintético e em dry-run; TDD 8/8 e QA passaram, mas o aceite humano ainda está pendente. Não há integração Meta validada.
+- A divergência de numeração entre `fase.md`/esta matriz e as SPECs foi encerrada em 2026-09-17; a numeração CA-2-01..12 e RN-F2-001..014 é única e coerente.
+- A pendência de identidade técnica/multi-fonte permanece; T04 e T08 usam `record_id` somente no escopo da fonte declarada.
+- `META-F2-001` foi aprovado humanamente com `fallback_manual`; não há integração Meta validada.
+- `META-F2-MANUAL-001` foi processado somente como lote sintético em dry-run; os erros da T08 são simulados, não respostas reais.
+- F2-T09 permanece condicional e não foi iniciada.

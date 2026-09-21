@@ -6,112 +6,34 @@
 ## Onde estamos
 
 - **Fase atual:** 2 — Sistema de campanhas e experimentação de Growth Marketing (LIBERADA PARA EXECUÇÃO).
-- **Task ativa:** F2-T08 — implementação concluída, aguardando teste humano do Champion.
-- **Task anterior:** F2-T07 concluída e validada em 2026-09-21.
-- **Progresso:** 7 de 9 tasks concluídas (78%); F2-T08 aguarda teste humano; F2-T09 permanece condicional.
+- **Task ativa:** nenhuma — F2-T08 concluída e validada em 2026-09-21.
+- **Task anterior:** F2-T08 concluída e validada em 2026-09-21.
+- **Progresso:** 8 de 9 tasks concluídas (89%); F2-T09 permanece condicional e não elegível.
 
-## Resultado técnico da F2-T01
+## Resultado da F2-T08
 
-- Commit de implementação: `c6b77ef9796ef760ccaf7d04db412d6597831dcf`.
-- Commit de evidência individual: `27d4e5c963a0fe346918ce3da07cdb1201770e25`.
-- Massa sintética: `EXP-F2-IN-001` e `EXP-F2-OUT-001`.
-- TDD: 20/20 aprovados, 0 falhas.
-- Evidências individuais registradas em `05_entregas/fase-2/f2-t01/evidence/test-results.json`.
-- Relatório: `05_entregas/fase-2/f2-t01/report/atendimento-criterios-f2-t01.md`.
-- Validação humana: aprovada expressamente.
+- Relatório de fechamento: `05_entregas/fase-2/f2-t08/relatorio-fechamento.md`.
+- Produto funcional: Skip v0.0.85, hash `25c717a`, preservado durante o fechamento.
+- T04: 7/7; T08: 8/8; bateria humana: 5/5.
+- Lote `META-F2-MANUAL-001`: 5 linhas, 100% sintético, `manual_export`, sem dados pessoais.
+- Classificações: vinculado, não vinculado, desconhecido, divergente e inválido.
+- Idempotência: replay `skip`; payload diferente com mesmo `batch_id` → conflito/bloqueio/decisão humana.
+- Falhas: 401/403/429/timeout/payload inválido simulados, sem chamada externa, sem retry automático; retorno seguro `fallback_manual`/`bloqueada`.
+- Regressão: `demandas` 10 registros; migrations até 0020; collections preservadas; T04 e F2-T01–T07 preservadas.
+- Nenhuma integração Meta, token/OAuth, dado real/pessoal, publicação, orçamento ou escrita em `demandas`.
 
-## Resultado da F2-T02
+## Resultado das tasks anteriores
 
-- Relatório de fechamento: `05_entregas/fase-2/f2-t02/relatorio-fechamento.md`.
-- Validação humana: testes RED, duplicação, versionamento/histórico, separação de preparação/publicação/gasto e permissões aprovados ou comprovados conforme relatório.
-- Correções retestadas: v0.0.60 (validação do RED) e v0.0.61 (mensagem de duplicidade); QA completo passou nas duas versões.
-- Limite: publicação e gasto foram validados exclusivamente como controles sintéticos; não houve execução real.
-- Ressalva: CA-2-02 e CA-2-03, em sentido amplo de captura de leads e relatório de métricas de alcance/conversão, não são declarados como entregues pela T02.
-
-## Resultado da F2-T03
-
-- Relatório de fechamento: `05_entregas/fase-2/f2-t03/relatorio-fechamento.md`.
-- Entrega: contrato de atribuição de fonte única, três fixtures sintéticas e registro da pendência multi-fonte.
-- Fixtures: `ATR-F2-IN-001`, `ATR-F2-OUT-001` e `ATR-F2-UNK-001`.
-- Migration: `0019_f2_t03_atr_fonte_unica` aplicada no Skip.
-- Skip: v0.0.64, hash `00bb006`.
-- QA oficial: setup, análise estática, build, integrações e testes passaram.
-- Validação humana: 4/4 testes aprovados em 2026-09-14.
-- Limites: sem Meta, RD Station, 1CRM, segunda fonte, schema novo, campo novo, hook novo ou decisão de identidade global/composta.
-
-## Resultado da F2-T04
-
-- Relatório de fechamento: `05_entregas/fase-2/f2-t04/relatorio-fechamento.md`.
-- Entrega: lote-fonte sintético independente, engine determinística em dry-run, relatório fonte×pipeline, tratamento de desconhecido/duplicidade/conflito e replay idempotente.
-- Lote: 17 linhas, 14 chaves preenchidas, 1 linha sem chave, 1 grupo de duplicidade e 1 grupo de conflito; baseline de 10 registros.
-- Skip funcional: v0.0.66, hash `c27bc10`.
-- QA oficial: setup, análise estática, build, integrações e testes passaram.
-- Verificações próprias: 7/7 aprovadas; replay com 0 novas criações.
-- Validação humana: 3/3 testes aprovados em 2026-09-17.
-- Regressão: painel 10 × fonte 10, diferença 0; nenhum `T04-*` gravado; Fase 1 e F2-T01/T02/T03 preservadas.
-- Limites: sem Meta, RD Station, 1CRM, dados reais, identidade global/multi-fonte, relação `demandas` ↔ `experimentos_f2`, nova collection/campo, alteração de RLS/hook/schema ou início da F2-T05.
-
-## Resultado da F2-T05
-
-- Relatório de fechamento: `05_entregas/fase-2/f2-t05/relatorio-fechamento.md`.
-- Entrega: collection `decisoes_f2` (migration `0020_f2_t05_decisoes`), hook exclusivo de invariantes, seção Decisão de Marketing no detalhe do experimento e fila `/decisoes-f2`, com fixtures sintéticas RED/GREEN/rollback.
-- Skip funcional da entrega: v0.0.78, hash `2a06902` (baseline vivo consultado: v0.0.80, `1f788f6`).
-- QA oficial: setup, análise estática, build, integrações e testes passaram.
-- TDD determinístico: 6/6 aprovados.
-- Validação humana: 3/3 testes aprovados em 2026-09-18 (RED, GREEN, rollback) + reteste do GREEN aprovado em 2026-09-21 após correção do detector.
-- Rollback provado: `DEC-F2-004` com `previous_decision_id = DEC-F2-002`; `DEC-F2-002` preservada como revogada; histórico sem exclusão.
-- Debugs registrados: `06_notas/debug/debug-2026-09-18-f2-t05-decisao-subsequente.md` e `06_notas/debug/debug-2026-09-18-f2-t05-detector-red-green.md`.
-- Limites: sem Meta, RD Station, 1CRM, Omie, dados reais, publicação, orçamento, decisão automática, relação `demandas` ↔ `experimentos_f2`, identidade global ou início de F2-T06/F2-T07.
-
-## Resultado da F2-T06
-
-- Relatório de fechamento: `05_entregas/fase-2/f2-t06/relatorio-fechamento.md`.
-- Escopo: prova, revalidação somente leitura e fechamento documental; nenhuma implementação funcional.
-- Matriz registrada: critério → regra → evidência → resultado da revalidação.
-- CA-2-07: decisão humana `DEC-F2-004` registrada como `ajustar`, com volume, qualidade, owner e próxima ação — PASSOU.
-- CA-2-08: `DEC-F2-RED-001` permanece pendente por evidência insuficiente/clique isolado — PASSOU.
-- CA-2-09: `DEC-F2-002` permanece revogada e `DEC-F2-004.previous_decision_id = DEC-F2-002` — PASSOU.
-- `DEC-F2-003` permanece massa sintética pendente, sem vínculo anterior e fora da cadeia de rollback.
-- Preservação confirmada: Fase 1 e F2-T01/T02/T03/T04/T05 sem mutação.
-- Nenhuma tela, collection, campo, migration, hook, RLS, fixture, regra funcional, integração, `demandas`, T04 ou decisão existente foi alterado.
-
-## Resultado da F2-T07
-
-- Relatório de fechamento: `05_entregas/fase-2/f2-t07/relatorio-fechamento.md`.
-- Registro: `META-F2-001`; modalidade `fallback_manual` aprovada humanamente pelo Champion.
-- Owner de governança: João Paulo (Champion/direção); operação e qualidade/reconciliação definidos por função; owner operacional nominal será informado quando houver operação real.
-- Contrato aprovado: `batch_id` como chave de idempotência; identificadores de campanha/anúncio como atributos; `record_id` limitado à fonte declarada; sem identidade global/multi-fonte; não vinculados, desconhecidos e divergências explícitos; métricas de campanha aceitas, com `spend` somente como leitura.
-- Limites confirmados: sem leads, formulários, contatos, dados pessoais, token, OAuth, chamada Meta, importação, nova estrutura ou alteração funcional.
-- Revalidação: Skip v0.0.81 (`e64f8bc`) preservado; migrations até `0020`; collections/rotas existentes, `demandas`, T04 e decisões preservadas; nenhuma task posterior iniciada.
-
-## Resultado da F2-T08 — aguardando teste humano
-
-- Relatório: `05_entregas/fase-2/f2-t08/relatorio-implementacao.md`.
-- Superfície: seção `F2-T08 · prova sintética do fallback manual` reutilizando a rota existente `/atribuicao-t04`; nenhuma página isolada nova.
-- Núcleo compartilhado: `src/lib/f2/reconciliation/core.ts`; T04 preservada como adapter em `src/lib/f2/t04/engine.ts`.
-- Adapter/contrato: `src/lib/f2/t08/manualBatch.ts`, com `META-F2-MANUAL-001`, ledger em memória, `batch_id`, replay e conflito de payload.
-- Lote: 5 linhas sintéticas, sem dados pessoais; classificações vinculado, não vinculado, desconhecido, divergente e inválido.
-- TDD T08: 8/8 aprovados no preview; regressão T04: 7/7 aprovados; `demandas`: 10 registros preservados.
-- QA oficial Skip v0.0.85 (`25c717a`): setup, análise estática, build, integrações e testes passaram.
-- Falhas 401/403/429/timeout/payload inválido: eventos injetados, marcados como `SIMULADO`, sem chamada Meta, sem retry automático e com retorno `fallback_manual`/`bloqueada`.
-- Não houve nova collection, migration, campo, hook, RLS, escrita em `demandas`, token/OAuth, dado real/pessoal, publicação ou alteração de orçamento.
-- Validação humana: pendente. A F2-T08 não está formalmente concluída.
+- F2-T01 a F2-T07: concluídas e validadas conforme os respectivos relatórios.
+- F2-T07: `META-F2-001` aprovado; `fallback_manual` formalizado.
 
 ## Gate atual
 
-**F2-T08 está no gate de teste humano.** O Champion deve executar o roteiro registrado em `05_entregas/fase-2/f2-t08/roteiro-validacao-humana.md`. F2-T09 não foi iniciada e permanece condicional.
+**Nenhuma task em execução.** F2-T08 está concluída. F2-T09 é condicional e não elegível.
 
 ## Pendências preservadas
 
-- A pendência arquitetural de identidade técnica/multi-fonte permanece para tasks posteriores.
-- Na F2-T04 e T08, `record_id` foi usado somente no escopo da fonte declarada; não houve identidade global ou composta.
-- O `.skip.config.json` mantém a alteração preexistente de metadado de build; não é alteração funcional da T08.
-- Nenhuma integração Meta, RD Station ou 1CRM foi executada.
-- Nenhuma relação estrutural entre `demandas` e `experimentos_f2` foi criada.
-- Na F2-T05, `DEC-F2-003` permanece na massa sintética sem vínculo de rollback; preservada sem alteração.
-- F2-T09 aguarda aceite humano da T08, acesso real de leitura, payload autorizado, política de dados, contrato de chave e autorização própria.
-
-## F2-T01 a F2-T08 preservadas
-
-- F2-T01, F2-T02, F2-T03, F2-T04, F2-T05, F2-T06 e F2-T07 permanecem concluídas e validadas.
-- F2-T08 permanece implementada e aguardando teste humano; F2-T09 é condicional.
+- Identidade técnica/multi-fonte ainda requer decisão futura explícita.
+- `.skip.config.json` mantém apenas metadado preexistente de build; não é alteração funcional do fechamento.
+- Nenhuma relação estrutural `demandas` ↔ `experimentos_f2` foi criada.
+- F2-T09 exige análise oficial própria, autorização expressa, acesso de leitura, payload autorizado, política de dados e contrato de chave antes de qualquer conexão Meta.

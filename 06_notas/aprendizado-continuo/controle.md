@@ -1,5 +1,3 @@
-# Controle de aprendizado contínuo
-
 - 2026-08-31T22:00 · task F1-T04 · capturado:06_notas/aprendizado-continuo/AP-2026-08-31-2200-hooks-validacao-skip.md · padrão verificado de hooks de validação em Skip Cloud (onRecordUpdate + e.oldRecord; evitar $app dentro de onRecordValidate)
 - 2026-09-01T18:35 · task F1-T05 · capturado:06_notas/aprendizado-continuo/AP-2026-09-01-1835-handoff-icp-opcionais.md · campos opcionais de decisão humana exigem semântica explícita do vazio e gates sem inferência automática
 - 2026-09-03T09:28 · task F1-T06 · capturado:06_notas/aprendizado-continuo/AP-2026-09-03-0928-reconciliacao-fonte-painel.md · painel derivado deve comparar quantidade e IDs com consulta equivalente da fonte
@@ -9,3 +7,4 @@
 - 2026-09-21T08:21 · task F2-T05 · capturado:06_notas/aprendizado-continuo/AP-2026-09-21-0821-f2-t05-migration-reenvio.md · após apply Skip com build falho e migration nova, conferir list_migrations/collections antes de seguir; reenvio exige alteração no próprio arquivo
 - 2026-09-21T09:01 · task F2-T06 · capturado:06_notas/aprendizado-continuo/AP-2026-09-21-0901-f2-t06-revalidacao-sem-mutacao.md · task de prova deve revalidar o estado vivo sem duplicar implementação ou repetir mutações
 - 2026-09-21T09:36 · task F2-T07 · capturado:06_notas/aprendizado-continuo/AP-2026-09-21-0936-f2-t07-fallback-idempotencia.md · separar fallback manual de integração real e batch_id de identidade global/multi-fonte
+- 2026-09-21T17:23 · task F2-T08 · capturado:06_notas/aprendizado-continuo/AP-2026-09-21-1723-f2-t08-reconciliacao-fallback.md · separar núcleo de reconciliação, batch_id e estados de fallback; replay idêntico skip; payload divergente exige decisão humana sem overwrite
