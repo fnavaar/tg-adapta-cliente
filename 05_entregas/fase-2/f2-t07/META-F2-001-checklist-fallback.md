@@ -84,7 +84,7 @@ A prova operacional posterior deverá receber um lote identificado, preferencial
 | `channel` | Registrar `Meta`/`manual_export` somente como origem declarada do lote; não converter clique em lead. |
 | `impressions` | Métrica de atividade; não é qualidade comercial. |
 | `clicks` | Métrica de atividade; não é qualidade comercial. |
-| `spend` | Não aceitar nesta task como autorização de orçamento ou gasto; se aparecer, registrar como campo não utilizado/lacuna e não importar. |
+| `spend` | Aceitar somente como métrica declarada de leitura se estiver no export autorizado; não autoriza orçamento, publicação ou gasto, não altera o Skip e não é tratado como decisão financeira. |
 
 ## 5. Leads, formulários e dados pessoais
 
@@ -109,7 +109,7 @@ Não serão aceitos nesta task:
 - Campo não fornecido deve aparecer em `missing_fields`/lacunas.
 - Campo desconhecido não deve ser inferido a partir do nome da campanha, canal ou clique.
 - Campo não previsto deve ser descartado do processamento e registrado como não mapeado.
-- Custo/gasto não autoriza orçamento nem publicação.
+- Métrica de custo/gasto, quando autorizada no export, é apenas dado de leitura; não autoriza orçamento, publicação ou gasto.
 - Impressão/clique não equivale a lead qualificado, oportunidade, proposta, conversão ou receita.
 - A origem manual deve permanecer explícita; não registrar o lote como integração Meta.
 
