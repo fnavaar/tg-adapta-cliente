@@ -1,13 +1,13 @@
 # Estado atual — Adapta Cliente
 
-- task_id: F2-T05
+- task_id: F2-T06
 - champion: João Paulo
 - spec: 04_fase-atual/specs/spec-f2-003-decisao-do-experimento.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada — Champion autorizou a implementação da F2-T05 conforme a SPEC F2-003 regularizada e o plano apresentado
-- teste_humano: aprovado — 3/3 testes aprovados (RED, GREEN e rollback em 18/09) + reteste do GREEN aprovado em 21/09 após correção do detector (print do Champion + backend: DEC-F2-004 Registrada/Ajustar com previous_decision_id=DEC-F2-002, DEC-F2-002 preservada Revogada); fechamento formal autorizado expressamente pelo Champion em 21/09 ("Pode concluir formalmente a F2-T05")
-- verificacao_automatica: passou — Skip funcional v0.0.78/2a06902 (corrente v0.0.79/d42864c); QA completo; TDD determinístico 6/6; migration 0020 aplicada; cadeia de rollback confirmada; regressões painel 10×10, IN/OUT/RED e T04 aprovadas
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-09-21-0820-f2-t05-qualidade-positiva.md (+ AP-2026-09-21-0821-f2-t05-migration-reenvio.md)
-- ultima_acao: fechamento documental executado (fase, STATUS, changelog, matriz, tasks gerais, relatório de fechamento, aprendizado); task marcada concluida sem alteração funcional
-- proxima_acao: nenhuma — aguardar autorização expressa do Champion para a próxima task (F2-T06 ou F2-T07); não iniciar automaticamente
-- atualizado_em: 2026-09-21T08:25:00-03:00
+- etapa: aguardando_autorizacao
+- autorizacao_implementacao: ausente — pedido atual autorizou somente análise da F2-T06, sem implementação
+- teste_humano: pendente — a F2-T05 já tem RED/GREEN/rollback aprovados; F2-T06 ainda não recebeu gate próprio de encerramento
+- verificacao_automatica: baseline somente leitura passou — Skip corrente v0.0.80/1f788f6; migration 0020 aplicada; collection decisoes_f2 íntegra; TDD visível da T05 6/6; cadeia DEC-F2-004→DEC-F2-002 confirmada; regressões Fase 1/T01-T05 preservadas
+- aprendizado: pendente
+- ultima_acao: análise oficial da F2-T06 concluída; fronteira T05×T06 definida; nenhuma alteração de produto feita
+- proxima_acao: aguardar autorização para executar a prova/fechamento da F2-T06, preferencialmente como ciclo documental/read-only sem nova funcionalidade
+- atualizado_em: 2026-09-21T08:55:00-03:00
