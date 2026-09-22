@@ -20,7 +20,7 @@
 - **2 pessoas atribuídas**, ambas com **acesso total**:
   - João Paulo Oliveira — acesso total (owner nominal confirmado também neste nível).
   - AYPLA DIGITAL — acesso total (agência/parceiro externo).
-- **Não existe nenhum usuário somente leitura** (Analyst / "Visualizar desempenho" + "Acessar relatórios") na conta.
+- **Não existe nenhum usuário somente leitura** (Analyst / "Ver desempenho") na conta.
 
 ### Riscos de governança registrados (não bloqueiam a T09)
 
@@ -37,12 +37,25 @@ A SPEC F2-004 exige **permissão mínima de leitura** para o modo integrado. Hoj
 - **Caminho escolhido:** opção 1 — criar/usar um usuário dedicado somente leitura.
 - **Objetivo:** atribuir à pessoa dedicada apenas a permissão mínima necessária para visualizar anúncios e acessar relatórios da conta `TalentGroup_01`.
 - **Escopo da decisão:** governança de acesso; não autoriza conexão, chamada, leitura real, implementação ou uso de credencial pelo assistente.
-- **Estado:** aguardando execução manual pelo owner no Meta.
 
-### Ponto de parada aplicado
+### Execução pelo owner — convite enviado (2026-09-22, 10:50)
 
-Conforme a SPEC ("parar e pedir validação quando for necessário conceder permissão"), o assistente não cria usuário, não envia convite e não altera permissões. Nenhuma conexão ou chamada foi feita.
+Comprovado por nova captura do owner (tela Configurações → Pessoas do portfólio):
+
+- **Convite enviado** pelo owner (João Paulo Oliveira) ao **e-mail dedicado do leitor** — e-mail não transcrito nesta evidência por conter dado pessoal; visível apenas no Meta.
+- **Atribuição configurada** na conta `TalentGroup_01` com somente a permissão **"Ver desempenho"** (captura de 10:44: gerenciar campanhas, modelos do Creative Hub e acesso total desligados).
+- **Estado no Meta:** convite **pendente de aceite** (validade de 30 dias); seção "Ativos de negócios (pendente)" indica que a atribuição do ativo aguarda ativação.
+- **Consistência verificada:** a captura exibe `business_id=954962358469228` — mesmo portfólio declarado no gate 1.
+- Nenhuma permissão existente foi alterada; nenhuma conexão ou chamada foi feita.
+
+### Por que o gate 2 segue EM ANDAMENTO
+
+A configuração está correta, mas o acesso ainda não está ativo: o convite não foi aceito e a atribuição do ativo consta como pendente. O gate fecha com a prova final do estado ativo.
 
 ## Próximo passo
 
-O owner deve adicionar um usuário dedicado ao portfólio e atribuir à conta `TalentGroup_01` somente as permissões de visualização de anúncios e acesso a relatórios, sem criar/editar anúncios, alterar orçamento/pagamento ou administrar pessoas. Depois, enviar captura sem e-mail, senha, token ou código. A T09 permanece bloqueada até a validação dessa evidência.
+1. O leitor dedicado **aceitar o convite** recebido por e-mail.
+2. O owner confirmar no Meta que a atribuição da conta `TalentGroup_01` saiu de pendente para ativa.
+3. O owner enviar captura da **lista de pessoas da conta `TalentGroup_01`** mostrando o leitor dedicado com acesso parcial (somente "Ver desempenho"), sem e-mails ou dados pessoais.
+
+Com essa evidência, o gate 2 é fechado e seguimos ao próximo requisito (contrato de campos/payload autorizado e política de dados). A T09 permanece bloqueada.
