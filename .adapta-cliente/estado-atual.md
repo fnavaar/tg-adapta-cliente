@@ -8,6 +8,6 @@
 - teste_humano: nao_aplicavel — não há teste humano de produto enquanto os gates de elegibilidade não forem atendidos
 - verificacao_automatica: baseline somente leitura passou — Skip v0.0.86/c9ea5d5 de governança; migrations até 0020; collections existentes; produto funcional preservado; nenhuma chamada externa ou mutação
 - aprendizado: pendente
-- ultima_acao: gate 1 da F2-T09 validado como identificação declarada dos ativos Meta; evidência registrada em 06_notas/f2-t09-elegibilidade-2026-09-22.md; sem conexão, chamada, alteração de permissão ou implementação
-- proxima_acao: verificar owner nominal e permissão mínima de leitura da conta de anúncios, sem alterar permissões, conectar ou chamar o Meta
-- atualizado_em: 2026-09-22T10:15:00-03:00
+- ultima_acao: gate 2 em andamento — captura do portfólio talentgroup.br comprova owner nominal com controle total (João Paulo Oliveira) no nível do portfólio; faltam permissões no nível da conta TalentGroup_01 e definição do leitor nominal; evidência em 06_notas/f2-t09-elegibilidade-2026-09-22.md
+- proxima_acao: obter lista de pessoas e papéis no nível da conta de anúncios TalentGroup_01 e definir o usuário/função de leitura, sem alterar permissões, conectar ou chamar o Meta
+- atualizado_em: 2026-09-22T10:25:00-03:00
