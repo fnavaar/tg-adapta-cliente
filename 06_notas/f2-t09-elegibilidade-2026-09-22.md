@@ -32,10 +32,17 @@
 
 A SPEC F2-004 exige **permissão mínima de leitura** para o modo integrado. Hoje só existem acessos de controle total (escrita). Usar a conta de acesso total do owner como via de leitura fere o princípio do privilégio mínimo e comprometeria o rollback (revogação limpa).
 
+### Decisão do owner — 2026-09-22, 10:32
+
+- **Caminho escolhido:** opção 1 — criar/usar um usuário dedicado somente leitura.
+- **Objetivo:** atribuir à pessoa dedicada apenas a permissão mínima necessária para visualizar anúncios e acessar relatórios da conta `TalentGroup_01`.
+- **Escopo da decisão:** governança de acesso; não autoriza conexão, chamada, leitura real, implementação ou uso de credencial pelo assistente.
+- **Estado:** aguardando execução manual pelo owner no Meta.
+
 ### Ponto de parada aplicado
 
-Conforme a SPEC ("parar e pedir validação quando for necessário conceder permissão"), a decisão de como fornecer o acesso de leitura mínima é do owner, que a executaria no Meta. Nenhuma permissão foi alterada; nenhuma conexão ou chamada foi feita.
+Conforme a SPEC ("parar e pedir validação quando for necessário conceder permissão"), o assistente não cria usuário, não envia convite e não altera permissões. Nenhuma conexão ou chamada foi feita.
 
 ## Próximo passo
 
-Owner decide o caminho do acesso de leitura mínima (atribuir papel Analyst a uma pessoa existente, criar usuário dedicado somente leitura, ou outro que definir). Depois de executada a alteração no Meta, nova captura fecha o gate 2.
+O owner deve adicionar um usuário dedicado ao portfólio e atribuir à conta `TalentGroup_01` somente as permissões de visualização de anúncios e acesso a relatórios, sem criar/editar anúncios, alterar orçamento/pagamento ou administrar pessoas. Depois, enviar captura sem e-mail, senha, token ou código. A T09 permanece bloqueada até a validação dessa evidência.
