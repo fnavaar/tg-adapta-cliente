@@ -8,6 +8,6 @@
 - teste_humano: nao_aplicavel — não há teste humano de produto enquanto os gates de elegibilidade não forem atendidos
 - verificacao_automatica: baseline somente leitura passou — Skip v0.0.86/c9ea5d5 de governança; migrations até 0020; collections existentes; produto funcional preservado; nenhuma chamada externa ou mutação
 - aprendizado: pendente
-- ultima_acao: gate 2 em andamento — captura do portfólio talentgroup.br comprova owner nominal com controle total (João Paulo Oliveira) no nível do portfólio; faltam permissões no nível da conta TalentGroup_01 e definição do leitor nominal; evidência em 06_notas/f2-t09-elegibilidade-2026-09-22.md
-- proxima_acao: obter lista de pessoas e papéis no nível da conta de anúncios TalentGroup_01 e definir o usuário/função de leitura, sem alterar permissões, conectar ou chamar o Meta
-- atualizado_em: 2026-09-22T10:25:00-03:00
+- ultima_acao: gate 2 em andamento — owner nominal confirmado nos níveis portfólio e conta (João Paulo Oliveira, acesso total); conta TalentGroup_01 possui 2 acessos, ambos de controle total (João Paulo e AYPLA DIGITAL), sem nenhum usuário somente leitura; decisão do owner pendente sobre como fornecer permissão mínima de leitura; evidência em 06_notas/f2-t09-elegibilidade-2026-09-22.md
+- proxima_acao: owner decidir e executar no Meta o acesso de leitura mínima (Analyst) para o leitor nominal; sem alteração por parte do assistente, sem conexão e sem chamada
+- atualizado_em: 2026-09-22T10:30:00-03:00
