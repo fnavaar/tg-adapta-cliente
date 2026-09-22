@@ -8,54 +8,40 @@
 - **ID da conta de anúncios:** `1667348577717128`.
 - Validação formal: campos completos, numéricos e associados aos nomes. Sem segredo, sem conexão, sem chamada.
 
-## Gate 2 — Owner nominal e acesso de leitura — EM ANDAMENTO
+## Gate 2 — Owner nominal e acesso de leitura — VALIDADO (2026-09-22, 10:56)
 
-### Comprovado por capturas do owner (2026-09-22, 10:22 e 10:27)
+### Trajetória da validação
 
-**Nível do portfólio `talentgroup.br`:**
-- **Owner nominal com controle total:** João Paulo Oliveira — sessão ativa em 2026-09-22; consistente com o Champion do projeto.
-- Observações de governança: dois perfis externos (parceiros/agências) com controle total do portfólio (um com expiração em 8 dias); um perfil interno com acesso parcial; um perfil inativo com controle total.
+1. Capturas de 10:22 e 10:27: owner nominal com controle total no portfólio e na conta (João Paulo Oliveira); conta `TalentGroup_01` com 2 acessos, ambos de controle total (João Paulo Oliveira e AYPLA DIGITAL), sem usuário somente leitura.
+2. Decisão do owner (10:32): opção 1 — usuário dedicado somente leitura.
+3. Execução do owner (10:44/10:50): convite enviado ao leitor dedicado; atribuição na `TalentGroup_01` configurada somente com "Ver desempenho" (gerenciar campanhas, modelos do Creative Hub e acesso total desligados); convite pendente de aceite.
+4. Captura final (10:56): convite ACEITO e acesso ATIVO.
 
-**Nível da conta de anúncios `TalentGroup_01`:**
-- **2 pessoas atribuídas**, ambas com **acesso total**:
-  - João Paulo Oliveira — acesso total (owner nominal confirmado também neste nível).
-  - AYPLA DIGITAL — acesso total (agência/parceiro externo).
-- **Não existe nenhum usuário somente leitura** (Analyst / "Ver desempenho") na conta.
+### Estado comprovado na captura final (10:56)
 
-### Riscos de governança registrados (não bloqueiam a T09)
+- **Leitor nominal dedicado:** Luiz Carlos Manni — ativo, online pela última vez em 22/09/2026 (convite aceito).
+- **Conta de anúncios `TalentGroup_01`:** **Acesso parcial (Ver desempenho)** — ATIVO, sem pendência.
+- **Consistência:** mesmo portfólio `talentgroup.br` (`954962358469228`) dos gates anteriores.
+- Nenhum e-mail ou dado pessoal foi transcrito nesta evidência.
+- Nenhuma permissão preexistente foi alterada; nenhuma conexão ou chamada foi feita.
 
-1. Agência externa (AYPLA DIGITAL) com poder de escrita na conta de anúncios.
-2. Perfil inativo ainda com controle total do portfólio.
-3. Dois perfis externos com controle total do portfólio.
+### Observações de governança registradas (não bloqueiam)
 
-### Por que o gate 2 NÃO fechou
+1. O leitor dedicado também possui **controle total do portfólio** (pode gerenciar configurações, pessoas e ativos e excluir o portfólio). O acesso à conta de anúncios — superfície da prova T09 — é somente leitura; o controle do portfólio não altera a natureza somente leitura do acesso à conta, mas fica registrado para o rollback (a revogação limpa é do acesso parcial da conta).
+2. Agência externa (AYPLA DIGITAL) com poder de escrita na conta de anúncios.
+3. Perfil inativo ainda com controle total do portfólio.
+4. Dois perfis externos com controle total do portfólio (um com expiração em 8 dias a partir de 22/09).
 
-A SPEC F2-004 exige **permissão mínima de leitura** para o modo integrado. Hoje só existem acessos de controle total (escrita). Usar a conta de acesso total do owner como via de leitura fere o princípio do privilégio mínimo e comprometeria o rollback (revogação limpa).
+## Gate 3 — Contrato de campos autorizados e política de dados — EM ANDAMENTO
 
-### Decisão do owner — 2026-09-22, 10:32
+Proposta apresentada ao owner para aprovação (base: SPEC F2-004, seção Dados e integrações):
 
-- **Caminho escolhido:** opção 1 — criar/usar um usuário dedicado somente leitura.
-- **Objetivo:** atribuir à pessoa dedicada apenas a permissão mínima necessária para visualizar anúncios e acessar relatórios da conta `TalentGroup_01`.
-- **Escopo da decisão:** governança de acesso; não autoriza conexão, chamada, leitura real, implementação ou uso de credencial pelo assistente.
+- **Campos autorizados para leitura:** identificador e nome de campanha, conjunto de anúncios e anúncio (quando disponíveis); período; origem/canal declarado; impressões; cliques; custo (spend) apenas como leitura.
+- **Campos proibidos:** contatos, leads, dados pessoais, conteúdo de formulários, criativos não públicos, qualquer escrita (campanha, orçamento, criativo).
+- **Política de dados:** sem dado pessoal; campo não previsto é descartado e registrado (RN-F2-012); erro 401/403/429/timeout/payload inválido interrompe sem retry cego (RN-F2-013); rollback documentado.
 
-### Execução pelo owner — convite enviado (2026-09-22, 10:50)
+## Próximos gates
 
-Comprovado por nova captura do owner (tela Configurações → Pessoas do portfólio):
-
-- **Convite enviado** pelo owner (João Paulo Oliveira) ao **e-mail dedicado do leitor** — e-mail não transcrito nesta evidência por conter dado pessoal; visível apenas no Meta.
-- **Atribuição configurada** na conta `TalentGroup_01` com somente a permissão **"Ver desempenho"** (captura de 10:44: gerenciar campanhas, modelos do Creative Hub e acesso total desligados).
-- **Estado no Meta:** convite **pendente de aceite** (validade de 30 dias); seção "Ativos de negócios (pendente)" indica que a atribuição do ativo aguarda ativação.
-- **Consistência verificada:** a captura exibe `business_id=954962358469228` — mesmo portfólio declarado no gate 1.
-- Nenhuma permissão existente foi alterada; nenhuma conexão ou chamada foi feita.
-
-### Por que o gate 2 segue EM ANDAMENTO
-
-A configuração está correta, mas o acesso ainda não está ativo: o convite não foi aceito e a atribuição do ativo consta como pendente. O gate fecha com a prova final do estado ativo.
-
-## Próximo passo
-
-1. O leitor dedicado **aceitar o convite** recebido por e-mail.
-2. O owner confirmar no Meta que a atribuição da conta `TalentGroup_01` saiu de pendente para ativa.
-3. O owner enviar captura da **lista de pessoas da conta `TalentGroup_01`** mostrando o leitor dedicado com acesso parcial (somente "Ver desempenho"), sem e-mails ou dados pessoais.
-
-Com essa evidência, o gate 2 é fechado e seguimos ao próximo requisito (contrato de campos/payload autorizado e política de dados). A T09 permanece bloqueada.
+- **Gate 4:** chave de reconciliação — inclui a decisão de identidade técnica multi-fonte pendente desde a F1-T06 (obrigatória para o modo integrado).
+- **Gate 5:** payload autorizado (exemplo do que a leitura produzirá, sintético/anonimizado).
+- Após todos os gates: reavaliação oficial de elegibilidade da F2-T09 e plano de implementação para autorização expressa do Champion.
