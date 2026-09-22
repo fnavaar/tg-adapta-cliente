@@ -6,44 +6,41 @@
 ## Onde estamos
 
 - **Fase atual:** 2 — Sistema de campanhas e experimentação de Growth Marketing (LIBERADA PARA EXECUÇÃO).
-- **Task ativa:** F2-T09 — análise de elegibilidade concluída; aguardando autorização de implementação.
+- **Task ativa:** F2-T09 — implementação autorizada, bloqueada por dependência externa do conector Meta.
 - **Task anterior:** F2-T08 concluída e validada em 2026-09-21.
-- **Progresso:** 8 de 9 tasks concluídas (89%); F2-T09 elegível para implementação controlada, ainda não implementada.
+- **Progresso:** 8 de 9 tasks concluídas (89%); F2-T09 elegível e autorizada, mas bloqueada antes da leitura real.
 
-## Reavaliação da F2-T09
+## Resultado da tentativa de execução da F2-T09
 
-- Gates 1 a 5 atendidos: ativos identificados; owner e acesso parcial de leitura comprovados; contrato de campos/política aprovados; chave `sistema_origem_tecnico + record_id` aprovada; payload sintético aprovado.
-- T07 e T08 aceitas e preservadas.
-- F2-T09 está **elegível**, mas a autorização de implementação ainda não foi concedida.
-- CA-2-11 e CA-2-12 no recorte real continuam pendentes.
+- Autorização recebida às 11:28 de 22/09/2026.
+- Preflight concluído; produto funcional preservado em Skip v0.0.88 (`aa6d1b6`), com apenas `.skip.config.json` como pendência preexistente.
+- Consulta planejada: conta `act_1667348577717128`, nível `account`, período 15/09/2026–21/09/2026, somente `account_id`, `account_name`, período, impressões, cliques e `spend`.
+- Primeira tentativa foi rejeitada pelo conector por parâmetro técnico inválido; a segunda foi corrigida e retornou `No connected account found for user ID 29567e12-3903-4558-9e24-8358d910e5d4`.
+- Nenhum dado Meta foi retornado; não houve leitura efetiva, escrita em `demandas`, alteração de campanha/orçamento/criativo, mudança de banco ou código funcional.
+- Nenhum token, senha, código ou segredo foi solicitado ou recebido.
+
+## Gate atual
+
+**F2-T09 bloqueada por dependência externa:** o ambiente do conector Meta não tem uma conta conectada para o usuário atual. A task não falhou por regra de negócio nem por produto; a execução parou antes da implementação e da leitura real.
+
+## Próxima ação única
+
+Conectar/autorização Meta no ambiente que fornece o conector, sem enviar segredo pelo chat. Depois, retomar a mesma F2-T09 e repetir a consulta limitada já definida; não iniciar outra task.
 
 ## Resultado preservado da F2-T08
 
 - Relatório de fechamento: `05_entregas/fase-2/f2-t08/relatorio-fechamento.md`.
-- Produto funcional: Skip v0.0.85, hash `25c717a`, preservado durante o fechamento.
+- Produto funcional: Skip v0.0.85, hash `25c717a`, preservado durante o fechamento; versão atual de governança verificada como v0.0.88 (`aa6d1b6`).
 - T04: 7/7; T08: 8/8; bateria humana: 5/5.
-- Lote `META-F2-MANUAL-001`: 5 linhas, 100% sintético, `manual_export`, sem dados pessoais.
+- Lote `META-F2-MANUAL-001`: 5 linhas, 100% sintéticas, `manual_export`, sem dados pessoais.
 - Idempotência: replay `skip`; payload diferente com mesmo `batch_id` → conflito/bloqueio/decisão humana.
 - Falhas 401/403/429/timeout/payload inválido simuladas, sem chamada externa, sem retry automático.
 - `demandas`: 10 registros; migrations até 0020; collections preservadas.
 
-## Gate atual
-
-**Autorização de implementação ausente.** A única próxima ação é aguardar autorização expressa do Champion para executar o plano da F2-T09.
-
-## Plano resumido aguardando autorização
-
-- Reutilizar o núcleo T04/T08.
-- Fazer uma única leitura Meta limitada, somente dos campos aprovados.
-- Normalizar em dry-run com identidade `(meta_ads, record_id)`.
-- Reconciliar quantidade, IDs, duplicidade, conflito e campos ausentes.
-- Não escrever em `demandas`, não criar leads e não alterar campanhas, orçamento ou criativos.
-- Executar QA, regressão e teste humano antes de qualquer conclusão.
-
 ## Pendências preservadas
 
-- CA-2-11 e CA-2-12 real ainda não executados.
+- CA-2-11 e CA-2-12 no recorte real não executados.
 - Leitor dedicado tem acesso parcial na conta, mas controle total do portfólio; ressalva de governança registrada para rollback.
 - Agência externa permanece com acesso de escrita na conta de anúncios.
 - Nenhuma relação estrutural `demandas` ↔ `experimentos_f2` foi criada.
-- F2-T09 não está concluída; aguarda autorização de implementação.
+- F2-T09 permanece aberta e bloqueada; não está concluída.
