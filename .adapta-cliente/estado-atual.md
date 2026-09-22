@@ -8,6 +8,6 @@
 - teste_humano: nao_aplicavel — não há teste humano de produto enquanto os gates de elegibilidade não forem atendidos
 - verificacao_automatica: baseline somente leitura passou — Skip v0.0.86/c9ea5d5 de governança; migrations até 0020; collections existentes; produto funcional preservado; nenhuma chamada externa ou mutação
 - aprendizado: pendente
-- ultima_acao: gate 2 VALIDADO — leitor nominal dedicado Luiz Carlos Manni ativo (convite aceito) com acesso parcial "Ver desempenho" ATIVO na conta TalentGroup_01 (captura 10:56, portfólio consistente 954962358469228); observações de governança registradas (leitor também tem controle total do portfólio; agência externa com escrita na conta; perfil inativo com controle total); evidência em 06_notas/f2-t09-elegibilidade-2026-09-22.md
-- proxima_acao: gate 3 — owner aprovar o contrato de campos autorizados e a política de dados; sem conexão, chamada ou implementação
-- atualizado_em: 2026-09-22T10:58:00-03:00
+- ultima_acao: gate 3 VALIDADO — owner aprovou o contrato de campos autorizados e a política de dados às 11:02; evidência registrada em 06_notas/f2-t09-elegibilidade-2026-09-22.md; sem conexão, chamada, leitura real ou implementação
+- proxima_acao: gate 4 — owner decidir a estratégia de identidade/chave de reconciliação multi-fonte; sem escolher por inferência, conectar ou chamar o Meta
+- atualizado_em: 2026-09-22T11:02:00-03:00

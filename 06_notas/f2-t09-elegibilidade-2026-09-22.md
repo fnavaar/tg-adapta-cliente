@@ -32,16 +32,52 @@
 3. Perfil inativo ainda com controle total do portfólio.
 4. Dois perfis externos com controle total do portfólio (um com expiração em 8 dias a partir de 22/09).
 
-## Gate 3 — Contrato de campos autorizados e política de dados — EM ANDAMENTO
+## Gate 3 — Contrato de campos autorizados e política de dados — VALIDADO (2026-09-22, 11:02)
 
-Proposta apresentada ao owner para aprovação (base: SPEC F2-004, seção Dados e integrações):
+### Aprovação do owner
 
-- **Campos autorizados para leitura:** identificador e nome de campanha, conjunto de anúncios e anúncio (quando disponíveis); período; origem/canal declarado; impressões; cliques; custo (spend) apenas como leitura.
-- **Campos proibidos:** contatos, leads, dados pessoais, conteúdo de formulários, criativos não públicos, qualquer escrita (campanha, orçamento, criativo).
-- **Política de dados:** sem dado pessoal; campo não previsto é descartado e registrado (RN-F2-012); erro 401/403/429/timeout/payload inválido interrompe sem retry cego (RN-F2-013); rollback documentado.
+- **Decisão:** `Aprovo como proposto`.
+- **Escopo:** aprovação do contrato de leitura e da política de dados; não autoriza conexão, chamada real, implementação, publicação, alteração de orçamento ou uso de segredo.
 
-## Próximos gates
+### Campos autorizados para leitura
 
-- **Gate 4:** chave de reconciliação — inclui a decisão de identidade técnica multi-fonte pendente desde a F1-T06 (obrigatória para o modo integrado).
-- **Gate 5:** payload autorizado (exemplo do que a leitura produzirá, sintético/anonimizado).
-- Após todos os gates: reavaliação oficial de elegibilidade da F2-T09 e plano de implementação para autorização expressa do Champion.
+1. Identificador e nome de campanha, conjunto de anúncios e anúncio, quando disponíveis.
+2. Período.
+3. Origem/canal declarado.
+4. Impressões.
+5. Cliques.
+6. Custo (`spend`), somente como leitura.
+
+### Campos e ações proibidos
+
+- contatos, leads e dados pessoais;
+- conteúdo de formulários;
+- criativos não públicos;
+- qualquer escrita em campanha, orçamento ou criativo.
+
+### Política aprovada
+
+- Campo fora do contrato: descartar e registrar, sem inferência (RN-F2-012).
+- Erro 401/403/429, timeout ou payload inválido: interromper o modo integrado, registrar o erro e não fazer retry cego (RN-F2-013).
+- Rollback documentado, preservando logs e evidências.
+- Nenhuma leitura real ou chamada Meta foi realizada neste gate.
+
+## Gate 4 — Chave de identidade e reconciliação — PENDENTE DE DECISÃO
+
+A pendência arquitetural oficial da F1-T06 permanece aberta. Antes de qualquer integração efetiva com múltiplas fontes técnicas, é necessário aprovar uma estratégia de identidade:
+
+- `record_id` global; ou
+- `sistema_origem_tecnico + record_id`; ou
+- outra chave explicitamente aprovada.
+
+Até essa decisão:
+
+- não deduplicar nem agregar fontes técnicas;
+- não criar identidade global por inferência;
+- não iniciar leitura real ou implementação da T09.
+
+## Próximo gate após a decisão de identidade
+
+**Gate 5 — payload autorizado:** apresentar exemplo sintético/anonimizado do retorno esperado, limitado aos campos aprovados, antes de qualquer leitura real.
+
+Após os gates restantes, será feita a reavaliação oficial da elegibilidade da F2-T09 e apresentado o plano de implementação para autorização expressa do Champion.
