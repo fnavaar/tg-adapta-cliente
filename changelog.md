@@ -6,6 +6,7 @@
 
 ## Registro
 
+- 2026-09-22 · Champion/owner · F2-T09 — implementação controlada autorizada às 11:28; escopo: leitura Meta limitada, dry-run, reconciliação, tratamento seguro de erro e rollback, sem escrita em `demandas`, leads/contatos, alteração de campanha/orçamento/criativo ou segredo no chat. Estado passou a `implementando`; nenhuma chamada real ainda realizada nesta transição.
 - 2026-09-22 · Champion/owner · F2-T09 — gate 5 VALIDADO (11:20): payload sintético/anonimizado aprovado como está, limitado aos campos do contrato; sem leads, contatos, dados pessoais, formulários, criativos não públicos, tokens, segredos ou escrita. Reavaliação oficial: gates 1–5 atendidos; F2-T09 elegível para implementação controlada, mas aguardando autorização expressa. CA-2-11 e CA-2-12 real ainda pendentes. Nenhuma conexão, chamada, leitura real ou alteração funcional.
 - 2026-09-22 · Adapta (Pepe) · F2-T09 — plano de implementação apresentado após reavaliação; estado persistido como `aguardando_autorizacao`; reutilização T04/T08, leitura Meta limitada, dry-run, reconciliação e rollback documentados em `06_notas/f2-t09-elegibilidade-2026-09-22.md`.
 - 2026-09-22 · Champion/owner · F2-T09 — gate 4 VALIDADO (11:13): escolhida a estratégia `sistema_origem_tecnico + record_id`. Regra futura: par de identidade preserva a fonte, evita colisões e não deduplica por inferência. Decisão não cria campo/chave no banco e não autoriza implementação, conexão ou leitura Meta. Próximo: gate 5, payload sintético/anonimizado.

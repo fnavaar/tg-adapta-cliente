@@ -3,11 +3,11 @@
 - task_id: F2-T09
 - champion: João Paulo
 - spec: 04_fase-atual/specs/spec-f2-004-prova-meta-ou-fallback.md
-- etapa: aguardando_autorizacao
-- autorizacao_implementacao: ausente — gates de elegibilidade aprovados; Champion ainda não autorizou implementação, conexão ou chamada real
-- teste_humano: pendente — só será executado após implementação autorizada
-- verificacao_automatica: baseline somente leitura passou — produto funcional preservado; nenhuma conexão Meta, chamada real, mutação ou implementação T09
+- etapa: implementando
+- autorizacao_implementacao: confirmada em 2026-09-22T11:28-03:00 — "Autorizar implementação controlada da F2-T09"; escopo limitado ao plano aprovado, sem escrita em demandas, leads/contatos, alteração de campanha/orçamento/criativo ou segredo no chat
+- teste_humano: pendente — será executado após as verificações automatizáveis
+- verificacao_automatica: pendente — implementação iniciada após baseline somente leitura e QA anterior preservados
 - aprendizado: pendente
-- ultima_acao: gate 5 aprovado às 11:20; reavaliação oficial concluiu F2-T09 elegível para implementação controlada; plano registrado em 06_notas/f2-t09-elegibilidade-2026-09-22.md; nenhuma conexão, chamada ou alteração funcional
-- proxima_acao: aguardar autorização expressa do Champion para implementar F2-T09 conforme o plano registrado
-- atualizado_em: 2026-09-22T11:20:00-03:00
+- ultima_acao: autorização expressa recebida; transição para implementando registrada antes de alterar o produto; inspeção confirmou versão Skip 0.0.88/aa6d1b6 e pendência preexistente somente em .skip.config.json
+- proxima_acao: implementar somente o adapter Meta de leitura limitada e o relatório dry-run, reutilizando T04/T08; parar em qualquer necessidade de escrita, segredo, campo fora do contrato ou integração adicional
+- atualizado_em: 2026-09-22T11:28:00-03:00
