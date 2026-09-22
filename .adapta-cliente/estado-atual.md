@@ -8,6 +8,6 @@
 - teste_humano: nao_aplicavel — não há teste humano de produto enquanto os gates de elegibilidade não forem atendidos
 - verificacao_automatica: baseline somente leitura passou — Skip v0.0.86/c9ea5d5 de governança; migrations até 0020; collections existentes; produto funcional preservado; nenhuma chamada externa ou mutação
 - aprendizado: pendente
-- ultima_acao: gate 3 VALIDADO — owner aprovou o contrato de campos autorizados e a política de dados às 11:02; evidência registrada em 06_notas/f2-t09-elegibilidade-2026-09-22.md; sem conexão, chamada, leitura real ou implementação
-- proxima_acao: gate 4 — owner decidir a estratégia de identidade/chave de reconciliação multi-fonte; sem escolher por inferência, conectar ou chamar o Meta
-- atualizado_em: 2026-09-22T11:02:00-03:00
+- ultima_acao: gate 4 VALIDADO — owner escolheu sistema_origem_tecnico + record_id às 11:13; decisão registrada em 06_notas/f2-t09-elegibilidade-2026-09-22.md; não houve criação de chave, alteração de banco/produto, conexão ou chamada
+- proxima_acao: gate 5 — apresentar ao owner payload sintético/anonimizado limitado aos campos aprovados, para aprovação antes de qualquer leitura real
+- atualizado_em: 2026-09-22T11:13:00-03:00

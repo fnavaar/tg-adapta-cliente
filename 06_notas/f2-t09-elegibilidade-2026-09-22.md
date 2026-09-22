@@ -62,22 +62,23 @@
 - Rollback documentado, preservando logs e evidências.
 - Nenhuma leitura real ou chamada Meta foi realizada neste gate.
 
-## Gate 4 — Chave de identidade e reconciliação — PENDENTE DE DECISÃO
+## Gate 4 — Chave de identidade e reconciliação — VALIDADO (2026-09-22, 11:13)
 
-A pendência arquitetural oficial da F1-T06 permanece aberta. Antes de qualquer integração efetiva com múltiplas fontes técnicas, é necessário aprovar uma estratégia de identidade:
+### Decisão do owner
 
-- `record_id` global; ou
-- `sistema_origem_tecnico + record_id`; ou
-- outra chave explicitamente aprovada.
+- **Estratégia escolhida:** `sistema_origem_tecnico + record_id`.
+- **Racional registrado:** manter cada identificador vinculado à fonte técnica; evitar colisões; preservar rastreabilidade; não inventar um `record_id` global.
+- **Escopo:** decisão de governança/arquitetura; não cria campo, índice, chave física ou vínculo no banco e não autoriza implementação.
 
-Até essa decisão:
+### Regra operacional para a futura prova
 
-- não deduplicar nem agregar fontes técnicas;
-- não criar identidade global por inferência;
-- não iniciar leitura real ou implementação da T09.
+- A identidade deverá ser tratada como par `(sistema_origem_tecnico, record_id)`.
+- A fonte Meta será identificada como sistema de origem somente quando a leitura autorizada for executada.
+- Sem chave válida, o registro será marcado como não vinculado/desconhecido; não será deduplicado por inferência.
+- A agregação entre fontes técnicas só poderá ocorrer respeitando esse par e o contrato aprovado.
 
-## Próximo gate após a decisão de identidade
+## Gate 5 — Payload autorizado — PRÓXIMO
 
-**Gate 5 — payload autorizado:** apresentar exemplo sintético/anonimizado do retorno esperado, limitado aos campos aprovados, antes de qualquer leitura real.
+Antes de qualquer leitura real, deve ser apresentado e aprovado um exemplo sintético/anonimizado do retorno esperado, limitado aos campos do Gate 3. Não incluir leads, contatos, dados pessoais, formulários, criativos não públicos, tokens ou segredos.
 
-Após os gates restantes, será feita a reavaliação oficial da elegibilidade da F2-T09 e apresentado o plano de implementação para autorização expressa do Champion.
+Após a aprovação do Gate 5 e dos demais gates documentais, será feita a reavaliação oficial da elegibilidade da F2-T09 e apresentado o plano de implementação para autorização expressa do Champion.
