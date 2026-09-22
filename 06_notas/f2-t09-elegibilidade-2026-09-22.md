@@ -77,8 +77,114 @@
 - Sem chave válida, o registro será marcado como não vinculado/desconhecido; não será deduplicado por inferência.
 - A agregação entre fontes técnicas só poderá ocorrer respeitando esse par e o contrato aprovado.
 
-## Gate 5 — Payload autorizado — PRÓXIMO
+## Gate 5 — Payload autorizado — VALIDADO (2026-09-22, 11:20)
 
-Antes de qualquer leitura real, deve ser apresentado e aprovado um exemplo sintético/anonimizado do retorno esperado, limitado aos campos do Gate 3. Não incluir leads, contatos, dados pessoais, formulários, criativos não públicos, tokens ou segredos.
+### Aprovação do owner
 
-Após a aprovação do Gate 5 e dos demais gates documentais, será feita a reavaliação oficial da elegibilidade da F2-T09 e apresentado o plano de implementação para autorização expressa do Champion.
+- **Decisão:** `Aprovo o payload como está`.
+- **Natureza:** aprovação de um contrato sintético/anonimizado; não é evidência de resposta real do Meta.
+
+### Limites confirmados
+
+- Payload limitado aos campos aprovados no Gate 3.
+- Identidade sintética no formato `(meta_ads, record_id)`.
+- Sem leads, contatos, dados pessoais, formulários, criativos não públicos, tokens, segredos ou campos de escrita.
+- Nenhuma conexão, chamada ou leitura real foi realizada.
+
+## Reavaliação oficial da elegibilidade da F2-T09 — 2026-09-22, 11:20
+
+### Pré-condições da task
+
+- F2-T07: concluída e validada; `META-F2-001` e `fallback_manual` aprovados.
+- F2-T08: concluída e validada; bateria humana 5/5; CA-2-10 e CA-2-12 no recorte simulado.
+- F2-T04: reconciliação determinística, replay e proteção de escopo preservados.
+
+### Matriz de elegibilidade
+
+| Requisito | Evidência | Resultado |
+|---|---|---|
+| Conta/portfólio identificados | Gate 1; declaração não sensível do owner | **Atendido** |
+| Owner nominal e acesso mínimo | Gate 2; leitor dedicado ativo com acesso parcial "Ver desempenho" na `TalentGroup_01` | **Atendido** |
+| Contrato de campos e política de dados | Gate 3; aprovação sem ressalvas | **Atendido** |
+| Chave de identidade/reconciliação | Gate 4; `sistema_origem_tecnico + record_id` | **Atendido** |
+| Payload autorizado | Gate 5; payload sintético aprovado | **Atendido** |
+| Autorização para implementação | Ainda não concedida | **Pendente — não é falha de elegibilidade** |
+
+### Veredito
+
+A F2-T09 está **elegível para implementação controlada**, mas **não está autorizada para implementação**. A task sai do bloqueio de elegibilidade e entra em `aguardando_autorizacao`.
+
+Os critérios CA-2-11 e CA-2-12 no recorte real ainda não foram executados e continuam pendentes de implementação, leitura real autorizada e teste humano. Não há integração Meta validada até este momento.
+
+## Plano de implementação para autorização
+
+### 1. Escopo mínimo
+
+- Reutilizar o núcleo determinístico de reconciliação T04/T08; não criar uma segunda engine.
+- Criar somente o adapter de leitura Meta e o tratamento de resposta, mantendo o fallback manual disponível.
+- Operar em modo somente leitura e dry-run; não escrever em `demandas`.
+- Não criar leads, contatos, formulários, vínculo estrutural campanha→lead ou receita.
+- Não criar nova collection, migration, campo, hook, RLS ou alteração de orçamento. Se isso se tornar necessário, parar e pedir nova decisão.
+
+### 2. Consulta real limitada
+
+- Usar a conta de anúncios já comprovada `TalentGroup_01` (`1667348577717128`).
+- Fazer uma única consulta inicial, com período curto previamente registrado e somente os campos aprovados.
+- Usar a superfície oficial de Insights da conta; endpoint, versão e disponibilidade de cada campo serão confirmados antes da chamada contra o contrato vigente da Meta.
+- A consulta não poderá buscar leads, contatos, formulários, criativos não públicos ou permissões de escrita.
+- Segredo/token, se tecnicamente necessário pelo conector aprovado, ficará fora do chat, GitHub e artefatos; não será solicitado pelo chat.
+
+### 3. Normalização e identidade
+
+- Registrar a origem técnica como `meta_ads` somente após a leitura autorizada.
+- Usar o par `(meta_ads, record_id)`.
+- Planejamento inicial: consultar no nível que retorne um identificador estável do objeto e usar esse ID como `record_id`; nunca usar nome de campanha como chave.
+- Se o identificador aprovado não vier, marcar `não vinculado/desconhecido` e parar; não inferir, deduplicar ou substituir por outra chave.
+- Preservar o payload bruto sanitizado e o relatório normalizado somente dentro da prova controlada, sem segredo ou dado pessoal.
+
+### 4. Reconciliação
+
+- Comparar resposta bruta autorizada × relatório normalizado.
+- Conferir quantidade de linhas, unicidade do par de identidade, campos permitidos, campos ausentes, duplicidade e conflito.
+- Registrar divergências e lacunas com estado explícito.
+- Não interpretar impressão, clique ou `spend` como lead, qualidade comercial, oportunidade ou receita.
+- Não afirmar atribuição ao pipeline F1, pois a relação estrutural `demandas` ↔ `experimentos_f2` não existe.
+
+### 5. Erros e rollback
+
+- 401/403/429, timeout ou payload/campo inválido: interromper, registrar e retornar a `fallback_manual`/`bloqueada`, sem retry cego.
+- Não provocar rate limit, bloqueio de conta ou erro destrutivo deliberadamente.
+- Se ocorrer erro real permitido durante a leitura, preservar status, resposta sanitizada e decisão de recuperação.
+- Se nenhum erro real ocorrer, não inventar uma evidência; a cobertura simulada permanece a da T08.
+- Ao fim da prova, o owner poderá revogar o acesso parcial da conta; logs e evidências permanecem preservados.
+
+### 6. Verificações automatizáveis
+
+1. Testes do parser/normalizador com o payload sintético aprovado.
+2. Teste de rejeição de campos fora do contrato.
+3. Teste da chave `(sistema_origem_tecnico, record_id)` e da ausência de chave.
+4. Teste de duplicidade, conflito e replay sem escrita.
+5. Teste de erro e retorno seguro, reutilizando a cobertura T08 e registrando qualquer erro real observado.
+6. Build, análise estática e regressão das rotas/painel F1, T04 e T08.
+7. Verificação viva de que `demandas`, collections e migrations não sofreram alteração.
+
+### 7. Teste humano obrigatório
+
+O Champion deverá confirmar:
+
+- conta, período e campos consultados;
+- somente leitura e ausência de escrita;
+- quantidade e IDs reconciliados;
+- campos proibidos ausentes;
+- comportamento seguro diante de erro, se observado;
+- fallback e rollback documentados;
+- preservação do painel F1 e das provas T04/T08.
+
+A task só poderá ser concluída após esse teste humano e a revalidação dos critérios CA-2-11 e CA-2-12.
+
+## Estado após a reavaliação
+
+- **Elegibilidade:** aprovada para implementação controlada.
+- **Autorização de implementação:** ausente.
+- **Estado operacional:** `aguardando_autorizacao`.
+- **Próxima ação única:** aguardar autorização expressa do Champion para executar este plano.

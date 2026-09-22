@@ -12,7 +12,7 @@
 | F2-T06 | 6 | Provar decisão baseada em qualidade e o histórico de ajuste/revogação. | Direção/marketing | F2-003 | CA-2-07, CA-2-08, CA-2-09 | Critérios de aceite; TDD da SPEC | RED `DEC-F2-RED-001` só com clique; GREEN decisão `ajustar`; regressão revoga e preserva histórico. | Decisão humana, relatório referenciado e histórico de revogação/versão. | F2-T05 aceita por teste humano. | Parar se resultado incompleto aparecer como êxito ou se o sistema agir externamente. | Concluída e validada em 2026-09-21 |
 | F2-T07 | 5 | Preencher o checklist Meta e documentar contrato de campos/owner ou selecionar formalmente fallback manual. | Gestor de tráfego/direção | F2-004 | RN-F2-011, RN-F2-012 | Contexto e decisões fechadas; Dados e integrações; Checklist | Tentar iniciar modo integrado sem checklist; selecionar `fallback_manual`/`bloqueada` quando faltar acesso. | Checklist de acesso, mapa de campos ou justificativa de fallback com owner. | F2-T04 aceita; decisão de identidade para multi-fonte não é necessária se permanecer manual. | Parar sem acesso, permissão, payload ou se houver pedido de segredo/OAuth/escrita Meta. | Concluída e validada em 2026-09-21 |
 | F2-T08 | 6 | Provar o fallback manual e a recuperação simulada de falhas sem escrita externa ou duplicidade. | Marketing/gestor de tráfego | F2-004 | CA-2-10, CA-2-12 (simulado) | Critérios de aceite; TDD da SPEC | RED sem credencial; lote `META-F2-MANUAL-001`; simular 401/403/429/timeout/payload inválido e lote repetido. | Log/captura do fallback/bloqueio, estado final e reconciliação do lote. | F2-T07 aceita por teste humano; fallback manual autorizado. | Parar se a prova exigir chamada real ao Meta ou qualquer escrita/publicação. | Concluída e validada em 2026-09-21 — bateria humana 5/5, CA-2-10/12 aprovados |
-| F2-T09 | Condicional | Provar leitura Meta limitada, mapeamento autorizado e tratamento real de erro, sem escrita. | Gestor de tráfego/direção | F2-004 | CA-2-11, CA-2-12 (real) | Dados e integrações; Critérios de aceite; TDD da SPEC | Consulta limitada com payload autorizado; reconciliar IDs/contagens; exercer erro real permitido. | Checklist aprovado, mapa de campos, log de leitura, comparação e rollback. | F2-T07 e F2-T08 aceitas; acesso de leitura, permissão, payload, chave multi-fonte e autorização explícita para esta task. | Parar em 401/403/429/timeout/campo não autorizado; desabilitar consulta e retornar a fallback. | Condicional — não elegível |
+| F2-T09 | Condicional | Provar leitura Meta limitada, mapeamento autorizado e tratamento real de erro, sem escrita. | Gestor de tráfego/direção | F2-004 | CA-2-11, CA-2-12 (real) | Dados e integrações; Critérios de aceite; TDD da SPEC | Consulta limitada com payload autorizado; reconciliar IDs/contagens; exercer erro real permitido. | Checklist aprovado, mapa de campos, log de leitura, comparação e rollback. | F2-T07 e F2-T08 aceitas; acesso de leitura, permissão, payload, chave multi-fonte e autorização explícita para esta task. | Parar em 401/403/429/timeout/campo não autorizado; desabilitar consulta e retornar a fallback. | Condicional — gates atendidos; elegível para implementação controlada, aguardando autorização expressa |
 
 ## Ordem e independência
 
@@ -22,7 +22,7 @@
 - **Leva 4:** F2-T04, após F2-T03.
 - **Leva 5:** F2-T05, após F2-T04; F2-T07, após F2-T04 — são independentes entre si.
 - **Leva 6:** F2-T06, após F2-T05; F2-T08, após F2-T07 — são independentes entre si.
-- **F2-T09:** não participa de leva fixa; fica inelegível até os gates explícitos da própria linha.
+- **F2-T09:** não participa de leva fixa; ficou inelegível até os gates explícitos da própria linha; após a reavaliação de 2026-09-22, os gates estão atendidos e a task aguarda autorização expressa para implementação controlada.
 - **Execução:** uma task por vez, mediante autorização expressa do Champion e teste humano ao fim de cada uma.
 
 ## Registro de fechamento da F2-T08 (2026-09-21)
@@ -40,3 +40,10 @@
 
 - Publicadas as SPECs F2-003 e F2-004, que constavam da decomposição aprovada em 03/09 mas não haviam sido enviadas na liberação original da fase.
 - As SPECs F2-001 e F2-002 foram substituídas pelas versões validadas da mesma decomposição, eliminando a divergência de numeração CA/RN entre esta jornada e as SPECs.
+
+## Registro de reavaliação da F2-T09 (2026-09-22)
+
+- Gates 1 a 5 de elegibilidade foram atendidos e registrados em `06_notas/f2-t09-elegibilidade-2026-09-22.md`.
+- A F2-T09 está elegível para implementação controlada, mas não autorizada e não concluída.
+- CA-2-11 e CA-2-12 no recorte real permanecem pendentes.
+- Nenhuma conexão, chamada Meta, leitura real ou alteração funcional foi realizada.

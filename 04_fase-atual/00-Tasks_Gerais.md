@@ -1,7 +1,7 @@
 # Fase 2 — Tasks gerais
 
 **Plano:** TG Mais Serviços / `6b09d189`  
-**Estado:** Fase 2 liberada para execução controlada; F2-T01 a F2-T08 concluídas e validadas; F2-T09 condicional e não elegível.
+**Estado:** Fase 2 liberada para execução controlada; F2-T01 a F2-T08 concluídas e validadas; F2-T09 elegível para implementação controlada, aguardando autorização expressa.
 
 ## Tasks
 
