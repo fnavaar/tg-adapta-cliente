@@ -1,11 +1,12 @@
 # Changelog — Projeto TG Mais Serviços de Tecnologia e RH LTDA
 
-> Registro de tudo que acontece no projeto, em ordem cronológica inversa (mais recente no topo).
+> Registro de tudo que aconteceu (inclusive dúvidas para o consultor).
 > Formato: `- AAAA-MM-DD · [quem] · o que aconteceu`
 > **Dúvidas para o consultor** entram como: `- AAAA-MM-DD · [quem] · DÚVIDA: …` — ele responde na próxima sincronização.
 
 ## Registro
 
+- 2026-09-22 · Champion/owner · F2-T09 — gate 1 de elegibilidade validado como identificação declarada dos ativos Meta: portfólio `talentgroup.br` (`954962358469228`) e conta `TalentGroup_01` (`1667348577717128`). Evidência registrada em `06_notas/f2-t09-elegibilidade-2026-09-22.md`. T09 permanece bloqueada; não houve conexão, chamada, alteração de permissão ou implementação.
 - 2026-09-21 · Champion (João Paulo) · F2-T08 CONCLUÍDA — bateria humana 5/5 aprovada e aceite formal do fechamento. CA-2-10 e CA-2-12 no recorte simulado passaram; T04 7/7, T08 8/8, pipeline/demandas 10, migrations até 0020 e collections preservadas. Produto funcional Skip v0.0.85 (`25c717a`) preservado. Sem Meta, token/OAuth, chamada externa, dado real/pessoal, publicação, orçamento, nova collection/migration/campo/hook/RLS ou escrita em `demandas`. F2-T09 permanece condicional e não foi iniciada.
 - 2026-09-21 · Adapta (Pepe) · FECHAMENTO DOCUMENTAL F2-T08 — relatório, fase, STATUS, matriz, Tasks Gerais, evidências, changelog, estado e aprendizado atualizados após revalidação independente em série; verificador previsto não disponível neste runtime, limitação registrada. Nenhuma implementação adicional no fechamento.
 - 2026-09-21 · Adapta (Pepe) · F2-T08 IMPLEMENTADA — núcleo puro generalizado, T04 adapter preservado, lote `META-F2-MANUAL-001`, idempotência/replay/conflito, falhas simuladas; Skip v0.0.85 (`25c717a`) QA passou; bateria humana aguardava aceite.
