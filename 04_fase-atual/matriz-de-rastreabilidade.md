@@ -1,18 +1,30 @@
-# Matriz de rastreabilidade — Fase 2
+# Matriz de rastreabilidade — Fase 3 (TG Mais)
 
-| Origem do escopo | SPEC | Critério de aceite | Task(s) | Prova/Evidência | Estado |
+**Escopo:** `03-Projeto/02-Escopo-Definitivo.md` · Fase 3 — Sistema integrado de pipeline, dashboard e handoffs
+**Run:** `20260923T1514Z-6b09d189-liberar-f3`
+**Estado:** Fase 3 liberada; 0/8 tasks concluídas; F3-T01 única elegível.
+
+| Origem do escopo / evolução | SPEC | Critérios de aceite | Task(s) | Prova / evidência | Estado |
 |---|---|---|---|---|---|
-| Fase 2; C-02; DC-001/DC-004; G-006 | F2-001 | CA-2-01..03 | F2-T01, F2-T02 | Briefings, bloqueios, versões e referência de aprovação | F2-T01 e F2-T02 concluídas e validadas |
-| Fase 2; C-01/C-04; DC-004; G-001/G-009 | F2-002 | CA-2-04..06 | F2-T03, F2-T04 | Relatório, IDs, reconciliação e lacunas | F2-T03 e F2-T04 concluídas e validadas; 3/3 testes humanos T04, 7/7 determinísticos e replay idempotente |
-| Fase 2; C-02/C-04; DC-007 | F2-003 | CA-2-07..09 | F2-T05, F2-T06 | Decisão humana e histórico de versões | F2-T05 e F2-T06 concluídas e validadas em 2026-09-21 |
-| Fase 2; DC-003; G-009 | F2-004 | CA-2-10..12 | F2-T07, F2-T08 | Checklist, fallback, falhas simuladas | F2-T07 e F2-T08 concluídas e validadas em 2026-09-21; T08 bateria humana 5/5 |
-| Fase 2; DC-003; G-009 | F2-004 | CA-2-11..12 | F2-T09 | Consulta Meta de leitura, reconciliação e erro real | Concluída e validada em 2026-09-23 — leitura real limitada (TalentGroup_01, 15–21/09, campos do contrato, HTTP 200), prova 10/10, teste humano aprovado (PDF 5 págs); CA-2-11 e CA-2-12 (real) atendidos. Histórico preservado: a task nasceu condicional/não elegível (2026-09-21), foi autorizada via gates 1–5 (2026-09-22), ficou bloqueada por dependência externa do conector (2026-09-22) e foi retomada/concluída após a conexão (2026-09-23) |
+| C-03; DC-001/DC-004; RQ-003/RQ-004; G-002 | F3-001 pipeline integrado | CA-3-01..03 | F3-T01, F3-T02 | Jornada inbound/outbound, proposta/vaga, retorno, escalonamento, log append-only, equivalência humana | F3-T01 elegível; F3-T02 bloqueada por F3-T01 + B3-RACI-01 |
+| C-04; DC-002/DC-004; RQ-001/RQ-006/RQ-007; G-001/G-005 | F3-002 dashboard/gargalos | CA-3-04..05 | F3-T03, F3-T04 | Visões por estado, gargalo, tempos, retorno, contagens pela fonte, bloqueio de KPI sem alvo | F3-T03 bloqueada por F3-T01; F3-T04 bloqueada por F3-T03 + B3-MET-01 |
+| C-05; DC-004/DC-005; RQ-004; G-004/G-005 | F3-003 handoffs por papel | CA-3-06..08 | F3-T05, F3-T06 | Registro, aceite/recusa, SLA, escalonamento, falha segura, recuperação e matriz RACI | F3-T05 bloqueada por F3-T01; F3-T06 bloqueada por F3-T05 + B3-RACI-01 |
+| C-06; DC-005/DC-006; RQ-009; G-003 | F3-004 sinais DHO | CA-3-09..10 | F3-T07, F3-T08 | Objeto separado, lista fechada, prova negativa de acesso, encaminhamento humano, fail-closed | F3-T07 bloqueada por F3-T01 + decisão C-06; F3-T08 bloqueada por F3-T07 |
+| EV-01/EV-02 — governança Meta | F3-001..004 | transversal | todas | Nenhuma task F3 lê Meta; regularização pelo leitor dedicado antes de eventual emenda | B3-META-01 aberto |
+| EV-03 — identidade multi-fonte | F3-001/F3-002 | CA-3-01..05 | F3-T01..T04 | Identidade explícita por fonte; sem dedupe por inferência; `demandas`↔`experimentos_f2` não é criado automaticamente | B3-ID-01 aberto |
+| EV-06 — G-001 e lead qualificado | F3-001/F3-002 | CA-3-04..05 | F3-T03/F3-T04 | Distribuição/tempos/gargalos permitidos; KPI contra alvo bloqueado com pendência visível | B3-MET-01 aberto |
+| EV-04/EV-07/EV-08 — falha segura, prova e UI | F3-001..004 | transversal | todas | Estado seguro sem retry cego; prova automatizável + bateria humana; limitações registradas | Incorporado às SPECs/TDDs |
 
-## Ressalvas de rastreabilidade
+## Bloqueios e decisões preservados
 
-- A divergência de numeração entre `fase.md`/esta matriz e as SPECs foi encerrada em 2026-09-17; a numeração CA-2-01..12 e RN-F2-001..014 é única e coerente.
-- A pendência de identidade técnica/multi-fonte permanece; T04, T08 e T09 usam `record_id` somente no escopo da fonte declarada.
-- `META-F2-001` foi aprovado humanamente com `fallback_manual`; o registro `META-F2-002` (T09) classifica a modalidade como `integrada_validada` em dry-run, com leitura real limitada registrada — sem escrita e sem alteração de campanha/orçamento/criativo.
-- `META-F2-MANUAL-001` foi processado somente como lote sintético em dry-run; os erros da T08 são simulados, não respostas reais.
-- Histórico da F2-T09 preservado: a task esteve condicional/não elegível (2026-09-21), foi autorizada via gates 1–5 (2026-09-22), bloqueada por dependência externa do conector Meta (2026-09-22, "No connected account") e concluída/validada após a conexão do conector (2026-09-23). O estado final é concluída; o histórico de bloqueio permanece registrado no `changelog.md` e em `05_entregas/fase-2/f2-t09/relatorio-fechamento.md`.
-- Pendências de governança da T09 preservadas para a próxima fase: o principal conectado no conector é o owner nominal (João Paulo Oliveira), não o leitor dedicado do gate 2; agência externa mantém escrita na conta de anúncios; nenhuma relação estrutural `demandas` ↔ `experimentos_f2` foi criada.
+- **B3-META-01:** nenhuma leitura Meta na F3 antes da regularização da conexão pelo leitor dedicado.
+- **B3-ID-01:** contrato de identidade por fonte; sem chave global ou deduplicação por inferência.
+- **B3-MET-01:** alvo, fórmula, período e definição de lead qualificado antes de KPI de resultado.
+- **B3-RACI-01:** matriz nominal de handoffs antes da prova F3-T06.
+- **B3-DHO-01:** lista de sinais autorizados e política de acesso antes de dado real de sinal; F3-004 permanece fail-closed com fixtures.
+
+## Projeções
+
+- Jornada: `00.tasks_per_fase/fase_3.md`, 8 tasks, fase-format:2, F3-T01 única elegível.
+- Tasks Gerais: `03-Projeto/02-Plano_de_acao/03.Fase_3/00-Tasks_Gerais.md`.
+- SPECs: F3-001..004, cada uma com TDD, critérios binários, bloqueios e tasks vinculadas.
