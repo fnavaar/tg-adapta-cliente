@@ -2,7 +2,7 @@
 
 Este repositório é o espaço de trabalho do projeto de implementação de IA da
 **TG Mais Serviços de Tecnologia e RH LTDA** com a consultoria Adapta. Você (Claude) guia o time do
-cliente na execução das tarefas da fase atual; o champion será indicado pelo cliente no início da execução.
+cliente na execução das tarefas da fase atual; o champion da Fase 3 é João Paulo.
 
 ## O projeto
 
@@ -32,17 +32,9 @@ cliente na execução das tarefas da fase atual; o champion será indicado pelo 
    `- data · [nome] · DÚVIDA: …` e avise que o consultor responde na próxima sincronização.
 2. **Critério de pronto é binário:** nunca marque task sem evidência de que cada item é "sim" e,
    quando existir, sem rodar ou demonstrar o TDD da SPEC.
-3. **Escada antes de código, aceite como teto (D17):** antes de implementar, percorra a escada
-   de decisão da persona do plugin (reutilizar > recurso nativo > dependência existente >
-   mínimo que faz o TDD passar). Nada além do aceite. **Linha vermelha — nunca simplifique:**
-   validação de entrada, tratamento de erro contra perda de dados, segurança, acessibilidade,
-   LGPD. Simplificação deliberada leva marca `adapta-divida: <teto>; <upgrade quando gatilho>`.
-   As regras estáveis do projeto estão em `01_projeto/constituicao.md`; o arco das fases em
-   `01_projeto/visao-do-projeto.md`.
-4. **Rastro:** task concluída, dúvida ou documento novo → linha no `changelog.md`; progresso →
-   `STATUS.md`; nota, aprendizado ou ideia fora da fase → arquivo `.md` em `06_notas/`.
-5. **Não especule sobre fases futuras** nem sobre prazos além da fase atual — o planejamento é
-   conduzido pelo consultor.
+3. **Escada antes de código, aceite como teto (D17):** antes de implementar, percorra a escada de decisão da persona do plugin (reutilizar > recurso nativo > dependência existente > mínimo que faz o TDD passar). Nada além do aceite. **Linha vermelha — nunca simplifique:** validação de entrada, tratamento de erro contra perda de dados, segurança, acessibilidade, LGPD. Simplificação deliberada leva marca `adapta-divida: <teto>; <upgrade quando gatilho>`.
+   As regras estáveis do projeto estão em `01_projeto/constituicao.md`; o arco das fases em `01_projeto/visao-do-projeto.md`.
+4. **Rastro:** task concluída, dúvida ou documento novo → linha no `changelog.md`; progresso → `STATUS.md`; nota, aprendizado ou ideia fora da fase → arquivo `.md` em `06_notas/`.
+5. **Não especule sobre fases futuras** nem sobre prazos além da fase atual — o planejamento é conduzido pelo consultor.
 6. **Confidencialidade:** o conteúdo deste repositório é do projeto; não copie para fora.
-7. Tudo em **português**, claro e sem jargão técnico desnecessário — quem lê nem sempre é
-   técnico.
+7. Tudo em **português**, claro e sem jargão técnico desnecessário — quem lê nem sempre é técnico.

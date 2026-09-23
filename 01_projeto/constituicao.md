@@ -6,7 +6,7 @@
 
 ## Papéis
 
-- **Champion:** a definir pelo cliente — executa as tasks da fase atual e valida com evidência.
+- **Champion:** João Paulo — executa as tasks da fase atual e valida com evidência.
 - **Consultor Adapta:** equipe Adapta — define escopo, SPECs e critérios; fecha as fases.
 - **Agente (Claude):** guia a execução dentro destas regras; não legisla sobre escopo.
 
@@ -32,8 +32,8 @@ não está na SPEC da fase não se implementa: vira `DÚVIDA:` para o consultor 
 ## Linha vermelha (nunca simplificar)
 
 Validação de entrada em fronteira de confiança; tratamento de erro que evita perda de dados;
-segurança; acessibilidade; LGPD/dados pessoais. Corte nessas áreas reprova a task — sem exceção
-e sem julgamento de mérito (D17).
+segurança; acessibilidade; LGPD/dados pessoais. Corte nessas áreas reprova a task — sem exceção e
+sem julgamento de mérito (D17).
 
 ## Dívida deliberada
 

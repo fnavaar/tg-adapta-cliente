@@ -1,13 +1,14 @@
 # Estado atual — Adapta Cliente
 
-- task_id: F2-T09
+- fase: 3
 - champion: João Paulo
-- spec: 04_fase-atual/specs/spec-f2-004-prova-meta-ou-fallback.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada em 2026-09-22T11:28-03:00 — "Autorizar implementação controlada da F2-T09"; retomada autorizada em 2026-09-23 — "autorizar implementação da t09" (owner, após verificação da conexão MetaAds: TalentGroup_01 ativa e legível)
-- teste_humano: aprovado — 2026-09-23, PDF de 5 páginas do Champion (uploads/5d191bfe-teste_t09.pdf): prova 10/10 verde, resumo "PASSOU — TDD da F2-T09 (leitura real + dry-run)", reconciliação das 8 linhas correta, rodapé "Modo Somente Leitura"
-- verificacao_automatica: passou — Skip v0.0.91 (hash 3a4b243) QA integral; prova T09 10/10 no preview; regressões T04 (7/7), T08 (8/8) e painel `/` OK; demandas 10 registros, zero escrita; nenhuma migration/collection/schema/hook novo (somente frontend)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-09-23-1210-cliques-overlay-skip.md + capturado:06_notas/aprendizado-continuo/AP-2026-09-23-1211-composio-principal-oauth.md
-- ultima_acao: F2-T09 CONCLUÍDA e validada humanamente em 23/09/2026; fechamento documental (fase, STATUS, changelog, estado, aprendizados); Fase 2 atinge 9/9 tasks
-- proxima_acao: NENHUMA — nenhuma task aberta; encerramento formal da Fase 2 na reunião de ciclo com o consultor; próxima fase só é publicada após esse encerramento
-- atualizado_em: 2026-09-23T12:15:00-03:00
+- task_elegivel: F3-T01
+- tasks_fase_3: 0/8 concluídas; F3-T01 elegível, F3-T02..T08 bloqueadas por dependências
+- prazo_referencia: 30/09/2026 (proposto; ajustável pelo Champion)
+- ambiente: Skip (GoSkip + SkipCloud), conforme regra geral do consultor
+- autorizacao_liberacao: confirmada por Navaar em 2026-09-23 — "quero que as tasks estejam liberadas"
+- autorizacao_implementacao: não concedida; esta publicação é documental
+- teste_humano: não aplicável à liberação documental; obrigatório ao fim de cada task executada
+- ultima_acao: Fase 3 publicada e selada como unidade ativa; Fase 2 arquivada com evidências
+- proxima_acao: João Paulo autorizar/executar F3-T01 com fixtures sintéticas e registrar evidências
+- bloqueios: B3-META-01, B3-ID-01, B3-MET-01, B3-RACI-01, B3-DHO-01

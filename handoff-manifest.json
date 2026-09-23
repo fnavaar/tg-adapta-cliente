@@ -1,62 +1,52 @@
 {
   "schemaVersion": "adapta-cliente-handoff/v1",
-  "phase": 2,
+  "phase": 3,
   "versions": {
     "package": "0.1.0",
     "adapta": "0.7.0",
     "adaptaCliente": "0.2.0"
   },
-  "generatedAt": "2026-09-17T17:25:00.000Z",
+  "generatedAt": "2026-09-23T19:42:51Z",
   "files": [
     {
+      "path": "04_fase-atual/00-Tasks_Gerais.md",
+      "sha256": "c89ec1f38f1210467bcd5c4daa2a2a57fa60047c61ee039c0f1a4621d3229e58",
+      "classification": "template-publico"
+    },
+    {
       "path": "04_fase-atual/README.md",
-      "sha256": "cf33fed8c1a187a8e36c8d4458325c669426f70a90af18945c38dbab5b6758b7",
+      "sha256": "956fece811d3c05ef1a815c455f4c759dfdb715e04de5f4e09ce8bea86431194",
       "classification": "template-publico"
     },
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "4994258b81ff8130cf2d1ad709483cf0cc2a04602802e6f1fb64c7106231377b",
+      "sha256": "aa2a1ae936dc64d7176c6fda3f25aa6a251375b195eac652c1f275e0012b958e",
       "classification": "fase-atual"
     },
     {
-      "path": "04_fase-atual/00-Tasks_Gerais.md",
-      "sha256": "8c478b7006f30f1e9bb17a48abaa05865188baccacea43331961a3057e09455c",
-      "classification": "tasks-gerais"
-    },
-    {
       "path": "04_fase-atual/matriz-de-rastreabilidade.md",
-      "sha256": "cbfe8b58bb91f45fdb708096945b8be20aa86b0feaf02d03638a50f1b6b3c0b2",
-      "classification": "matriz-rastreabilidade"
+      "sha256": "4a5ed1c54f9f5b0e0ee2966fe91f05d75d9dd08a80764f390f6a3803254244e7",
+      "classification": "template-publico"
     },
     {
-      "path": "04_fase-atual/specs/spec-f2-001-briefing-experimento-controlado.md",
-      "sha256": "9404db73f445689eb24e06f6010931de1e07fe128f619470ebda175376e03a95",
+      "path": "04_fase-atual/specs/spec-f3-001-pipeline-integrado.md",
+      "sha256": "95e85b3549112b6519b2fee3b9f6828faecba9cbbd13215eee1bdadd9c20c354",
       "classification": "spec-fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-f2-002-atribuicao-qualidade.md",
-      "sha256": "f5d052035c8c7adf28b74bd79db803166926e5f690c034f59061ee88fadd3fa2",
+      "path": "04_fase-atual/specs/spec-f3-002-dashboard-gargalos.md",
+      "sha256": "c4f7e75c0ae12a6a73b49f82161de317650c22075a7d9aebaf1ed53419c862b2",
       "classification": "spec-fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-f2-003-decisao-do-experimento.md",
-      "sha256": "b494106f87a84862a4b6a789e8d54d0d3b46cf71c877539daf75d27ad73f8ad8",
+      "path": "04_fase-atual/specs/spec-f3-003-handoffs-papel.md",
+      "sha256": "cd3cfabc23cd53abcb3fcfbb1df9fa946e705532ae7fae6035d3ed644e192c7a",
       "classification": "spec-fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-f2-004-prova-meta-ou-fallback.md",
-      "sha256": "0e879906fa7ac40d1f3c7a919550c4f9365a2ed7da0a31793cac364efdeddd20",
+      "path": "04_fase-atual/specs/spec-f3-004-sinais-dho.md",
+      "sha256": "793e5717bab3eff86281282db5ccc21a5df22842217d854f8e8ec1ba944d6feb",
       "classification": "spec-fase-atual"
-    },
-    {
-      "path": "STATUS.md",
-      "sha256": "473f5f411c343f5f7b7bb6ef9acfb19790d9abdd2046655935c312abc3b4be15",
-      "classification": "estado"
-    },
-    {
-      "path": "changelog.md",
-      "sha256": "8a341a052cb17b1f798bdec851c78e520670eac229c3dc14e6df1ea335a1b1cb",
-      "classification": "estado"
     }
   ]
 }
