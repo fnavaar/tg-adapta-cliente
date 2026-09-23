@@ -8,3 +8,5 @@
 - 2026-09-21T09:01 · task F2-T06 · capturado:06_notas/aprendizado-continuo/AP-2026-09-21-0901-f2-t06-revalidacao-sem-mutacao.md · task de prova deve revalidar o estado vivo sem duplicar implementação ou repetir mutações
 - 2026-09-21T09:36 · task F2-T07 · capturado:06_notas/aprendizado-continuo/AP-2026-09-21-0936-f2-t07-fallback-idempotencia.md · separar fallback manual de integração real e batch_id de identidade global/multi-fonte
 - 2026-09-21T17:23 · task F2-T08 · capturado:06_notas/aprendizado-continuo/AP-2026-09-21-1723-f2-t08-reconciliacao-fallback.md · separar núcleo de reconciliação, batch_id e estados de fallback; replay idêntico skip; payload divergente exige decisão humana sem overwrite
+- 2026-09-23T12:10:00-03:00 · task F2-T09 · capturado:06_notas/aprendizado-continuo/AP-2026-09-23-1210-cliques-overlay-skip.md · rolar botão para o viewport antes de clicar em páginas longas do Skip; clique sem mudança observável é suspeito
+- 2026-09-23T12:11:00-03:00 · task F2-T09 · capturado:06_notas/aprendizado-continuo/AP-2026-09-23-1211-composio-principal-oauth.md · conexão OAuth herda permissões de quem consente; principal efetivo é evidência de gate
