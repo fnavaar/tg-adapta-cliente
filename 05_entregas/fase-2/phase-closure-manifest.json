@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "adapta-phase-closure/v1",
+  "phase": 2,
+  "closedAt": "2026-09-23T18:22:03.614Z",
+  "activeDigest": "73b250e81e40bce08ec65a42ee6be8e458ee4632b45a70b4366384db2a183085",
+  "files": [
+    {"relative": "00-Tasks_Gerais.md", "sha256": "8dbb7bfa5160e17e9e0fed2223357457f734898bee3309c5a597b62bfde36953"},
+    {"relative": "fase.md", "sha256": "9c59f9273f3f91d29a18dfdb55fe3db8870844867b28739295f3a6211fa755b3"},
+    {"relative": "matriz-de-rastreabilidade.md", "sha256": "bf3da0de06479caa39ef437e66fbe96a8353a3cc4454b30f3cfc52c7783538a6"},
+    {"relative": "README.md", "sha256": "cf33fed8c1a187a8e36c8d4458325c669426f70a90af18945c38dbab5b6758b7"},
+    {"relative": "specs/spec-f2-001-briefing-experimento-controlado.md", "sha256": "9404db73f445689eb24e06f6010931de1e07fe128f619470ebda175376e03a95"},
+    {"relative": "specs/spec-f2-001-sistema-campanhas-experimentacao.md", "sha256": "1217aed5490d879d2a3565d823fd32a11e61461e13afc3bccc8d5f3997da6474"},
+    {"relative": "specs/spec-f2-002-atribuicao-qualidade.md", "sha256": "f5d052035c8c7adf28b74bd79db803166926e5f690c034f59061ee88fadd3fa2"},
+    {"relative": "specs/spec-f2-002-integracao-meta-atribuicao.md", "sha256": "255fd5d02b5896b72b56543883c9c2aab5613652ffccf0f2b3bde0e90fcde3e2"},
+    {"relative": "specs/spec-f2-003-decisao-do-experimento.md", "sha256": "465f39903a6a3b24b59d6c5ec1be55b88fdcee3bf0f13e6b5bb7ed25507ea864"},
+    {"relative": "specs/spec-f2-004-prova-meta-ou-fallback.md", "sha256": "0e879906fa7ac40d1f3c7a919550c4f9365a2ed7da0a31793cac364efdeddd20"}
+  ],
+  "checkSha256": "1ba25ed76e86327dbd6d4f76111b708441db3898ff9475b22b7a3c75abf3dffb",
+  "manifestDrift": [
+    {"path": "04_fase-atual/fase.md", "status": "alterado-desde-manifesto", "manifestSha256": "4994258b81ff8130cf2d1ad709483cf0cc2a04602802e6f1fb64c7106231377b", "currentSha256": "9c59f9273f3f91d29a18dfdb55fe3db8870844867b28739295f3a6211fa755b3"},
+    {"path": "04_fase-atual/00-Tasks_Gerais.md", "status": "alterado-desde-manifesto", "manifestSha256": "8c478b7006f30f1e9bb17a48abaa05865188baccacea43331961a3057e09455c", "currentSha256": "8dbb7bfa5160e17e9e0fed2223357457f734898bee3309c5a597b62bfde36953"},
+    {"path": "04_fase-atual/matriz-de-rastreabilidade.md", "status": "alterado-desde-manifesto", "manifestSha256": "cbfe8b58bb91f45fdb708096945b8be20aa86b0feaf02d03638a50f1b6b3c0b2", "currentSha256": "bf3da0de06479caa39ef437e66fbe96a8353a3cc4454b30f3cfc52c7783538a6"},
+    {"path": "04_fase-atual/specs/spec-f2-003-decisao-do-experimento.md", "status": "alterado-desde-manifesto", "manifestSha256": "b494106f87a84862a4b6a789e8d54d0d3b46cf71c877539daf75d27ad73f8ad8", "currentSha256": "465f39903a6a3b24b59d6c5ec1be55b88fdcee3bf0f13e6b5bb7ed25507ea864"},
+    {"path": "04_fase-atual/specs/spec-f2-001-sistema-campanhas-experimentacao.md", "status": "novo-desde-manifesto", "currentSha256": "1217aed5490d879d2a3565d823fd32a11e61461e13afc3bccc8d5f3997da6474"},
+    {"path": "04_fase-atual/specs/spec-f2-002-integracao-meta-atribuicao.md", "status": "novo-desde-manifesto", "currentSha256": "255fd5d02b5896b72b56543883c9c2aab5613652ffccf0f2b3bde0e90fcde3e2"}
+  ]
+}
