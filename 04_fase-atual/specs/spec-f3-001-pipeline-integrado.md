@@ -50,7 +50,7 @@
 | RN-F3-005 — Sem inferência de origem | Origem/campanha ausente | Exibir `desconhecido`; nunca completar por suposição | — | C-01, §Fase 1 |
 | RN-F3-006 — Contagem pela fonte | Qualquer contagem/painel | Recalcular a partir da fonte via núcleo de reconciliação compartilhado; sem cópia divergente | Divergência fonte×painel → pendência com dono | EV-05, F1 |
 | RN-F3-007 — Hierarquia única (E-F3-001-01) | Registro de proposta/vaga | Persistir como registro relacionado (`demanda_id`); demanda é o registro principal; empresa permanece campo único da demanda | Empresa duplicada em proposta/vaga → rejeitado | Decisão Champion 25/09 |
-| RN-F3-008 — Sem pipeline paralelo (E-F3-001-01) | Proposta/vaga | Sem estado de pipeline próprio; vaga tem prazo operacional próprio (distinto do prazo/SLA da demanda) | Estado de pipeline em filho → rejeitado | Decisão Champion 25/09 |
+| RN-F3-008 — Sem pipeline paralelo (E-F3-001-01) | Proposta/vaga | Sem estado de pipeline próprio; vaga tem prazo operacional próprio (distinto do prazo da próxima ação da demanda); proposta não tem prazo operacional próprio | Estado de pipeline em filho → rejeitado | Decisão Champion 25/09; harmonização 06/10 |
 | RN-F3-009 — Sem agregação automática (E-F3-001-01) | Registro filho | Estado da demanda muda somente por ação do Comercial com evidência (RN-F1-007); filho nunca altera o estado do pai | Filho alterando pai → rejeitado e registrado no log | Decisão Champion 25/09 |
 
 ## Fluxo e regras
@@ -134,7 +134,7 @@
 
 1. **Coleções relacionadas `propostas` e `vagas`** (novas, criadas nesta fase), cada registro vinculado à demanda de origem por `demanda_id` (= `record_id` da `demandas`); cada vaga vincula também `proposta_id`. Proposta → 1..N vagas.
 2. **Sem duplicação de empresa:** a empresa permanece campo único da demanda; propostas e vagas não carregam campo de empresa próprio — referenciam a demanda.
-3. **Prazo operacional próprio da vaga:** campo de prazo operacional na vaga, distinto do prazo/SLA da demanda.
+3. **Prazo operacional próprio da vaga:** campo de prazo operacional na vaga, distinto do ciclo de estados da demanda — e exclusivo da vaga: **proposta e demanda não possuem prazo operacional global próprio** (na demanda, o prazo citado é sempre o da próxima ação, taxonomia F1 RN-F1-006..012).
 4. **Estado permanece único na demanda:** propostas e vagas NÃO têm estado de pipeline próprio (não é novo pipeline); o ciclo de estados RN-F1-006..012 continua exclusivamente na demanda, controlado pelo Comercial.
 
 **Limites de alteração (não autorizado por esta emenda):**
@@ -143,5 +143,7 @@
 - Nenhum outro pipeline, coleção, campo de estado em proposta/vaga ou dedupe por inferência.
 - Nenhuma migration destrutiva em `demandas` ou nas coleções novas; nenhum hook de escrita externa.
 - Fora desta emenda: qualquer estrutura além de `propostas`/`vagas` relacionadas (ex.: empresa como registro separado, pipeline de vagas, hierarquia alternativa).
+
+**Harmonização (06/10, devolutiva do Champion):** o prazo operacional pertence exclusivamente à vaga; proposta e demanda não têm prazo operacional global próprio — o prazo da demanda é o da próxima ação (taxonomia F1). Referência cruzada: E-F3-002-01 (renumeração CA-3-11/12 na F3-002).
 
 **Vigência:** vale para a F3-T01 e demais tasks desta SPEC. Decisões de produto adicionais pertencem à Talent Group; emendas documentais são responsabilidade da consultoria conforme a Constituição do projeto.

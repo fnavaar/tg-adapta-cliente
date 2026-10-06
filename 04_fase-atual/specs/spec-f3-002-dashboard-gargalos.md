@@ -16,7 +16,7 @@
 ## Resultado observável
 
 1. Visão única inbound×outbound por estado do pipeline com contagem, dono e idade do registro.
-2. Gargalo identificável entre captura, abordagem, proposta e vaga: contagem por estado + tempo mediano entre transições + registros parados além do SLA.
+2. Gargalo identificável entre captura, abordagem, proposta e vaga: contagem por estado + tempo mediano entre transições + registros parados além do prazo aplicável à etapa.
 3. Retorno de proposta/vaga com origem e motivo visível (consome CA-3-02).
 4. Filtros herdados da F1 (período, tipo, canal, campanha, serviço, responsável, origem) + filtro por estado e por pendência.
 5. Bloco de pendências de governança/métrica visível (B3-MET-01, B3-ID-01) — lacunas aparecem como lacunas.
@@ -37,12 +37,12 @@
 
 | Origem/destino | Fonte de verdade | Campos/contrato | Autenticação/permissão | Timeout/retry/idempotência | Tratamento de erro |
 |---|---|---|---|---|---|
-| Pipeline integrado (F3-001) → dashboard | `demandas` + log de transições | contagem por estado/tipo/origem; tempo entre transições; parados > SLA; retorno com motivo | Leitura por papel | Recalcular da fonte (núcleo compartilhado); sem cópia materializada divergente | Divergência → pendência com dono (RN-F3-006) |
+| Pipeline integrado (F3-001) → dashboard | `demandas` + log de transições | contagem por estado/tipo/origem; tempo entre transições; parados além do prazo aplicável (vaga: prazo operacional; demais: prazo da próxima ação); retorno com motivo | Leitura por papel | Recalcular da fonte (núcleo compartilhado); sem cópia materializada divergente | Divergência → pendência com dono (RN-F3-006) |
 | Campanha/experimento F2 → contexto de origem | Atribuição F2-002 | campanha/experimento_id, canal, tipo inbound/outbound | Leitura | Ligação por identidade da fonte (B3-ID-01) | Origem ausente → `desconhecido` |
 
 | Regra de negócio | Condição | Ação/resultado | Exceção | Fonte |
 |---|---|---|---|---|
-| RN-F3-007 — Gargalo visível | Qualquer leitura | Exibir contagem por estado + tempo mediano entre etapas + parados > SLA | Sem SLA definido para a etapa → exibir sem SLA e registrar pendência | §Fase 3 checklist |
+| RN-F3-007 — Gargalo visível | Qualquer leitura | Exibir contagem por estado + tempo mediano entre etapas + parados além do prazo aplicável à etapa (prazo operacional da vaga; demais etapas usam o prazo da próxima ação da demanda — E-F3-001-01) | Sem prazo aplicável à etapa → exibir sem prazo e registrar pendência | §Fase 3 checklist; E-F3-001-01 |
 | RN-F3-008 — Atividade ≠ qualidade | Métricas de volume (cliques, impressões) | Exibir sempre separadas de conversão/qualidade | — | F2, §1 escopo |
 | RN-F3-009 — Sem KPI sem alvo | G-001 aberto | Bloquear exibição de KPI contra alvo; exibir pendência B3-MET-01 | Direção aprovar alvo/fórmula/período → nova versão libera o bloco | G-001, EV-06 |
 | RN-F3-010 — Desconhecido visível | Origem/dado ausente | Exibir `desconhecido`; nunca zero falso nem inferência | Consulta válida sem registros → zero legítimo | C-01, RN-F1-005 |
@@ -79,15 +79,15 @@
 
 ## Critérios de aceite
 
-- [ ] **CA-3-04:** o dashboard identifica, a partir da amostra, onde a demanda parou (estado, dono, prazo) e o gargalo entre captura, abordagem, proposta e vaga, com contagens reproduzíveis da fonte.
-- [ ] **CA-3-05:** a leitura separa volume de qualidade, exibe `desconhecido` para dado ausente e mantém bloqueado qualquer KPI contra alvo enquanto G-001 não for aprovado (pendência visível com dono).
+- [ ] **CA-3-11:** o dashboard identifica, a partir da amostra, onde a demanda parou (estado, dono, prazo) e o gargalo entre captura, abordagem, proposta e vaga, com contagens reproduzíveis da fonte.
+- [ ] **CA-3-12:** a leitura separa volume de qualidade, exibe `desconhecido` para dado ausente e mantém bloqueado qualquer KPI contra alvo enquanto G-001 não for aprovado (pendência visível com dono).
 
 ## TDD da SPEC
 
 | Etapa | Prova | Comando/ação | Resultado esperado | Evidência |
 |---|---|---|---|---|
 | RED | KPI contra alvo sem G-001; contagem divergente da fonte; origem ausente renderizada como zero | consultar dashboard | bloqueio/pendência; recusa de número sem fonte | captura/log |
-| GREEN | amostra com jornada completa | ler gargalo + retorno | CA-3-04 demonstrável; contagens = fonte | captura + comparação |
+| GREEN | amostra com jornada completa | ler gargalo + retorno | CA-3-11 demonstrável; contagens = fonte | captura + comparação |
 | REFACTOR/REGRESSÃO | reprocessar lote; refiltrar; verificar painel F1/F2 intacto | replay + filtros | sem regressão; contagens idempotentes | comparação + captura |
 
 **Dados/fixtures:** mesmos fixtures/amostra da F3-001; sem dado pessoal.
@@ -105,10 +105,21 @@
 
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
 |---|---|---|---|---|---|---|---|---|
-| F3-T03 | Materializar visões de gargalo, tempos e retorno no dashboard com massa sintética | Marketing/comercial | F3-002 | CA-3-04 | Dados e integrações; Fluxo e regras; Checklist | Captura/export das visões com contagens da fonte | F3-T01 aceita | ☐ |
-| F3-T04 | Provar leitura de gargalo, bloqueio de KPI sem alvo e reprodução das contagens | Direção + consultor | F3-002 | CA-3-04, CA-3-05 | Critérios de aceite; TDD da SPEC | Bateria humana da leitura + comparação fonte×painel | F3-T03 aceita por teste humano | ☐ |
+| F3-T03 | Materializar visões de gargalo, tempos e retorno no dashboard com massa sintética | Marketing/comercial | F3-002 | CA-3-11 | Dados e integrações; Fluxo e regras; Checklist | Captura/export das visões com contagens da fonte | F3-T01 aceita | ☐ |
+| F3-T04 | Provar leitura de gargalo, bloqueio de KPI sem alvo e reprodução das contagens | Direção + consultor | F3-002 | CA-3-11, CA-3-12 | Critérios de aceite; TDD da SPEC | Bateria humana da leitura + comparação fonte×painel | F3-T03 aceita por teste humano | ☐ |
 
 ## Emendas
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
+| 2026-10-06 | Devolutiva do Champion (harmonização pós-E-F3-001-01) | E-F3-002-01 | Renumerar CA-3-04→CA-3-11 e CA-3-05→CA-3-12 (colisão de identificador com o novo CA-3-04 da F3-001) e harmonizar prazo: prazo operacional pertence à vaga; proposta e demanda não têm prazo operacional global próprio |
+
+### E-F3-002-01 — Renumeração de critérios e harmonização de prazo (2026-10-06)
+
+**Origem:** devolutiva do Champion após a E-F3-001-01 — identificador CA-3-04 duplicado entre as SPECs e referências a "SLA da proposta" / "prazo/SLA da demanda" incompatíveis com a decisão de prazo.
+
+**1. Renumeração (colisão de identificador):** o critério de gargalo da F3-002 passa a ser **CA-3-11** e o de volume×qualidade/KPI passa a ser **CA-3-12**. O **CA-3-04 fica exclusivo da F3-001** (hierarquia Demanda → Propostas → Vagas). Nenhuma task estava concluída ou em execução (0/8), então a renumeração não afeta aceites existentes; T03 cita CA-3-11 e T04 cita CA-3-11/12.
+
+**2. Harmonização de prazo:** o **prazo operacional pertence à vaga** (campo próprio, distinto do ciclo de estados da demanda). **Proposta e demanda não possuem prazo operacional global próprio** — na demanda, o prazo citado no painel é sempre o **prazo da próxima ação** (taxonomia F1, RN-F1-006..012), nunca um prazo global de fechamento. Referências a "parados > SLA" foram reescritas como "parados além do prazo aplicável à etapa" (vaga: prazo operacional; demais etapas: prazo da próxima ação da demanda).
+
+**Vigência:** vale para toda a F3-002 e para as tasks F3-T03/F3-T04.
