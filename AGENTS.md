@@ -12,3 +12,8 @@ Instruções para agentes de código neste repositório. **A fonte de verdade é
    `/adapta-cliente:destravar-task` antes de tentar concluir.
 5. Toda ação relevante → `changelog.md`; progresso → `STATUS.md`.
 6. Conteúdo confidencial do projeto; tudo em português.
+7. **Protocolo anti-trava (07/10/2026):** ambiguidade da SPEC **não congela a task** — registre
+   `DÚVIDA:` no `changelog.md`, adote o default conservador documentado na task (fixtures
+   sintéticos, sem dado real, sem integração externa, sem conceito novo de negócio) e siga
+   executando até onde a SPEC permite. A resposta do Champion no `changelog.md` é **final**.
+   Emendas documentais saem em lote único, pela consultoria — não uma por dúvida.

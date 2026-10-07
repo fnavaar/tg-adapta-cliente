@@ -112,3 +112,13 @@
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
+| 2026-10-07 | Varredura anti-ambiguidade pós-E-F3-001-02 (decisão do Champion de 06/10) | E-F3-003-01 | Delimitar o "SLA de aceite" do handoff como prazo de resposta da passagem de guarda, conceito próprio e distinto do prazo operacional da vaga/próxima ação |
+
+
+### E-F3-003-01 — Delimitação do prazo de aceite do handoff (2026-10-07)
+
+**Origem:** varredura preventiva das 4 SPECs F3 após a E-F3-001-02 (decisão do Champion de 06/10: não existe prazo "SLA" autônomo de proposta/vaga/demanda).
+
+**Delimitação:** o "SLA de aceite" citado nesta SPEC é o **prazo de resposta/aceite do handoff** (passagem de guarda entre papéis) — atributo do registro de handoff, com valores definidos pela **matriz RACI nominal** (B3-RACI-01: quem aceita, quem escala, prazo por papel). Ele **não** é um prazo de proposta/vaga/demanda: estes seguem exclusivamente o **prazo operacional da vaga** e o **prazo da próxima ação da demanda** (E-F3-001-02). Enquanto a matriz nominal não existir, a materialização usa papéis provisórios registrados e a prova de handoff permanece condicionada a B3-RACI-01 (já previsto nesta SPEC) — sem criar valor de prazo por conta própria.
+
+**Vigência:** F3-T05 e F3-T06.

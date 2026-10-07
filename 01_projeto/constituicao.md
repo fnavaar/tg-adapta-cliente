@@ -41,8 +41,25 @@ Simplificação intencional leva marca no ponto exato da decisão:
 `adapta-divida: <teto atual>; <upgrade quando gatilho>`. O consultor acompanha essas marcas na
 sincronização — é o combinado do método.
 
+## Dúvidas e insumos — nunca travam (protocolo anti-trava, 2026-10-07)
+
+- Uma ambiguidade da SPEC **não congela a task**: o agente registra `DÚVIDA:` no `changelog.md`,
+  adota o **default conservador documentado na própria task** (massa sintética, sem dado real,
+  sem integração externa, sem conceito novo de negócio) e continua a execução até onde a SPEC
+  permite.
+- A **resposta do Champion** (registrada no `changelog.md`) é **final e definitiva**, mesmo quando
+  a origem da informação for outra pessoa — não se exige confirmação da fonte.
+- **Insumo faltante vira pergunta embutida no card da task** dirigida ao Champion, nunca um
+  bloqueio que para o projeto.
+- **Emendas documentais** continuam sendo responsabilidade da consultoria, publicadas **em lote
+  único** por rodada (com varredura das SPECs afetadas), não uma emenda por dúvida.
+- Continuam parando de verdade apenas: linha vermelha; exigência de dado real sem autorização;
+  integração externa; mudança de escopo/critério/aceite; e ação externa (produção, push,
+  publicação).
+
 ## Emendas
 
 | Data | O que mudou | Decisão/motivo |
 |---|---|---|
-| | | |
+| 2026-10-07 | Protocolo anti-trava (dúvidas/insumos nunca congelam task; resposta do Champion é final; pergunta embutida no card; emendas em lote) | Decisão do consultor (Navaar), 07/10/2026 — encerrar ciclo de validações repetidas na F3 |
+| 2026-10-07 | Emendas E-F3-001-02 (prazos sem SLA autônomo) e E-F3-003-01 (prazo de aceite do handoff) publicadas nas SPECs F3 | Resposta à DÚVIDA de 06/10 + varredura preventiva das 4 SPECs da F3 |
