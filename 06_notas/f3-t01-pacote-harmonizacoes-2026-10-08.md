@@ -1,9 +1,9 @@
 # Pacote Único de Harmonizações — F3-T01
 
-**Data:** 2026-10-08
+**Data:** 2026-10-08 (atualizado em 2026-10-08 com o item D6 — mesma entrega, sem solicitação separada)
 **Origem:** Champion/owner da Talent Group — coleta de decisões de negócio da F3-T01 encerrada em 08/10/2026.
 **Destinatário:** Consultor Adapta (Navaar).
-**Protocolo:** resposta em **lote único**, mediante emenda datada à SPEC F3-001, conforme o protocolo anti-trava (AGENTS.md + Constituição, 07/10/2026). As decisões de produto pertencem à Talent Group e já estão registradas no changelog; este documento **consolida** as cinco solicitações documentais em uma única entrega — não são solicitações separadas. Nada foi implementado; a implementação da F3-T01 aguarda autorização expressa do Champion.
+**Protocolo:** resposta em **lote único**, mediante emenda datada à SPEC F3-001, conforme o protocolo anti-trava (AGENTS.md + Constituição, 07/10/2026). As decisões de produto pertencem à Talent Group e já estão registradas no changelog; este documento **consolida as seis solicitações documentais em uma única entrega** — não são solicitações separadas. Nada foi implementado; a implementação da F3-T01 aguarda autorização expressa do Champion.
 
 ---
 
@@ -43,6 +43,13 @@
 - **Risco se não harmonizado:** lógica de retorno/escalonamento e cenários de TDD do ciclo de substituição teriam de ser refeitos.
 - **Referência no changelog:** DÚVIDA de 2026-10-08 + DECISÃO consolidada de 2026-10-08.
 
+## D6 — Regras de recuperação comercial (RN-F3-004)
+
+- **Decidido (negócio, changelog 08/10; decisões tomadas pelo Champion em 24/09/2026 durante a coleta da T01):** (1) recuperação limitada a no máximo **3 tentativas** e prazo máximo total de **90 dias corridos** (contando sábados, domingos e feriados), contados da data do escalonamento automático registrado pelo Skip; (2) tentativa é somente **ação humana de recuperação registrada** após o escalonamento, com data, canal, ação, destinatário/referência, resultado sem resposta, próxima ação e novo prazo — evento automático, anotação e alteração de prazo sem ação NÃO contam; (3) ao atingir 3 tentativas ou 90 dias, o sistema **sugere** estado `sem timing` e **exige confirmação do Comercial** — nunca encerra automaticamente; (4) recusa explícita do Comercial = estado `perdido` com motivo e evidência; (5) cliente responde durante a recuperação = Comercial encerra o escalonamento, mantém o estado comercial atual e registra nova ação/prazo ou encerramento fundamentado.
+- **Depende de confirmação documental:** essas decisões NÃO constam da RN-F3-004 nem de nenhum documento do repositório (a RN-F3-004 prevê apenas "escalonar com prazo e dono; caminho para terminal com motivo"). Solicitamos emenda datada à SPEC F3-001 incorporando as regras à RN-F3-004 (ou regra correlata), **preservando a taxonomia F1** (`sem timing`/`perdido` como estados terminais com motivo) e **sem criar fluxo paralelo** de responsáveis, prazos ou encerramentos. Os marcos de Proposta Aceita e Conversão Comercial (F1-T04) permanecem exatamente como implementados; o gate de Lead Qualificado (RN-F1-011/B3-MET-01) permanece sujeito à decisão oficial pendente, sem simular sua aprovação nos testes.
+- **Risco se não harmonizado:** a etapa de escalonamento/recuperação (E6 do plano) teria lógica e cenários de TDD refeitos; regra de negócio aprovada ficaria sem amparo documental na SPEC.
+- **Referência no changelog:** DÚVIDA de 2026-10-08 (item D6).
+
 ---
 
 ## Prioridade sugerida para a resposta em lote único
@@ -50,6 +57,7 @@
 1. **D4 e D2 antes da criação das coleções** (migrations) — risco de retrabalho de schema.
 2. **D3 antes das regras de transição e do TDD.**
 3. **D1 antes da confecção dos fixtures.**
-4. **D5 antes da etapa de retorno da operação/escalonamento** — ou instrução explícita de default conservador para o cenário de substituição, registrada como pendência visível.
+4. **D6 antes da etapa de escalonamento/recuperação** — as regras de recuperação decididas precisam constar da RN-F3-004 antes da lógica de escalonamento.
+5. **D5 antes da etapa de retorno da operação** — ou instrução explícita de default conservador para o cenário de substituição, registrada como pendência visível.
 
-Todas as cinco podem ser respondidas em uma única emenda à SPEC F3-001 (ou emenda + apêndice), preservando integralmente as decisões de produto já aprovadas. A decisão de produto pertence à Talent Group; a emenda documental é responsabilidade da consultoria conforme a Constituição do projeto.
+Todas as seis podem ser respondidas em uma única emenda à SPEC F3-001 (ou emenda + apêndice), preservando integralmente as decisões de produto já aprovadas. A decisão de produto pertence à Talent Group; a emenda documental é responsabilidade da consultoria conforme a Constituição do projeto.
