@@ -10,8 +10,8 @@
 - autorizacao_implementacao: segue o fluxo normal — o Champion autoriza cada task (uma por vez); sem trava documental pendente desde 07/10/2026
 - teste_humano: não aplicável à liberação documental; obrigatório ao fim de cada task executada
 - bloqueios: B3-META-01, B3-ID-01, B3-MET-01, B3-RACI-01, B3-DHO-01
-- ultima_acao: 2026-10-09 — Champion autorizou INÍCIO PARCIAL da F3-T01 (somente E0 sincronização + E1 fixtures + preparação documental de E3/E4); defaults conservadores e DÚVIDAs D1–D6 registradas abaixo; E2/E5/E6/E7 NÃO autorizadas; pacote D1–D6 (06_notas/f3-t01-pacote-harmonizacoes-2026-10-08.md) segue aguardando emenda do consultor
-- proxima_acao: executar E1 (fixtures PIPE-F3-IN-001/OUT-001/STUCK-001 sintéticos) e preparar documentação de E3/E4; ao final, apresentar evidências ao Champion; E2 (migrations) e E5/E6 (retorno/escalonamento) bloqueadas até emenda D4/D5/D6 ou registro do Champion
+- ultima_acao: 2026-10-21 — Champion aprovou e registrou a DECISÃO de segregação sintético×produção no ETHOS 51414 (campo origem_dado {sintetico, producao}; indicadores oficiais só produção; modo homologação preservado; dedup por identidade composta, não só e-mail; LGPD pendente antes de dado real; B3-MET-01 mantido) — changelog commit 2409160, verificado byte a byte; escopo do ciclo: apenas documental, nenhuma migration/coleção/dashboard/publicação. Antes disso (20/10): inventário real do 51414 concluído (10 registros sintéticos em demandas, demais coleções vazias).
+- proxima_acao: aguardar autorização expressa do Champion para a E2 (migration não destrutiva origem_dado + backfill dos 10 + núcleo de consulta com filtro); E2 não executada. Em paralelo, F3-T01 segue com E2 (coleções) bloqueada por D4, E5 por D4/D5 e E6 por D6 — emendas do Navaar pendentes.
 
 ## Defaults conservadores da F3-T01 (protocolo anti-trava — Constituição §Dúvidas e insumos, 07/10/2026)
 
