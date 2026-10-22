@@ -1,18 +1,22 @@
 # Fase atual — Fase 3
 
-Esta pasta contém as SPECs e tasks da Fase 3 do projeto TG Mais. A Fase 2 encerrada está arquivada em `05_entregas/fase-2/`, com evidências e manifesto de encerramento.
+Esta pasta contém as SPECs e tasks da Fase 3 do projeto TG Mais. A Fase 2 encerrada está arquivada em
+`05_entregas/fase-2/`, com evidências e manifesto de encerramento.
 
-- `fase.md`: Jornada `fase-format:2` e tabela operacional da Fase 3 (8 tasks).
-- `00-Tasks_Gerais.md`: resumo operacional e rastreabilidade de cada task.
+- `fase.md`: explicação da fase em linguagem simples, ordem recomendada, Jornada e tabela operacional (13 tasks).
+- `00-Tasks_Gerais.md`: tabela operacional com "Onde executar" e "O que você vai ver" de cada task.
 - `matriz-de-rastreabilidade.md`: origem, SPEC, critérios, provas e bloqueios.
-- `specs/`: F3-001 pipeline integrado, F3-002 dashboard de gargalos, F3-003 handoffs por papel e F3-004 sinais de conta do DHO.
+- `specs/`: F3-001 pipeline integrado, F3-002 gargalos, F3-003 passagens entre áreas, F3-004 sinais do DHO,
+  **F3-005 Funil (Kanban)** e **F3-006 Campanhas Meta via Maestro** (novas em 22/10/2026).
 
-## Liberação
+## Estado
 
 - **Champion:** João Paulo.
-- **Prazo de referência:** 30/09/2026, proposto para o ciclo e ajustável pelo Champion.
-- **Estado:** Fase 3 liberada para execução controlada; nenhuma task iniciada.
-- **Elegível:** somente a primeira task da Jornada, para preservar o gate de uma task por vez.
+- **Em andamento:** F3-T01 (E2 implementada em 22/10/2026, aguardando teste humano).
+- **Próxima depois da F3-T01:** F3-T09 — diagnóstico no Maestro das automações, do destino dos leads e das campanhas.
 - **Teste:** cada task exige provas da SPEC e teste humano antes da seguinte.
+- **Como o Maestro trabalha:** explica a fase, a task atual e a próxima; combina cada passo; pede para
+  conferir no Skip; fecha com resumo (protocolo no `CLAUDE.md`).
 
-Bloqueios nomeados: B3-META-01 (nenhuma leitura Meta na F3), B3-ID-01 (identidade por fonte, sem dedupe por inferência), B3-MET-01 (G-001 antes de KPI), B3-RACI-01 (matriz nominal antes da prova F3-T06) e B3-DHO-01 (lista/política antes de dado real de sinal).
+Bloqueios nomeados: B3-META-01 (só métricas de campanha pela F3-006), B3-META-LEITOR, B3-LGPD-01,
+B3-ID-01, B3-MET-01, B3-RACI-01 e B3-DHO-01 — detalhes em `fase.md`.

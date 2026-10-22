@@ -57,9 +57,19 @@ sincronização — é o combinado do método.
   integração externa; mudança de escopo/critério/aceite; e ação externa (produção, push,
   publicação).
 
+## Visibilidade e interação com o time (2026-10-22)
+
+- Toda task diz **onde executar** (Maestro → projeto Skip "repositório adapta") e **o que o time vai ver** ao final, em linguagem simples.
+- O agente conduz a conversa passo a passo: situa a fase, a task atual e a próxima; combina cada passo antes de fazer; depois de cada passo diz onde olhar no Skip e espera a confirmação; fecha com resumo. Protocolo completo no `CLAUDE.md`.
+- Critérios, provas e TDD continuam obrigatórios, mas são conduzidos pelo agente nos bastidores; ao time se mostra o resultado visível.
+- **Toda automação do Maestro é uma task** com projeto de destino declarado. Automação sem task não faz parte do projeto e deve ser desligada.
+- Nenhum dado do projeto vai para outro projeto Skip além do "repositório adapta".
+
 ## Emendas
 
 | Data | O que mudou | Decisão/motivo |
 |---|---|---|
 | 2026-10-07 | Protocolo anti-trava (dúvidas/insumos nunca congelam task; resposta do Champion é final; pergunta embutida no card; emendas em lote) | Decisão do consultor (Navaar), 07/10/2026 — encerrar ciclo de validações repetidas na F3 |
 | 2026-10-07 | Emendas E-F3-001-02 (prazos sem SLA autônomo) e E-F3-003-01 (prazo de aceite do handoff) publicadas nas SPECs F3 | Resposta à DÚVIDA de 06/10 + varredura preventiva das 4 SPECs da F3 |
+| 2026-10-22 | Visibilidade e interação com o time: "onde executar" e "o que você vai ver" em toda task; agente conduz passo a passo; automação do Maestro = task; projeto Skip único | Decisão do consultor (Ramon Pádua), 5ª call de 22/10/2026 — time não tinha visibilidade do que construía |
+| 2026-10-22 | SPECs F3-005 (Funil Kanban) e F3-006 (Campanhas Meta via Maestro), tasks F3-T09..T13 e emendas de visibilidade nas SPECs F3-001..004 | Mesma decisão (P1); RD Station fora do projeto |

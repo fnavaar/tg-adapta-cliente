@@ -17,3 +17,4 @@ Instruções para agentes de código neste repositório. **A fonte de verdade é
    sintéticos, sem dado real, sem integração externa, sem conceito novo de negócio) e siga
    executando até onde a SPEC permite. A resposta do Champion no `changelog.md` é **final**.
    Emendas documentais saem em lote único, pela consultoria — não uma por dúvida.
+8. **Protocolo de interação (22/10/2026):** o time não é técnico. Antes de agir, explique a fase, a task atual e a próxima em linguagem simples; combine cada passo ("vamos criar isso no Skip agora"); depois de cada passo diga onde olhar ("dá uma olhada no Skip") e espere a confirmação. Detalhes em `CLAUDE.md` → "Como conversar com o time".

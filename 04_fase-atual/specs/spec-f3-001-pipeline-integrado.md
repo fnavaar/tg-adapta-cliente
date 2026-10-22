@@ -124,6 +124,7 @@
 |---|---|---|---|
 | 2026-10-06 | DÚVIDA do Champion registrada no changelog em 2026-09-25 | E-F3-001-01 | Formalizar a hierarquia Demanda → Propostas → Vagas decidida pela Talent Group e os limites de alteração da F3-T01 |
 | 2026-10-07 | DÚVIDA do Champion registrada no changelog em 2026-10-06 (SLA/prazo) | E-F3-001-02 | Eliminar o SLA autônomo: prazo operacional exclusivo da vaga; demanda usa o prazo da próxima ação; proposta sem prazo próprio |
+| 2026-10-22 | 5ª call (EV-5C-04, decisão P1) | E-F3-001-03 | Visibilidade: cada task declara o que o cliente vai ver e onde executar; regras e critérios inalterados |
 
 ### E-F3-001-01 — Hierarquia Demanda → Propostas → Vagas (2026-10-06)
 
@@ -167,3 +168,25 @@
 **Delimitação (varredura preventiva das 4 SPECs F3):** o **"SLA de aceite" do handoff** (SPEC-F3-003) é conceito distinto — prazo de resposta/aceite da passagem de guarda, com valores definidos pela matriz RACI nominal (B3-RACI-01) — e permanece válido (ver E-F3-003-01). Na F3-002, a harmonização equivalente já consta da E-F3-002-01 ("prazo aplicável à etapa").
 
 **Vigência:** vale para a F3-T01, F3-T02 e demais tasks desta SPEC. Decisões de produto adicionais pertencem à Talent Group; emendas documentais são responsabilidade da consultoria conforme a Constituição do projeto.
+
+### E-F3-001-03 — Visibilidade e local de execução (2026-10-22)
+
+**Origem:** 5ª call (22/10/2026), evolução EV-5C-04, decisão P1 (consultor Ramon Pádua).
+
+**O que muda:** cada task desta SPEC passa a declarar, em linguagem simples, o que o cliente vai ver ao
+final e onde executar. **O que NÃO muda:** regras, critérios de aceite, TDD, dependências e bloqueios
+desta SPEC.
+
+**Onde executar (todas as tasks desta SPEC):** Maestro, com o conector Skip apontando para o projeto
+"repositório adapta" (GitHub `talentgroupepress-web`). Antes de cada etapa, o Maestro explica ao
+Champion o que ela vai criar.
+
+**O que você vai ver:**
+
+- **F3-T01:** cada demanda de teste ganha suas propostas e vagas, o retorno da operação (ex.: "perfis
+  apresentados") e um aviso quando fica parada além do prazo. Tudo isso aparece depois no Funil
+  (F3-T10, SPEC-F3-005).
+- **F3-T02:** um roteiro em que duas pessoas classificam os mesmos casos e chegam à mesma etapa, com um
+  relatório simples de "passou / não passou" por caso.
+
+**Vigência:** tasks ainda não concluídas desta SPEC.

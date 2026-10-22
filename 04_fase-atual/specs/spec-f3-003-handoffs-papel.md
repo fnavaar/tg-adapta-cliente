@@ -113,6 +113,7 @@
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
 | 2026-10-07 | Varredura anti-ambiguidade pós-E-F3-001-02 (decisão do Champion de 06/10) | E-F3-003-01 | Delimitar o "SLA de aceite" do handoff como prazo de resposta da passagem de guarda, conceito próprio e distinto do prazo operacional da vaga/próxima ação |
+| 2026-10-22 | 5ª call (EV-5C-04, decisão P1) | E-F3-003-02 | Visibilidade: cada task declara o que o cliente vai ver e onde executar; regras e critérios inalterados |
 
 
 ### E-F3-003-01 — Delimitação do prazo de aceite do handoff (2026-10-07)
@@ -122,3 +123,24 @@
 **Delimitação:** o "SLA de aceite" citado nesta SPEC é o **prazo de resposta/aceite do handoff** (passagem de guarda entre papéis) — atributo do registro de handoff, com valores definidos pela **matriz RACI nominal** (B3-RACI-01: quem aceita, quem escala, prazo por papel). Ele **não** é um prazo de proposta/vaga/demanda: estes seguem exclusivamente o **prazo operacional da vaga** e o **prazo da próxima ação da demanda** (E-F3-001-02). Enquanto a matriz nominal não existir, a materialização usa papéis provisórios registrados e a prova de handoff permanece condicionada a B3-RACI-01 (já previsto nesta SPEC) — sem criar valor de prazo por conta própria.
 
 **Vigência:** F3-T05 e F3-T06.
+
+### E-F3-003-02 — Visibilidade e local de execução (2026-10-22)
+
+**Origem:** 5ª call (22/10/2026), evolução EV-5C-04, decisão P1 (consultor Ramon Pádua).
+
+**O que muda:** cada task desta SPEC passa a declarar, em linguagem simples, o que o cliente vai ver ao
+final e onde executar. **O que NÃO muda:** regras, critérios de aceite, TDD, dependências e bloqueios
+desta SPEC.
+
+**Onde executar (todas as tasks desta SPEC):** Maestro, com o conector Skip apontando para o projeto
+"repositório adapta" (GitHub `talentgroupepress-web`). Antes de cada etapa, o Maestro explica ao
+Champion o que ela vai criar.
+
+**O que você vai ver:**
+
+- **F3-T05:** uma lista **"Passagens pendentes"**: quando o comercial passa uma demanda para o R&S ou a
+  alocação, aparece para quem foi, o prazo para aceitar e se foi aceita, recusada ou venceu.
+- **F3-T06:** o teste com os nomes reais da matriz de responsáveis: aceite, recusa, prazo vencido, sem
+  resposta e falha de acesso, cada um mostrando o que aconteceu na tela.
+
+**Vigência:** tasks ainda não concluídas desta SPEC.

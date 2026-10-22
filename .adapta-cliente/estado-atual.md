@@ -3,7 +3,7 @@
 - fase: 3
 - champion: João Paulo
 - task_elegivel: F3-T01
-- tasks_fase_3: 0/8 concluídas; F3-T01 elegível, F3-T02..T08 bloqueadas por dependências
+- tasks_fase_3: 0/13 concluídas (8 originais + F3-T09..T13 publicadas em 22/10/2026); F3-T01 em andamento; ordem recomendada: F3-T01 → T09 → T10 → T11 → T12 → T13 → T02 → T03..T08
 - prazo_referencia: ajustável pelo Champion (referência inicial 30/09/2026 vencida; decisão Navaar 07/10/2026 — sem trava de prazo)
 - ambiente: Skip (GoSkip + SkipCloud), conforme regra geral do consultor
 - etapa: aguardando_teste_humano (E2 — migration origem_dado; autorização do Champion/owner em 22/10/2026: "Autorizo a E2 — pode implementar")
@@ -11,7 +11,9 @@
 - teste_humano: pendente (roteiro entregue ao Champion em 22/10/2026)
 - verificacao_automatica: passou — QA Skip (setup/static/build/integrations OK; v0.0.97 ref 08c6e6a e v0.0.98 ref 2aab7da); banco conferido via API: total 10, sintetico 10, producao 0, vazio 0; migration 0021_origem_dado applied
 - aprendizado: capturado:06_notas/aprendizado-continuo/controle.md (AP-2026-10-22-1600)
-- bloqueios: B3-META-01, B3-ID-01, B3-MET-01, B3-RACI-01, B3-DHO-01
+- bloqueios: B3-META-01 (alterado 22/10: só métricas de campanha pela SPEC-F3-006), B3-META-LEITOR (novo, antes da F3-T12), B3-LGPD-01 (formalizado), B3-ID-01, B3-MET-01, B3-RACI-01, B3-DHO-01
+- protocolo_interacao: vigente desde 22/10/2026 — explicar fase/task atual/próxima, combinar cada passo, pedir para conferir no Skip, fechar com resumo (CLAUDE.md)
+- projeto_skip: "repositório adapta" (GitHub talentgroupepress-web); nenhum dado em outro projeto Skip
 - ultima_acao: 2026-10-22 — E2 implementada com autorização do Champion: migration 0021_origem_dado (campo select {sintetico, producao} em demandas + backfill dos 10 registros como sintetico, não destrutiva, com rollback), núcleo de consulta src/lib/origem-dado.ts (filtroOrigemDado, resumirSegregacao, filtrarPorOrigem, normalizarOrigemDado; default seguro: sem campo = sintetico) e painel oficial Index.tsx exibindo somente producao com selo de segregação e reconciliação/opções filtradas por producao.
 - proxima_acao: teste humano do Champion no painel (10 registros saem do painel oficial; selo "Painel oficial — somente origem_dado=producao" visível; modo homologação preservado). Após aceite: E3 (painéis com filtro) aguarda autorização. F3-T01 segue com E2 (coleções) bloqueada por D4, E5 por D4/D5 e E6 por D6 — emendas do Navaar pendentes.
 

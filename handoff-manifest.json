@@ -6,46 +6,56 @@
     "adapta": "0.7.0",
     "adaptaCliente": "0.2.0"
   },
-  "generatedAt": "2026-09-23T19:42:51Z",
+  "generatedAt": "2026-10-22T22:22:31Z",
   "files": [
     {
       "path": "04_fase-atual/00-Tasks_Gerais.md",
-      "sha256": "c89ec1f38f1210467bcd5c4daa2a2a57fa60047c61ee039c0f1a4621d3229e58",
+      "sha256": "4365df1c721b142d7fce713bd910e56459df17ed9277fdd567464b4f175afb8a",
       "classification": "template-publico"
     },
     {
       "path": "04_fase-atual/README.md",
-      "sha256": "956fece811d3c05ef1a815c455f4c759dfdb715e04de5f4e09ce8bea86431194",
+      "sha256": "ca2fc0a731386ad7b70d41ad32c732e028d85adea3b06e8cb0dd9abe9e057cb8",
       "classification": "template-publico"
     },
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "aa2a1ae936dc64d7176c6fda3f25aa6a251375b195eac652c1f275e0012b958e",
+      "sha256": "888e03b2171e923f301a57e90b93c83ffa5b97a7cf5d8460da8c4519d20043a5",
       "classification": "fase-atual"
     },
     {
       "path": "04_fase-atual/matriz-de-rastreabilidade.md",
-      "sha256": "4a5ed1c54f9f5b0e0ee2966fe91f05d75d9dd08a80764f390f6a3803254244e7",
+      "sha256": "f3b6225854c99bbd9e87b3200e2bcac209337fa5ef02e92f2651cda4737c5c0d",
       "classification": "template-publico"
     },
     {
       "path": "04_fase-atual/specs/spec-f3-001-pipeline-integrado.md",
-      "sha256": "9e013ece3b342f19a2532004a8a419e3fac8474a5a3d4841e57e9f4f53198200",
+      "sha256": "373e96d252bd63179c7d28b403798684696ed4b90a2c0db06605683a600789ea",
       "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/specs/spec-f3-002-dashboard-gargalos.md",
-      "sha256": "c4f7e75c0ae12a6a73b49f82161de317650c22075a7d9aebaf1ed53419c862b2",
+      "sha256": "cbe59ea9690cdb21a37aef278c5e8ace3976e20cf35447e9dd780d31802ab3ed",
       "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/specs/spec-f3-003-handoffs-papel.md",
-      "sha256": "f6fb183335a4148516a1a99741ecadd9c2e8e9b4014333adcebac896665f683d",
+      "sha256": "d6491e04ae9b71403c70535d879a66b302265f12a3aff3c7212b2ab03d9e0906",
       "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/specs/spec-f3-004-sinais-dho.md",
-      "sha256": "793e5717bab3eff86281282db5ccc21a5df22842217d854f8e8ec1ba944d6feb",
+      "sha256": "641c9da4fb3d6cdc21e2719b4130975270feb242a79f244109401e480484e493",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-f3-005-funil-kanban.md",
+      "sha256": "b65de613acfa1664d5c5198de89bdf6e51349229171d40c51de72654d9460c5f",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-f3-006-campanhas-meta-maestro.md",
+      "sha256": "0125bf6f088ecee4f5b1e8cb77192146a386b70046b129524de2a767e279b673",
       "classification": "spec-fase-atual"
     }
   ]

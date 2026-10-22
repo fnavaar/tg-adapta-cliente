@@ -1,5 +1,6 @@
 {
   "enabledPlugins": {
-    "adapta-cliente@adapta-native": true
+    "adapta-cliente@adapta-native": true,
+    "adapta-cliente@adapta-cliente": true
   }
 }

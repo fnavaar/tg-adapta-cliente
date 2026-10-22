@@ -113,6 +113,7 @@
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
 | 2026-10-06 | Devolutiva do Champion (harmonização pós-E-F3-001-01) | E-F3-002-01 | Renumerar CA-3-04→CA-3-11 e CA-3-05→CA-3-12 (colisão de identificador com o novo CA-3-04 da F3-001) e harmonizar prazo: prazo operacional pertence à vaga; proposta e demanda não têm prazo operacional global próprio |
+| 2026-10-22 | 5ª call (EV-5C-04, decisão P1) | E-F3-002-02 | Visibilidade: cada task declara o que o cliente vai ver e onde executar; regras e critérios inalterados |
 
 ### E-F3-002-01 — Renumeração de critérios e harmonização de prazo (2026-10-06)
 
@@ -123,3 +124,25 @@
 **2. Harmonização de prazo:** o **prazo operacional pertence à vaga** (campo próprio, distinto do ciclo de estados da demanda). **Proposta e demanda não possuem prazo operacional global próprio** — na demanda, o prazo citado no painel é sempre o **prazo da próxima ação** (taxonomia F1, RN-F1-006..012), nunca um prazo global de fechamento. Referências a "parados > SLA" foram reescritas como "parados além do prazo aplicável à etapa" (vaga: prazo operacional; demais etapas: prazo da próxima ação da demanda).
 
 **Vigência:** vale para toda a F3-002 e para as tasks F3-T03/F3-T04.
+
+### E-F3-002-02 — Visibilidade e local de execução (2026-10-22)
+
+**Origem:** 5ª call (22/10/2026), evolução EV-5C-04, decisão P1 (consultor Ramon Pádua).
+
+**O que muda:** cada task desta SPEC passa a declarar, em linguagem simples, o que o cliente vai ver ao
+final e onde executar. **O que NÃO muda:** regras, critérios de aceite, TDD, dependências e bloqueios
+desta SPEC.
+
+**Onde executar (todas as tasks desta SPEC):** Maestro, com o conector Skip apontando para o projeto
+"repositório adapta" (GitHub `talentgroupepress-web`). Antes de cada etapa, o Maestro explica ao
+Champion o que ela vai criar.
+
+**O que você vai ver:**
+
+- **F3-T03:** uma tela **"Gargalos"** com quantas demandas há em cada etapa, quanto tempo levam de uma
+  etapa para a outra e quais estão paradas além do prazo. As contagens são as mesmas do Funil
+  (SPEC-F3-005).
+- **F3-T04:** a direção abre a tela e diz onde a demanda está travando; os números batem com o Funil; a
+  meta continua como "pendente de decisão" enquanto o G-001 não for aprovado.
+
+**Vigência:** tasks ainda não concluídas desta SPEC.

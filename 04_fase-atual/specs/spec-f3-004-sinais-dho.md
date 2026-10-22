@@ -111,3 +111,25 @@
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
+| 2026-10-22 | 5ª call (EV-5C-04, decisão P1) | E-F3-004-01 | Visibilidade: cada task declara o que o cliente vai ver e onde executar; regras e critérios inalterados |
+
+### E-F3-004-01 — Visibilidade e local de execução (2026-10-22)
+
+**Origem:** 5ª call (22/10/2026), evolução EV-5C-04, decisão P1 (consultor Ramon Pádua).
+
+**O que muda:** cada task desta SPEC passa a declarar, em linguagem simples, o que o cliente vai ver ao
+final e onde executar. **O que NÃO muda:** regras, critérios de aceite, TDD, dependências e bloqueios
+desta SPEC.
+
+**Onde executar (todas as tasks desta SPEC):** Maestro, com o conector Skip apontando para o projeto
+"repositório adapta" (GitHub `talentgroupepress-web`). Antes de cada etapa, o Maestro explica ao
+Champion o que ela vai criar.
+
+**O que você vai ver:**
+
+- **F3-T07:** uma área separada, só do DHO, onde se registra um sinal da conta (com dado de teste); o
+  comercial não enxerga essa área.
+- **F3-T08:** a prova de que o comercial não vê o sinal, que só sinais da lista aprovada entram e que o
+  sinal vira encaminhamento para uma pessoa, nunca ação automática.
+
+**Vigência:** tasks ainda não concluídas desta SPEC.
