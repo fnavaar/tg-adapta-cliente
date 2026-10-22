@@ -6,12 +6,14 @@
 - tasks_fase_3: 0/8 concluídas; F3-T01 elegível, F3-T02..T08 bloqueadas por dependências
 - prazo_referencia: ajustável pelo Champion (referência inicial 30/09/2026 vencida; decisão Navaar 07/10/2026 — sem trava de prazo)
 - ambiente: Skip (GoSkip + SkipCloud), conforme regra geral do consultor
-- autorizacao_liberacao: confirmada por Navaar em 2026-09-23 — "quero que as tasks estejam liberadas"
-- autorizacao_implementacao: segue o fluxo normal — o Champion autoriza cada task (uma por vez); sem trava documental pendente desde 07/10/2026
-- teste_humano: não aplicável à liberação documental; obrigatório ao fim de cada task executada
+- etapa: aguardando_teste_humano (E2 — migration origem_dado; autorização do Champion/owner em 22/10/2026: "Autorizo a E2 — pode implementar")
+- autorizacao_implementacao: confirmada 2026-10-22 15:59 — "Autorizo a E2 — pode implementar" (mensagem do Champion/owner após relatório de status)
+- teste_humano: pendente (roteiro entregue ao Champion em 22/10/2026)
+- verificacao_automatica: passou — QA Skip (setup/static/build/integrations OK; v0.0.97 ref 08c6e6a e v0.0.98 ref 2aab7da); banco conferido via API: total 10, sintetico 10, producao 0, vazio 0; migration 0021_origem_dado applied
+- aprendizado: capturado:06_notas/aprendizado-continuo/controle.md (AP-2026-10-22-1600)
 - bloqueios: B3-META-01, B3-ID-01, B3-MET-01, B3-RACI-01, B3-DHO-01
-- ultima_acao: 2026-10-21 — Champion aprovou e registrou a DECISÃO de segregação sintético×produção no ETHOS 51414 (campo origem_dado {sintetico, producao}; indicadores oficiais só produção; modo homologação preservado; dedup por identidade composta, não só e-mail; LGPD pendente antes de dado real; B3-MET-01 mantido) — changelog commit 2409160, verificado byte a byte; escopo do ciclo: apenas documental, nenhuma migration/coleção/dashboard/publicação. Antes disso (20/10): inventário real do 51414 concluído (10 registros sintéticos em demandas, demais coleções vazias).
-- proxima_acao: aguardar autorização expressa do Champion para a E2 (migration não destrutiva origem_dado + backfill dos 10 + núcleo de consulta com filtro); E2 não executada. Em paralelo, F3-T01 segue com E2 (coleções) bloqueada por D4, E5 por D4/D5 e E6 por D6 — emendas do Navaar pendentes.
+- ultima_acao: 2026-10-22 — E2 implementada com autorização do Champion: migration 0021_origem_dado (campo select {sintetico, producao} em demandas + backfill dos 10 registros como sintetico, não destrutiva, com rollback), núcleo de consulta src/lib/origem-dado.ts (filtroOrigemDado, resumirSegregacao, filtrarPorOrigem, normalizarOrigemDado; default seguro: sem campo = sintetico) e painel oficial Index.tsx exibindo somente producao com selo de segregação e reconciliação/opções filtradas por producao.
+- proxima_acao: teste humano do Champion no painel (10 registros saem do painel oficial; selo "Painel oficial — somente origem_dado=producao" visível; modo homologação preservado). Após aceite: E3 (painéis com filtro) aguarda autorização. F3-T01 segue com E2 (coleções) bloqueada por D4, E5 por D4/D5 e E6 por D6 — emendas do Navaar pendentes.
 
 ## Defaults conservadores da F3-T01 (protocolo anti-trava — Constituição §Dúvidas e insumos, 07/10/2026)
 
