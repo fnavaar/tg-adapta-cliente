@@ -1,0 +1,5 @@
+# AP-2026-10-23-1610 — payload composto pode divergir do arquivo local em qualquer direção
+
+- **Sinal**: publicar documento montado por edição/concatenação pode introduzir divergência em QUALQUER lado: o remoto pode receber erro de digitação que o local não tem, e o local pode ficar com linhas antigas que o remoto já tem corrigidas. A verificação byte a byte pós-publicação é o detector; o diff de linhas diz qual lado está errado.
+- **Evidência**: 23/10/2026 — diagnóstico F3-T09 publicado com "O onde grava" no remoto (local correto; corrigido em d91002e); estado-atual.md publicado com as linhas novas no remoto e antigas no local (local alinhado ao remoto).
+- **Reutilizável em**: toda publicação via MCP GitHub — conteúdo sempre verbatim de leitura completa recente do arquivo local; após cada publicação, comparar remoto×local e corrigir o lado errado (não assumir que o local é sempre a fonte da verdade). Complementa AP-2026-10-21-1020 (truncamento) e AP-2026-10-23-1155 (base64 literal).
