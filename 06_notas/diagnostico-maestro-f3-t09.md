@@ -8,7 +8,7 @@
 
 ### 1.1 ETHOS (ambiente do assistente) — 4 agendamentos, nenhum grava em projeto Skip
 
-| # | Automação (cron ETHOS) | Cadência | O que lê | O onde grava / entrega |
+| # | Automação (cron ETHOS) | Cadência | O que lê | Onde grava / entrega |
 |---|---|---|---|---|
 | 1 | Relatório semanal (Gmail) | sexta 08:00 | conteúdo do relatório | e-mail via Gmail (conta talentgroupepress) |
 | 2 | Lembrete LinkedIn — convites B2B | dias úteis 09:00 | fila de convites pendentes | mensagem no chat |
