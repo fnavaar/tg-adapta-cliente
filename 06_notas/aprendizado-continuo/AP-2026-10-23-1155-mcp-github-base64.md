@@ -1,0 +1,6 @@
+# AP-2026-10-23-1155 — MCP GitHub grava content literal (não decodifica base64/placeholder)
+
+- **Sinal**: ao publicar documento via mcp_github_create_or_update_file, se o campo content for montado com placeholder/base64 ou qualquer esquema de codificação própria, o conector grava o texto LITERAL no arquivo — não decodifica. Resultado: arquivo remoto vira 1 linha de base64 ilegível.
+- **Detector**: verificação byte a byte pós-publicação (git show origin/main:arquivo × clone local) — arquivo com 1 linha e tamanho maior que o local = gravação literal.
+- **Evidência**: commits d1462d3 (STATUS.md) e d50d268 (estado-atual.md) de 23/10/2026 gravados como base64 bruto; corrigidos em 7ce56dc e 9829d77 com conteúdo verbatim; verificação final 5/5 documentos idênticos ao clone local (changelog, fase, STATUS, estado, controle).
+- **Reutilizável em**: toda publicação de documento no GitHub via MCP — conteúdo SEMPRE verbatim no campo content (nunca placeholder/base64) + verificação byte a byte após cada publicação. Mesma família de AP-2026-10-21-1020 (truncamento de arquivo grande).
