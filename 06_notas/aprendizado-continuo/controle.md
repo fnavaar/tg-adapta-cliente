@@ -12,3 +12,4 @@
 - 2026-09-23T12:11:00-03:00 · task F2-T09 · capturado:06_notas/aprendizado-continuo/AP-2026-09-23-1211-composio-principal-oauth.md · conexão OAuth herda permissões de quem consente; principal efetivo é evidência de gate
 - 2026-10-21T10:20:00-03:00 · registro E1 segregação · capturado:06_notas/aprendizado-continuo/AP-2026-10-21-1020-changelog-mcp-truncamento.md · publicação de arquivo grande via MCP GitHub pode truncar; size da resposta é o detector; nunca reconstruir conteúdo de cabeça
 - 2026-10-22T16:00:00-03:00 · E2 segregação origem_dado · capturado:06_notas/aprendizado-continuo/AP-2026-10-22-1600-e2-origem-dado.md · default seguro: ausência de origem_dado = sintetico; todo consumidor de demandas usa o núcleo origem-dado
+- 2026-10-23T11:47:00-03:00 · conclusão E2 (F3-T01) · sem sinal reutilizável adicional · padrão já capturado em AP-2026-10-22-1600-e2-origem-dado.md; teste humano confirmou o comportamento na tela sem revelar novo padrão
