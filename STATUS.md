@@ -7,7 +7,7 @@
 
 - **Fase atual:** 3 — Funil, painéis e passagem entre áreas (5 fases no total).
 - **Fase 1:** 6/6 ✅ · **Fase 2:** 9/9 ✅ (arquivada em `05_entregas/fase-2/`).
-- **Fase 3:** 0/13 tasks concluídas — **F3-T01 em andamento** (E2 segregação origem_dado **concluída** 23/10 com teste humano aprovado; próximas etapas da T01 bloqueadas por D4/D5/D6).
+- **Fase 3:** 1/13 tasks concluídas — **F3-T09 concluída 24/10** (homologada com ressalvas: CA-3-15 parcial, Hub 57113 ativo até substituta aprovada, leads 67634 sem integração com o funil = pendência). **F3-T01 em andamento** (E2 concluída 23/10; etapas seguintes bloqueadas por D4/D5/D6).
 - **Champion:** João Paulo.
 - **Prazo:** sem trava de prazo (decisão de 07/10/2026).
 
@@ -35,5 +35,5 @@ F3-T01 (terminar) → F3-T09 diagnóstico → F3-T10/T11 Funil → F3-T12/T13 Ca
 
 ## Próxima ação
 
-1. Iniciar a **F3-T09** no Maestro (diagnóstico somente leitura das automações, destino dos leads da landing e campanhas Meta) — por decisão do Champion.
-2. F3-T01 segue aberta com etapas bloqueadas por D4/D5/D6 (emendas do consultor pendentes).
+1. **F3-T10 (Funil Kanban)** é a próxima da ordem, mas segue BLOQUEADA: depende da F3-T01 aceita por completo (coleções `propostas`/`vagas` dependem de D4/D5/D6 — emendas do consultor). Decisão do Champion: aguardar emendas ou definir recorte.
+2. Renovação do token Meta pelo Champion, sem exposição de credenciais no chat (condição da homologação da F3-T09).
