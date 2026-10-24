@@ -110,7 +110,5 @@ Enquanto isso, o Hub segue ativo e intocado (ordem reforçada). O aproveitamento
 
 **F3-T13 · CA-3-16 + CA-3-17 (SPEC F3-006):** com a conexão inválida, a execução não grava snapshot novo, mantém o anterior, mostra a faixa de aviso e envia o e-mail; reexecutar com conexão válida não duplica linhas; **nenhuma escrita na Meta ocorre em nenhum cenário**.
 
-## 10. Inventário das funcionalidades do Hub 57113 — o que se preserva e o que se substitui
-
-| Funcionalidade do Hub | O que faz hoje | Destino na F3-T12 |
-|---|---|---|
+---
+**Continuação:** as seções 10–14 (inventário do Hub, conciliação, credenciais, 3 dias sem falha, rollback/histórico) estão no arquivo complementar: 06_notas/plano-f3-t12-complemento-v2-2026-10-24.md
