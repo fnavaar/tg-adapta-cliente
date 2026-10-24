@@ -1,0 +1,5 @@
+# AP-2026-10-24-0905 — critério parcial sustentado por condição registrada do Champion
+
+- **Sinal**: task cujo critério tem parte dependente de task futura pode ser concluída quando o Champion homologa POR ESCRITO com a ressalva explícita (ex.: CA-3-15 parcial porque a parada do Hub foi deliberadamente adiada até a substituta da F3-T12/T13). A ressalva vira parte do registro de conclusão — não é pendência da task nem falha.
+- **Evidência**: homologação da F3-T09 em 24/10/2026 09:01 com 6 condições numeradas (diagnóstico aceito; CA-3-15 parcial; Hub ativo por ordem; pendência dos leads; sem alterações; token sem exposição no chat) — changelog de 24/10.
+- **Reutilizável em**: fechamentos com critério parcialmente atendido por decisão do dono — registrar a condição textual no changelog/estado e vincular o fechamento do critério à task futura responsável.
